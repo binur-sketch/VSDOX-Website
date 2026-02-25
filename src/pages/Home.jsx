@@ -342,7 +342,7 @@ const Home = () => {
                     </div>
 
                     <div className="verticals-grid">
-                        <Link to="/solutions/banking-bfsi" className="vertical-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <div className="vertical-card">
                             <div className="vertical-icon"><i className="fas fa-city"></i></div>
                             <h3>Corporate</h3>
                             <ul className="vertical-list">
@@ -350,52 +350,43 @@ const Home = () => {
                                 <li><strong>Secretarial:</strong> Shareholder, Investor relation documents</li>
                                 <li><strong>Regular functions:</strong> R&D, Finance, Customer Experience content</li>
                             </ul>
-                        </Link>
+                        </div>
 
-                        <Link to="/solutions/banking-bfsi" className="vertical-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <div className="vertical-card">
                             <div className="vertical-icon"><i className="fas fa-building-columns"></i></div>
                             <h3>BFSI</h3>
                             <ul className="vertical-list">
                                 <li><strong>Banking:</strong> Account opening forms, Account holder details & forms, Retail & Commercial lending</li>
                                 <li><strong>Insurance:</strong> New policies, Policy Servicing, Service request management</li>
                             </ul>
-                        </Link>
+                        </div>
 
-                        <Link to="/solutions/government" className="vertical-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <div className="vertical-icon"><i className="fas fa-landmark"></i></div>
+                        <div className="vertical-card">
+                            <div className="vertical-icon"><i className="fas fa-scale-balanced"></i></div>
                             <h3>Government</h3>
                             <ul className="vertical-list">
+                                <li><strong>Judiciary:</strong> Case File Digitization</li>
                                 <li><strong>Ministries:</strong> Automation Repositories, Grants management</li>
-                                <li><strong>Public Records:</strong> Citizen records, land registries & civil archives</li>
                             </ul>
-                        </Link>
+                        </div>
 
-                        <Link to="/solutions/judiciary" className="vertical-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <div className="vertical-icon"><i className="fas fa-scale-balanced"></i></div>
-                            <h3>Judiciary</h3>
-                            <ul className="vertical-list">
-                                <li><strong>High Courts:</strong> Case file digitization & e-filing workflows</li>
-                                <li><strong>Tribunals:</strong> Cause list management & certified true copies</li>
-                            </ul>
-                        </Link>
-
-                        <Link to="/solutions/education" className="vertical-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <div className="vertical-card">
                             <div className="vertical-icon"><i className="fas fa-graduation-cap"></i></div>
                             <h3>Education</h3>
                             <ul className="vertical-list">
                                 <li><strong>Libraries:</strong> Research, Journals, Archives, Subject Text Repositories</li>
                                 <li><strong>Institutions:</strong> Managing access to Repositories</li>
                             </ul>
-                        </Link>
+                        </div>
 
-                        <Link to="/solutions/healthcare" className="vertical-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <div className="vertical-card">
                             <div className="vertical-icon"><i className="fas fa-hospital-user"></i></div>
                             <h3>Health</h3>
                             <ul className="vertical-list">
                                 <li><strong>Hospitals & Clinics:</strong> Patient Records digitization, easy access for appointments</li>
                                 <li><strong>Insurance:</strong> Patient case history and claims management</li>
                             </ul>
-                        </Link>
+                        </div>
                     </div>
 
                     <div style={{ marginTop: '60px', textAlign: 'center' }}>

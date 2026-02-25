@@ -18,8 +18,7 @@ import {
   Healthcare,
   Manufacturing,
   Education,
-  Government,
-  Judiciary
+  Government
 } from './pages/IndustryPages';
 
 import {
@@ -28,8 +27,6 @@ import {
   PrivacyPolicy,
   TermsConditions
 } from './pages/CompanyPages';
-
-import Blog from './pages/Blog';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -48,7 +45,6 @@ function App() {
           <Route path="industries" element={<Industries />} />
           <Route path="resources" element={<Resources />} />
           <Route path="about" element={<About />} />
-          <Route path="blog" element={<Blog />} />
 
           {/* Industry Solution Pages */}
           <Route path="solutions/banking-bfsi" element={<BankingBFSI />} />
@@ -56,14 +52,12 @@ function App() {
           <Route path="solutions/manufacturing" element={<Manufacturing />} />
           <Route path="solutions/education" element={<Education />} />
           <Route path="solutions/government" element={<Government />} />
-          <Route path="solutions/judiciary" element={<Judiciary />} />
 
           {/* Company / Utility Pages */}
           <Route path="contact" element={<ContactUs />} />
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsConditions />} />
-
 
           {/* Legacy route kept for backward compatibility */}
           <Route path="legal" element={<PrivacyPolicy />} />
