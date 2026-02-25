@@ -436,3 +436,73 @@ export const Government = () => {
         </>
     );
 };
+
+
+/* ═══════════════════════════════════════════════════════════
+   JUDICIARY
+   ═══════════════════════════════════════════════════════════ */
+export const Judiciary = () => {
+    useEffect(() => { window.scrollTo(0, 0); document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in')); }, []);
+    return (
+        <>
+            <PageHero
+                tag="INDUSTRY SOLUTION · JUDICIARY"
+                title="Digital Transformation for Courts & Legal Institutions"
+                subtitle="Digitize case files, enable e-filing, and streamline court document workflows with a secure, scalable ECM platform trusted by India's leading High Courts."
+                bgColor="linear-gradient(135deg, #0f172a 0%, #1a1030 100%)"
+            />
+
+            <StatsStrip stats={[
+                { value: '15+', label: 'High Courts Served' },
+                { value: '50M+', label: 'Case Files Digitized' },
+                { value: '95%', label: 'Faster Document Retrieval' },
+                { value: '100%', label: 'Audit Trail Compliance' }
+            ]} />
+
+            <section style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', padding: '100px 0' }}>
+                <div className="max-container">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }} className="reveal">
+                        <span className="info-tag" style={{ background: 'rgba(29,99,237,0.15)', color: '#60a5fa', border: '1px solid rgba(29,99,237,0.2)' }}>Platform Capabilities</span>
+                        <h2 style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: '800', color: 'white', margin: '20px 0' }}>End-to-End Judicial Document Management</h2>
+                        <p style={{ color: '#94a3b8', maxWidth: '700px', margin: '0 auto', fontSize: '17px' }}>From case file digitization to e-filing workflows, our platform is built for the unique demands of India's judicial system.</p>
+                    </div>
+                    <FeatureGrid features={[
+                        { icon: 'fa-gavel', title: 'Case File Digitization', desc: 'Convert millions of physical case files into structured, searchable digital archives using multilingual OCR (Hindi & English).' },
+                        { icon: 'fa-file-circle-check', title: 'e-Filing Workflows', desc: 'Enable advocates and litigants to file documents electronically with automated validation, acknowledgement and routing.' },
+                        { icon: 'fa-magnifying-glass', title: 'Full-Text Case Search', desc: 'Find any order, judgement, or petition across millions of documents in seconds using AI-powered full-text indexing.' },
+                        { icon: 'fa-clock-rotate-left', title: 'Cause List & Diary Management', desc: 'Automate daily cause list generation, court diary entries, and hearing scheduling with document linkage.' },
+                        { icon: 'fa-shield-halved', title: 'Secure Role-Based Access', desc: 'Granular access controls for judges, registrars, advocates, and staff — with complete audit trails for every action.' },
+                        { icon: 'fa-certificate', title: 'Certified True Copy (CTC)', desc: 'Generate digitally signed, court-certified copies of orders and judgements for advocates and litigants online.' },
+                    ]} />
+                </div>
+            </section>
+
+            <BenefitsList
+                title="Accelerating Justice Through Digital Records"
+                desc="Courts that have deployed VsDOX report transformative improvements in case processing speed, staff productivity, and litigant satisfaction."
+                benefits={[
+                    { icon: 'fa-bolt', title: 'Instant Case File Retrieval', desc: 'Judges and registrars access any case file in seconds — no more manual search through physical files.' },
+                    { icon: 'fa-laptop', title: 'Remote Access for Judges', desc: 'With secure digital access, judges review case files from any location — critical during hybrid hearings.' },
+                    { icon: 'fa-chart-line', title: 'Reduced Case Pendency', desc: 'Faster document processing contributes directly to a measurable reduction in pending cases.' },
+                    { icon: 'fa-lock', title: 'Tamper-Proof Digital Records', desc: 'Every document is cryptographically signed and immutably stored with a full version history.' },
+                ]}
+            />
+
+            <section style={{ padding: '80px 0', background: 'white' }} className="reveal">
+                <div className="max-container" style={{ textAlign: 'center' }}>
+                    <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: '800', marginBottom: '16px' }}>High Courts We Are Proud To Serve</h2>
+                    <p style={{ color: 'var(--text-muted)', marginBottom: '48px', fontSize: '17px' }}>Trusted by India's leading judicial institutions for digitization and case management</p>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+                        {['Allahabad High Court', 'Odisha High Court', 'Madras High Court', 'Rajasthan High Court', 'Kerala High Court', 'Bombay High Court', 'Delhi High Court'].map((name, i) => (
+                            <div key={i} style={{ background: '#f8fafc', border: '1px solid var(--border)', borderRadius: '12px', padding: '14px 24px', fontWeight: '700', color: 'var(--text-dark)', fontSize: '14px' }}>{name}</div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <CTABanner title="Modernize Your Court's Document Management" subtitle="Join India's leading High Courts and tribunals in the digital transformation journey with VsDOX." />
+            <ClientLogos />
+        </>
+    );
+};
+

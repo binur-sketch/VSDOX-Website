@@ -8,7 +8,8 @@ const solutionsDropdown = [
     { to: '/solutions/healthcare', label: 'Healthcare', icon: 'fa-hospital-user', desc: 'Patient records & clinical docs' },
     { to: '/solutions/manufacturing', label: 'Manufacturing', icon: 'fa-gears', desc: 'Engineering & QMS document control' },
     { to: '/solutions/education', label: 'Education', icon: 'fa-graduation-cap', desc: 'Academic repos & student records' },
-    { to: '/solutions/government', label: 'Government', icon: 'fa-landmark', desc: 'Judiciary & ministry records' },
+    { to: '/solutions/government', label: 'Government', icon: 'fa-landmark', desc: 'Ministry & public records' },
+    { to: '/solutions/judiciary', label: 'Judiciary', icon: 'fa-scale-balanced', desc: 'Court case files & legal docs' },
 ];
 
 const companyDropdown = [
@@ -18,13 +19,15 @@ const companyDropdown = [
     { to: '/contact', label: 'Contact Us', icon: 'fa-envelope', desc: 'Get in touch with our experts' },
 ];
 
-const DropdownMenu = ({ items, isOpen }) => {
-    if (!isOpen) return null;
-    return (
-        <div className="nav-dropdown">
+/* Pure CSS hover dropdown — no gap, no state flicker */
+const DropdownMenu = ({ items }) => (
+    <div className="nav-dropdown">
+        <div className="nav-dropdown-inner">
             {items.map((item, i) => (
                 <Link key={i} to={item.to} className="dropdown-item">
-                    <span className="dropdown-icon"><i className={`fas ${item.icon}`}></i></span>
+                    <span className="dropdown-icon">
+                        <i className={`fas ${item.icon}`}></i>
+                    </span>
                     <div>
                         <div className="dropdown-label">{item.label}</div>
                         <div className="dropdown-desc">{item.desc}</div>
@@ -32,35 +35,18 @@ const DropdownMenu = ({ items, isOpen }) => {
                 </Link>
             ))}
         </div>
-    );
-};
+    </div>
+);
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState(null);
     const location = useLocation();
     const navRef = useRef(null);
 
-    const toggleMenu = () => setMenuOpen(!menuOpen);
-    const closeMenu = () => { setMenuOpen(false); setActiveDropdown(null); };
+    const closeMenu = () => setMenuOpen(false);
 
-    // Close dropdown when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (e) => {
-            if (navRef.current && !navRef.current.contains(e.target)) {
-                setActiveDropdown(null);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
-
-    // Close on route change
+    // Close mobile menu on route change
     useEffect(() => { closeMenu(); }, [location.pathname]);
-
-    const handleDropdown = (name) => {
-        setActiveDropdown(prev => (prev === name ? null : name));
-    };
 
     return (
         <nav className="navbar" ref={navRef}>
@@ -70,25 +56,29 @@ const Navbar = () => {
 
             {/* Desktop Nav Links */}
             <div className="nav-links">
-                <Link to="/products" className="nav-link">Products</Link>
 
-                {/* Solutions Dropdown */}
-                <div className="nav-dropdown-wrapper" onMouseEnter={() => setActiveDropdown('solutions')} onMouseLeave={() => setActiveDropdown(null)}>
-                    <button className="nav-link nav-link-btn" onClick={() => handleDropdown('solutions')}>
-                        Solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ transition: 'transform 0.2s', transform: activeDropdown === 'solutions' ? 'rotate(180deg)' : 'rotate(0)' }}><path d="M6 9l6 6 6-6" /></svg>
+                {/* Solutions Dropdown — CSS :hover driven */}
+                <div className="nav-dropdown-wrapper">
+                    <button className="nav-link nav-link-btn">
+                        Solutions
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
                     </button>
-                    <DropdownMenu items={solutionsDropdown} isOpen={activeDropdown === 'solutions'} />
+                    <DropdownMenu items={solutionsDropdown} />
                 </div>
 
                 <Link to="/industries" className="nav-link">Industries</Link>
-                <Link to="/resources" className="nav-link">Resources</Link>
 
-                {/* Company Dropdown */}
-                <div className="nav-dropdown-wrapper" onMouseEnter={() => setActiveDropdown('company')} onMouseLeave={() => setActiveDropdown(null)}>
-                    <button className="nav-link nav-link-btn" onClick={() => handleDropdown('company')}>
-                        Company <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ transition: 'transform 0.2s', transform: activeDropdown === 'company' ? 'rotate(180deg)' : 'rotate(0)' }}><path d="M6 9l6 6 6-6" /></svg>
+                {/* Company Dropdown — CSS :hover driven */}
+                <div className="nav-dropdown-wrapper">
+                    <button className="nav-link nav-link-btn">
+                        Company
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
                     </button>
-                    <DropdownMenu items={companyDropdown} isOpen={activeDropdown === 'company'} />
+                    <DropdownMenu items={companyDropdown} />
                 </div>
             </div>
 
@@ -97,7 +87,7 @@ const Navbar = () => {
             {/* Hamburger Button */}
             <button
                 className="hamburger-btn"
-                onClick={toggleMenu}
+                onClick={() => setMenuOpen(prev => !prev)}
                 aria-label="Toggle navigation menu"
                 aria-expanded={menuOpen}
             >
@@ -106,25 +96,24 @@ const Navbar = () => {
                 <span className={`hamburger-bar ${menuOpen ? 'open' : ''}`}></span>
             </button>
 
-            {/* Mobile Dropdown Menu */}
+            {/* Mobile Menu */}
             {menuOpen && (
                 <div className="mobile-menu">
-                    <Link to="/products" className="mobile-menu-link" onClick={closeMenu}>Products</Link>
-
                     <div className="mobile-section-label">Solutions</div>
                     {solutionsDropdown.map((item, i) => (
                         <Link key={i} to={item.to} className="mobile-menu-link mobile-sub-link" onClick={closeMenu}>
-                            <i className={`fas ${item.icon}`} style={{ marginRight: '10px', color: 'var(--primary)' }}></i>{item.label}
+                            <i className={`fas ${item.icon}`} style={{ marginRight: '10px', color: 'var(--primary)' }}></i>
+                            {item.label}
                         </Link>
                     ))}
 
                     <Link to="/industries" className="mobile-menu-link" onClick={closeMenu}>Industries</Link>
-                    <Link to="/resources" className="mobile-menu-link" onClick={closeMenu}>Resources</Link>
 
                     <div className="mobile-section-label">Company</div>
                     {companyDropdown.map((item, i) => (
                         <Link key={i} to={item.to} className="mobile-menu-link mobile-sub-link" onClick={closeMenu}>
-                            <i className={`fas ${item.icon}`} style={{ marginRight: '10px', color: 'var(--primary)' }}></i>{item.label}
+                            <i className={`fas ${item.icon}`} style={{ marginRight: '10px', color: 'var(--primary)' }}></i>
+                            {item.label}
                         </Link>
                     ))}
 

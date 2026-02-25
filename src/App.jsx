@@ -18,7 +18,8 @@ import {
   Healthcare,
   Manufacturing,
   Education,
-  Government
+  Government,
+  Judiciary
 } from './pages/IndustryPages';
 
 import {
@@ -54,6 +55,7 @@ function App() {
           <Route path="solutions/manufacturing" element={<Manufacturing />} />
           <Route path="solutions/education" element={<Education />} />
           <Route path="solutions/government" element={<Government />} />
+          <Route path="solutions/judiciary" element={<Judiciary />} />
 
           {/* Company / Utility Pages */}
           <Route path="contact" element={<ContactUs />} />
