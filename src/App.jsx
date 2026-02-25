@@ -28,6 +28,8 @@ import {
   TermsConditions
 } from './pages/CompanyPages';
 
+import Careers from './pages/Careers';
+
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -58,6 +60,7 @@ function App() {
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsConditions />} />
+          <Route path="careers" element={<Careers />} />
 
           {/* Legacy route kept for backward compatibility */}
           <Route path="legal" element={<PrivacyPolicy />} />

@@ -1,5 +1,4 @@
 import React from 'react';
-import startupIndia from '../assets/startup india.png';
 import gemLogo from '../assets/GeM logo.webp';
 import msmeLogo from '../assets/msme logo.webp';
 
@@ -8,13 +7,6 @@ const GovtRegistrations = () => {
         <section className="govt-registrations reveal">
             <div className="max-container">
                 <div className="registrations-container">
-                    <div className="reg-item">
-                        <img src={startupIndia} alt="Startup India Registered" />
-                        <div className="reg-info">
-                            <h4>Startup India</h4>
-                            <p>Recognized Startup</p>
-                        </div>
-                    </div>
                     <div className="reg-item">
                         <img src={gemLogo} alt="GeM Registered" style={{ height: '50px' }} />
                         <div className="reg-info">
