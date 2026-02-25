@@ -12,13 +12,6 @@ const solutionsDropdown = [
     { to: '/solutions/judiciary', label: 'Judiciary', icon: 'fa-scale-balanced', desc: 'Court case files & legal docs' },
 ];
 
-const companyDropdown = [
-    { to: '/about', label: 'About Vir Softech', icon: 'fa-building', desc: 'Our story, mission & values' },
-    { to: '/case-studies', label: 'Case Studies', icon: 'fa-award', desc: 'Real results from real clients' },
-    { to: '/careers', label: 'Careers', icon: 'fa-users', desc: 'Join our growing team' },
-    { to: '/contact', label: 'Contact Us', icon: 'fa-envelope', desc: 'Get in touch with our experts' },
-];
-
 /* Pure CSS hover dropdown — no gap, no state flicker */
 const DropdownMenu = ({ items }) => (
     <div className="nav-dropdown">
@@ -68,18 +61,10 @@ const Navbar = () => {
                     <DropdownMenu items={solutionsDropdown} />
                 </div>
 
-                <Link to="/industries" className="nav-link">Industries</Link>
-
-                {/* Company Dropdown — CSS :hover driven */}
-                <div className="nav-dropdown-wrapper">
-                    <button className="nav-link nav-link-btn">
-                        Company
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </button>
-                    <DropdownMenu items={companyDropdown} />
-                </div>
+                <Link to="/case-studies" className="nav-link">Case Studies</Link>
+                <Link to="/about" className="nav-link">About Us</Link>
+                <Link to="/blog" className="nav-link">Blog</Link>
+                <Link to="/contact" className="nav-link">Contact Us</Link>
             </div>
 
             <Link to="/contact" className="btn-signin desktop-only">Request Demo</Link>
@@ -107,15 +92,10 @@ const Navbar = () => {
                         </Link>
                     ))}
 
-                    <Link to="/industries" className="mobile-menu-link" onClick={closeMenu}>Industries</Link>
-
-                    <div className="mobile-section-label">Company</div>
-                    {companyDropdown.map((item, i) => (
-                        <Link key={i} to={item.to} className="mobile-menu-link mobile-sub-link" onClick={closeMenu}>
-                            <i className={`fas ${item.icon}`} style={{ marginRight: '10px', color: 'var(--primary)' }}></i>
-                            {item.label}
-                        </Link>
-                    ))}
+                    <Link to="/case-studies" className="mobile-menu-link" onClick={closeMenu}>Case Studies</Link>
+                    <Link to="/about" className="mobile-menu-link" onClick={closeMenu}>About Us</Link>
+                    <Link to="/blog" className="mobile-menu-link" onClick={closeMenu}>Blog</Link>
+                    <Link to="/contact" className="mobile-menu-link" onClick={closeMenu}>Contact Us</Link>
 
                     <Link to="/contact" className="btn-signin mobile-demo-btn" onClick={closeMenu}>Request Demo</Link>
                 </div>

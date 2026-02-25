@@ -29,7 +29,7 @@ import {
   TermsConditions
 } from './pages/CompanyPages';
 
-import Careers from './pages/Careers';
+import Blog from './pages/Blog';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -48,6 +48,7 @@ function App() {
           <Route path="industries" element={<Industries />} />
           <Route path="resources" element={<Resources />} />
           <Route path="about" element={<About />} />
+          <Route path="blog" element={<Blog />} />
 
           {/* Industry Solution Pages */}
           <Route path="solutions/banking-bfsi" element={<BankingBFSI />} />
@@ -62,7 +63,7 @@ function App() {
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsConditions />} />
-          <Route path="careers" element={<Careers />} />
+
 
           {/* Legacy route kept for backward compatibility */}
           <Route path="legal" element={<PrivacyPolicy />} />
