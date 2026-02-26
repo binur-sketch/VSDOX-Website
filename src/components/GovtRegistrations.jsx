@@ -1,5 +1,4 @@
 import React from 'react';
-import startupIndia from '../assets/startup india.png';
 import gemLogo from '../assets/GeM logo.webp';
 import msmeLogo from '../assets/msme logo.webp';
 

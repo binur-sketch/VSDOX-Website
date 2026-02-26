@@ -244,15 +244,15 @@ export const Healthcare = () => {
 
 
 /* ═══════════════════════════════════════════════════════════
-   MANUFACTURING
+   Corporate
    ═══════════════════════════════════════════════════════════ */
-export const Manufacturing = () => {
+export const Corporate = () => {
     useEffect(() => { window.scrollTo(0, 0); document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in')); }, []);
     return (
         <>
             <PageHero
-                tag="INDUSTRY SOLUTION · MANUFACTURING"
-                title="Smart Document Control for Modern Manufacturing"
+                tag="INDUSTRY SOLUTION · Corporate"
+                title="Smart Document Control for Modern Corporate"
                 subtitle="Automate engineering document control, quality management records, and supply chain documentation to drive operational excellence across your plant floor."
                 bgColor="linear-gradient(135deg, #0f172a 0%, #1a1f2e 100%)"
             />

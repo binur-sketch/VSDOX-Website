@@ -38,8 +38,10 @@ const Footer = () => {
                             <li><Link to="/solutions/banking-bfsi">Banking &amp; BFSI</Link></li>
                             <li><Link to="/solutions/healthcare">Healthcare</Link></li>
                             <li><Link to="/solutions/government">Government</Link></li>
-                            <li><Link to="/solutions/manufacturing">Manufacturing</Link></li>
+                            <li><Link to="/solutions/corporate">Corporate</Link></li>
                             <li><Link to="/solutions/education">Education</Link></li>
+                            <li><Link to="/solutions/judiciary">Judiciary</Link></li>
+
                         </ul>
                     </div>
 

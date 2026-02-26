@@ -63,7 +63,7 @@ const caseStudies = [
         challenge: 'Hero MotoCorp\'s engineering, compliance, and HR teams were managing thousands of critical documents across disconnected shared drives and physical files.',
         solution: 'Enterprise-wide VsDOX deployment integrating with their SAP ERP, automated document routing, version-controlled engineering drawing management.',
         results: ['40% reduction in overall operational document costs', 'Engineering drawings now version-controlled across 12 plants', '100% paperless HR onboarding process', 'SAP-integrated purchase order document workflow'],
-        industry: 'Manufacturing / Automotive'
+        industry: 'Corporate / Automotive'
     },
     {
         tag: 'HEALTHCARE',
@@ -255,7 +255,7 @@ export const ContactUs = () => {
                                                 <option>BFSI / Banking Solution</option>
                                                 <option>Healthcare Solution</option>
                                                 <option>Government / e-Governance</option>
-                                                <option>Manufacturing Solution</option>
+                                                <option>Corporate Solution</option>
                                                 <option>Education / Research Repository</option>
                                                 <option>Technical Support</option>
                                                 <option>Partnership Inquiry</option>

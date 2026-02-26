@@ -16,7 +16,7 @@ import {
 import {
   BankingBFSI,
   Healthcare,
-  Manufacturing,
+  Corporate,
   Education,
   Government
 } from './pages/IndustryPages';
@@ -49,7 +49,7 @@ function App() {
           {/* Industry Solution Pages */}
           <Route path="solutions/banking-bfsi" element={<BankingBFSI />} />
           <Route path="solutions/healthcare" element={<Healthcare />} />
-          <Route path="solutions/manufacturing" element={<Manufacturing />} />
+          <Route path="solutions/corporate" element={<Corporate />} />
           <Route path="solutions/education" element={<Education />} />
           <Route path="solutions/government" element={<Government />} />
 
