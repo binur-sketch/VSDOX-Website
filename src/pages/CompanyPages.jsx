@@ -33,77 +33,71 @@ const CompanyPageHero = ({ tag, title, subtitle }) => (
    ═══════════════════════════════════════════════════════════ */
 const caseStudies = [
     {
-        tag: 'BFSI',
-        tagColor: '#1877f2',
-        client: 'HDFC Life Insurance',
-        logo: '🏛️',
-        title: 'How HDFC Life Digitized 10M+ Policy Documents',
-        challenge: 'HDFC Life faced mounting pressure from paper-based policy storage, slow claim processing, and regulatory audits requiring rapid document retrieval.',
-        solution: 'Deployed VSDOX ECM with AI-powered document classification, OCR, and a rules-based workflow engine for automated claim routing.',
-        results: ['70% faster claim settlement processing', '10M+ policy documents digitized in 6 months', 'Zero failed regulatory audits post-deployment', '45% reduction in document storage costs'],
-        industry: 'Insurance'
-    },
-    {
         tag: 'JUDICIARY',
         tagColor: '#7c3aed',
         client: 'Allahabad High Court',
         logo: '⚖️',
-        title: 'Allahabad High Court: 5M+ Case Files Digitized',
-        challenge: 'One of India\'s largest High Courts was managing millions of physical case files, causing severe retrieval delays, physical space constraints, and access issues.',
-        solution: 'VSDOX deployed a custom judicial ECM with multilingual OCR (Hindi & English), full-text search across all case documents, and e-filing workflows.',
-        results: ['5M+ case files fully digitized', '95% reduction in physical document retrieval time', 'Judges access files remotely from any device', 'Robust audit trail for all document lifecycle events'],
-        industry: 'Government / Judiciary'
-    },
-    {
-        tag: 'AUTOMOTVIE',
-        tagColor: '#d97706',
-        client: 'Hero MotoCorp',
-        logo: '🏍️',
-        title: 'Hero MotoCorp Saves 40% Operational Cost with ECM',
-        challenge: 'Hero MotoCorp\'s engineering, compliance, and HR teams were managing thousands of critical documents across disconnected shared drives and physical files.',
-        solution: 'Enterprise-wide VSDOX deployment integrating with their SAP ERP, automated document routing, version-controlled engineering drawing management.',
-        results: ['40% reduction in overall operational document costs', 'Engineering drawings now version-controlled across 12 plants', '100% paperless HR onboarding process', 'SAP-integrated purchase order document workflow'],
-        industry: 'Corporate / Automotive'
-    },
-    {
-        tag: 'HEALTHCARE',
-        tagColor: '#059669',
-        client: 'AIIMS New Delhi',
-        logo: '🏥',
-        title: 'AIIMS New Delhi: Paperless OPD & Patient Records',
-        challenge: 'AIIMS was handling hundreds of thousands of OPD records, referral letters, and lab reports in physical form, causing delays in treatment workflows.',
-        solution: 'VSDOX was deployed to digitize all patient-facing documents, with role-based access for doctors and HIPAA-compliant document handling.',
-        results: ['3M+ patient records securely digitized', 'Doctors access patient history in under 5 seconds', 'Insurance claim documentation automated', 'HIPAA-compliant access controls fully enforced'],
-        industry: 'Healthcare'
-    },
-    {
-        tag: 'EDUCATION',
-        tagColor: '#0891b2',
-        client: 'IIT Delhi',
-        logo: '🎓',
-        title: 'IIT Delhi Builds World-Class Research Repository',
-        challenge: 'IIT Delhi needed a scalable, open-access institutional repository for research papers, theses, and conference proceedings to boost global academic visibility.',
-        solution: 'Custom institutional repository with OAI-PMH open access compliance, multilingual search, and full integration with the university\'s existing library systems.',
-        results: ['200,000+ research publications accessible online', 'DOI minting for all published research', 'Global discoverability via Google Scholar integration', 'Zero licensing cost with open-source ECM foundation'],
-        industry: 'Education / Research'
+        title: 'Paperless E-Court Solution',
+        challenge: 'Ensuring robust protection against sensitive data breaches while training judges and staff to transition from millions of physical files to a digital system without workflow disruption.',
+        solution: 'Custom judicial ECM with advanced search, automated cause-list generation, and secure workflows for document submission, approval, and archiving.',
+        results: ['Instant remote access for judges', '95% reduction in physical file clutter', 'Automated case tracking & scheduling', 'Robust protection against unauthorized access'],
+        industry: 'Judiciary',
+        tech: 'Java, React JS, PostgreSQL'
     },
     {
         tag: 'GOVERNMENT',
         tagColor: '#dc2626',
-        client: 'Indian Patent Office',
-        logo: '📋',
-        title: 'Indian Patent Office: Patent Archive Modernization',
-        challenge: 'IPO was managing decades of physical patent applications, drawings, and correspondence that needed to be digitized, indexed, and made searchable.',
-        solution: 'VSDOX captured, OCR\'d, and structured millions of patent documents with specialized metadata schemas for IPC classification and applicant data.',
-        results: ['Millions of patent records digitized and indexed', 'Patent examiners find prior art in minutes vs. hours', 'Full integration with CGPDTM national IP database', 'Reduced examination turnaround time by 35%'],
-        industry: 'Government / IPR'
+        client: 'National Archives of India',
+        logo: '📜',
+        title: 'Abhilekh Patal: Historical Digitization',
+        challenge: 'Digitizing vast, delicate, and aging historical records including manuscripts and maps in multiple languages while ensuring long-term preservation.',
+        solution: 'High-resolution non-contact scanning, multilingual metadata indexing, and an intuitive public portal with advanced search and role-based access.',
+        results: ['Long-term preservation of national heritage', 'Global access for international researchers', 'Multilingual OCR for deep content search', 'Secure handling of sensitive archives'],
+        industry: 'Government / Archives',
+        tech: 'Java, JSP, PostgreSQL, Tomcat'
+    },
+    {
+        tag: 'LIBRARY',
+        tagColor: '#0891b2',
+        client: 'India International Center',
+        logo: '🎥',
+        title: 'Digilib: Multimedia DMS & Streaming',
+        challenge: 'Integrating high-quality multimedia streaming with a DMS while protecting against piracy and managing diverse content types across varied internet bandwidths.',
+        solution: 'Real-time streaming integration, complex file handling, payment gateway for monetization, and a subscription-based pay-per-view accessibility model.',
+        results: ['Seamless lag-free multimedia playback', 'Monetized exclusive digital archives', 'Unified document & media management', 'Scalable storage for high-volume video'],
+        industry: 'Multimedia / Library',
+        tech: 'Java, JSP, PostgreSQL, Tomcat'
+    },
+    {
+        tag: 'EDUCATION',
+        tagColor: '#059669',
+        client: 'Deccan College',
+        logo: '🎓',
+        title: '2 Million Records Digitization Project',
+        challenge: 'Scanning 2 million diverse records including rare books, microfilms, and micro-cards that require specialized equipment and precise metadata indexing.',
+        solution: 'Centralized high-resolution repository with batch import/export tools and a custom DMS optimized for microfilm and fragile book digitization.',
+        results: ['2M+ records preserved digitally', '70% reduction in physical handling', 'Rapid retrieval of rare manuscripts', 'Detailed metadata for academic research'],
+        industry: 'Education / Research',
+        tech: 'Java, JSP, PostgreSQL, Tomcat'
+    },
+    {
+        tag: 'GOVERNMENT',
+        tagColor: '#dc2626',
+        client: 'Presidential Estate',
+        logo: '🏛️',
+        title: 'Presidential Estate Digitization',
+        challenge: 'Preserving discolored historical documents and large-format maps while building a comprehensive metadata schema for government-level retrieval.',
+        solution: 'Phased digitization approach using color correction enhancement, OCR tagging, and secure cloud storage with strict role-based access controls.',
+        results: ['Enhanced accessibility to historical maps', 'Full-text OCR for rapid document discovery', 'Digital backups for disaster recovery', 'Improved historical research efficiency'],
+        industry: 'Government / Heritage',
+        tech: 'Java, PostgreSQL'
     }
 ];
 
 export const CaseStudies = () => {
     useEffect(() => { window.scrollTo(0, 0); document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in')); }, []);
     const [activeFilter, setActiveFilter] = useState('All');
-    const filters = ['All', 'BFSI', 'JUDICIARY', 'AUTOMOTVIE', 'HEALTHCARE', 'EDUCATION', 'GOVERNMENT'];
+    const filters = ['All', 'JUDICIARY', 'GOVERNMENT', 'LIBRARY', 'EDUCATION'];
     const filtered = activeFilter === 'All' ? caseStudies : caseStudies.filter(c => c.tag === activeFilter);
 
     return (
@@ -163,6 +157,11 @@ export const CaseStudies = () => {
                                                 <span style={{ fontSize: '14px', fontWeight: '600', color: 'var(--text-dark)' }}>{r}</span>
                                             </div>
                                         ))}
+                                    </div>
+                                    <div style={{ marginTop: '20px', padding: '12px 16px', background: '#f1f5f9', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                        <i className="fas fa-code-branch" style={{ color: '#64748b', fontSize: '12px' }}></i>
+                                        <span style={{ fontSize: '12px', fontWeight: '700', color: '#475569', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Tech Stack:</span>
+                                        <span style={{ fontSize: '13px', color: '#334155', fontWeight: '500' }}>{cs.tech}</span>
                                     </div>
                                     <div style={{ marginTop: '28px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
                                         <Link to="/contact" className="btn-primary" style={{ display: 'inline-block', fontSize: '14px', padding: '10px 22px' }}>Get Similar Results →</Link>
