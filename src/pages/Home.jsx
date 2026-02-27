@@ -90,187 +90,323 @@ const Home = () => {
             <section className="ai-capabilities-section reveal" style={{ padding: '100px 0' }}>
                 <div className="max-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px', color: 'white' }}>Intelligence Beyond Documents</h2>
+                        <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px', color: 'white' }}>AI-Powered Enterprise Content Management</h2>
                         <p style={{ color: '#94a3b8', maxWidth: '800px', margin: '0 auto', fontSize: '18px' }}>
-                            Our integrated AI engine transforms your ECM from a storage repository into an intelligent knowledge hub.
+                            Leverage advanced AI capabilities within VSDOX to automate, classify, extract, and retrieve information with precision.
                         </p>
                     </div>
 
                     <div className="ai-features-grid">
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-microchip"></i></div>
-                            <h3>Intelligent Document Processing (IDP)</h3>
-                            <p>Automated data extraction from structured and unstructured documents with enterprise-grade precision.</p>
+                            <h3>Document Summarization</h3>
+                            <p>Automatically condenses lengthy documents (e.g., 50–500 page case files) into concise, easy-to-review summaries, enabling faster understanding and decision-making.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-file-contract"></i></div>
-                            <h3>Document Summarization</h3>
-                            <p>Generate intelligent, concise summaries of voluminous documents instantly using LLM technology.</p>
+                            <h3>RAG-Based Q&A</h3>
+                            <p>An on-premise, cloud based Retrieval-Augmented Generation solution that securely answers user queries by retrieving and generating responses directly from your organization’s internal documents and DMS data.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-robot"></i></div>
-                            <h3>NLP Based Q&A</h3>
-                            <p>Interact with your entire document repository using natural language—ask questions, get instant factual answers.</p>
+                            <h3>AI Translation</h3>
+                            <p>Automatically translates uploaded documents into multiple languages and stores parallel versions, enabling seamless multilingual access to the same content anytime.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-language"></i></div>
-                            <h3>AI Translation & Transliteration</h3>
-                            <p>Seamlessly translate or transliterate documents across multiple languages while preserving context and meaning.</p>
+                            <h3>AI Transliteration</h3>
+                            <p>Enables multilingual search by automatically converting user queries (e.g., “Amit” to “अमित”) into the selected language, ensuring accurate retrieval of documents across language scripts.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-sitemap"></i></div>
-                            <h3>Smart Classification & Auto-Tagging</h3>
-                            <p>AI-driven categorization and metadata auto-extraction for zero-effort organization.</p>
+                            <h3>Automatic Document Type Association</h3>
+                            <p>Intelligently classifies and segments bulk-uploaded or scanned files by identifying document types and page ranges (e.g., index, judgment, petition, ID proofs, salary slips), ensuring structured and organized record management.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-layer-group"></i></div>
-                            <h3>Document Type Segregation</h3>
-                            <p>Automatic DOCTYPE association and segregation using advanced neural network patterns.</p>
+                            <h3>Automatic Metadata Extraction</h3>
+                            <p>Automatically captures and indexes key information (e.g., case details, patient data, IDs, dates) from ingested documents, enabling accurate classification, faster search, and streamlined document management across domains.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-magnifying-glass-plus"></i></div>
-                            <h3>AI Powered Search</h3>
-                            <p>Go beyond keywords with semantic search that understands intent and context.</p>
+                            <h3>Document Segregation</h3>
+                            <p> Automatically analyzes bulk-uploaded files, identifies their category or status (e.g., civil, criminal, pending, disposed), and routes them to the appropriate department or folder for structured and efficient document management.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-chart-line"></i></div>
-                            <h3>Predictive Insights & Analytics</h3>
-                            <p>Unlock hidden trends and predictive data patterns within your organizational knowledge base.</p>
+                            <h3>Multilingual Speech-to-Text</h3>
+                            <p>Converts spoken input in the selected language (e.g., Hindi) into accurate text, enabling hands-free note creation and voice-powered search across the system.</p>
+                        </div>
+                        <div className="ai-feature-card">
+                            <div className="ai-icon"><i className="fas fa-chart-line"></i></div>
+                            <h3>Multilingual Localization</h3>
+                            <p>Instantly adapts the entire VSDOX interface into the user’s selected language (e.g., Hindi, Malayalam, many more), delivering a seamless and user-friendly multilingual experience across the platform.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Redesigned Unified Productivity & Security Section */}
-            <section className="productivity-section reveal">
-                <div className="max-container">
-                    <div className="productivity-grid">
-                        <div className="prod-content">
-                            <span className="info-tag">Core Value Proposition</span>
-                            <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '24px' }}>Unified Productivity & Security</h2>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: 'var(--text-muted)', marginBottom: '24px' }}>
-                                All organizations want the highest productivity, security, and accessibility to all documents. Storing and accessing all organizational documents across departments, teams, and geographies is the key to success, security, and sustainability.
-                            </p>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: 'var(--text-muted)', marginBottom: '32px' }}>
-                                Our open-source based ECM enables moving your document databases online in a highly secure environment that is cloud-ready and scalable. It's the perfect place to store your archives and rich media formats.
-                            </p>
-                            <div className="hero-btns">
-                                <Link to="/solutions" className="btn-primary">Explore Solutions</Link>
-                            </div>
-                        </div>
-                        <div className="productivity-visuals">
-                            <div className="prod-card">
-                                <span className="prod-icon"><i className="fas fa-gauge-high"></i></span>
-                                <h4>Highest Productivity</h4>
-                            </div>
-                            <div className="prod-card">
-                                <span className="prod-icon"><i className="fas fa-user-lock"></i></span>
-                                <h4>Enterprise Security</h4>
-                            </div>
-                            <div className="prod-card">
-                                <span className="prod-icon"><i className="fas fa-earth-americas"></i></span>
-                                <h4>Global Access</h4>
-                            </div>
-                            <div className="prod-card">
-                                <span className="prod-icon"><i className="fas fa-cloud-arrow-up"></i></span>
-                                <h4>Cloud Scalability</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-            {/* ECM Workflow Section */}
-            <section className="workflow-detailed-section max-container reveal" style={{ padding: '80px 0' }}>
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                    <h2 style={{ fontSize: '36px', fontWeight: '800' }}>The ECM Workflow</h2>
-                    <p style={{ color: 'var(--text-muted)' }}>Aiding you in all aspects of documentation management.</p>
-                </div>
-                <div className="workflow-grid-v3">
-                    <div className="workflow-col">
-                        <div className="workflow-header">
-                            <div className="workflow-icon-box"><i className="fas fa-file-import"></i></div>
-                            <h3>Capture</h3>
-                        </div>
-                        <p>Capture, digitalize and secure data while saving and converting various file formats.</p>
-                        <ul className="dot-list">
-                            <li>Multilingual OCR</li>
-                            <li>Scanned Image Enhancement</li>
-                            <li>Compression</li>
-                            <li>Cleaning & QC</li>
-                            <li>Metadata Indexing</li>
-                            <li>Page-Level Tagging</li>
-                            <li>PDF Conversion</li>
-                            <li>Auto Upload to ECM</li>
-                        </ul>
-                    </div>
-                    <div className="workflow-col">
-                        <div className="workflow-header">
-                            <div className="workflow-icon-box"><i className="fas fa-magnifying-glass-chart"></i></div>
-                            <h3>Retrieve</h3>
-                        </div>
-                        <p>Securely retrieve files and documents using advanced filters and full-text indexing.</p>
-                        <ul className="dot-list">
-                            <li>Structured Folders</li>
-                            <li>Folder & Document-Level Access</li>
-                            <li>Role-based Access & Authorization</li>
-                            <li>Content type Segregation</li>
-                            <li>Advanced search</li>
-                            <li>Full Text search</li>
-                        </ul>
-                    </div>
-                    <div className="workflow-col">
-                        <div className="workflow-header">
-                            <div className="workflow-icon-box"><i className="fas fa-diagram-project"></i></div>
-                            <h3>Workflow</h3>
-                        </div>
-                        <p>Manage review, verification, hierarchies, security, and user configurations.</p>
-                        <ul className="dot-list">
-                            <li>Review and Approval Workflows (e.g., invoice verification)</li>
-                            <li>Multilevel Hierarchy Parallel Workflows</li>
-                            <li>Secured Workflows</li>
-                            <li>User Configurable Workflows</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            {/* ECM Features Section */}
-            <section className="features-v3-section reveal" style={{ background: '#f8fafc', padding: '100px 0' }}>
+            {/* Flexible Hosting Infrastructure */}
+            <section className="hosting-section reveal" style={{ padding: '80px 0', background: 'var(--section-alt)' }}>
                 <div className="max-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '800' }}>ECM Features</h2>
+                        <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px' }}>Flexible Hosting Infrastructure</h2>
+                        <p style={{ color: 'var(--text-muted)', maxWidth: '900px', margin: '0 auto', fontSize: '18px', lineHeight: '1.6' }}>
+                            VSDOX is designed for deployment flexibility, enabling organizations to choose the infrastructure model that aligns with their operational, compliance, and scalability requirements. Built on a high-availability, containerized, and modular architecture, VSDOX ensures performance, resilience, and seamless scalability across environments.
+                        </p>
                     </div>
-                    <div className="features-v3-grid">
-                        <div className="feature-v3-card">
-                            <h5>Secured Opensource</h5>
-                            <p>Certified Service Provider (RSP) for DSpace. Custom implementation with OWASP compliance.</p>
+
+                    <div className="hosting-grid">
+                        <div className="hosting-card">
+                            <div className="hosting-icon"><i className="fas fa-server"></i></div>
+                            <h3>On-Premise Deployment</h3>
+                            <p>VSDOX is fully capable of being hosted on your on-premise servers, providing complete control over data, infrastructure, security, and regulatory compliance.</p>
                         </div>
-                        <div className="feature-v3-card">
-                            <h5>Enterprise Integration</h5>
-                            <p>Integrate with existing applications like SAP and Google Enterprise seamlessly.</p>
+                        <div className="hosting-card">
+                            <div className="hosting-icon"><i className="fas fa-cloud"></i></div>
+                            <h3>Cloud Deployment</h3>
+                            <p>Host VSDOX on public or private cloud platforms—including MeitY-empanelled providers such as National Informatics Centre (NIC Cloud) and STPI—as well as leading hyperscalers like AWS and GCP.</p>
                         </div>
-                        <div className="feature-v3-card">
-                            <h5>Scalable & Future-ready</h5>
-                            <p>Cluster architecture and auto-scalable infrastructure tailored for future growth.</p>
-                        </div>
-                        <div className="feature-v3-card">
-                            <h5>Additional Hardware</h5>
-                            <p>Optimized for AWS, Azure, and Google Cloud. Save costs by using what you have.Deploy on on-premise server as well.</p>
-                        </div>
-                        <div className="feature-v3-card">
-                            <h5>Huge Data & Legacy Migration</h5>
-                            <p>End to end implementation with migrating legacy data and handling huge data that is hundreds of terabytes.</p>
-                        </div>
-                        <div className="feature-v3-card">
-                            <h5>Paperless office</h5>
-                            <p>Time to say Goodbye to file cabinets in your office basement.</p>
+                        <div className="hosting-card">
+                            <div className="hosting-icon"><i className="fas fa-network-wired"></i></div>
+                            <h3>Hybrid Deployment</h3>
+                            <p>Deploy VSDOX in a hybrid architecture that seamlessly integrates on-premise infrastructure with cloud environments, delivering optimal performance and compliance.</p>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Enterprise-Grade Security */}
+            <section className="security-section-enhanced reveal" style={{ padding: '100px 0' }}>
+                <div className="max-container">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px' }}>Enterprise-Grade Security</h2>
+                        <p style={{ color: 'var(--text-muted)', maxWidth: '900px', margin: '0 auto', fontSize: '18px' }}>
+                            VSDOX implements multi-layered security controls across application, network, and data layers to ensure confidentiality, integrity, availability, and regulatory compliance.
+                        </p>
+                    </div>
+
+                    <div className="security-features-grid">
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-key"></i></div>
+                            <div className="security-item-content">
+                                <h4>Multi-Factor Authentication (MFA)</h4>
+                                <p>Implements layered authentication mechanisms—including CAPTCHA, OTP-based verification, and email (SMTP) validation—to strengthen access control and prevent unauthorized system entry.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-users-gear"></i></div>
+                            <div className="security-item-content">
+                                <h4>Role-Based Access Control (RBAC)</h4>
+                                <p>Enforces granular access management based on roles and organizational hierarchy—controlling permissions at department, section, and content levels, including upload, view, edit, and delete rights.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-lock"></i></div>
+                            <div className="security-item-content">
+                                <h4>AES-256 & Encryption at Rest</h4>
+                                <p>Secures all stored data using AES-256 encryption, ensuring that even if storage assets are accessed directly, the data remains unreadable without authorized VSDOX access and decryption controls.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-shield-alt"></i></div>
+                            <div className="security-item-content">
+                                <h4>End-to-End TLS/SSL Encryption</h4>
+                                <p>VSDOX secures all data in transit using HTTPS with TLS/SSL encryption, ensuring protected communication between users, applications, and servers.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-id-badge"></i></div>
+                            <div className="security-item-content">
+                                <h4>Digitally Signed JWT Tokens</h4>
+                                <p>Implements secure session management through cryptographically signed JWT tokens, with validation on every API request to protect user identity details and prevent unauthorized access.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-directory-arrow-right"></i></div>
+                            <div className="security-item-content">
+                                <h4>LDAP & Active Directory Integration (SSO)</h4>
+                                <p>Enables secure and seamless authentication through integration with the client’s LDAP or Active Directory, ensuring centralized identity management and controlled user access.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-clipboard-list"></i></div>
+                            <div className="security-item-content">
+                                <h4>Audit Trails</h4>
+                                <p>Maintains comprehensive logs of all user and system activities—including read, write, edit, modify, delete, document view, and batch uploads—ensuring full traceability, accountability, and compliance.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-hourglass-half"></i></div>
+                            <div className="security-item-content">
+                                <h4>Time-Bound Access Control</h4>
+                                <p>Allows administrators to define controlled access durations, enabling authorized users to view or perform actions on documents only within a specified time period, after which access is automatically revoked.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-database"></i></div>
+                            <div className="security-item-content">
+                                <h4>Backup Scheduler & Disaster Recovery (DR)</h4>
+                                <p>Enables automated, time-based backups where administrators can configure specific schedules or intervals, ensuring VSDOX periodically secures both the database and asset store with structured recovery mechanisms for uninterrupted business continuity.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-code"></i></div>
+                            <div className="security-item-content">
+                                <h4>OWASP Compliance</h4>
+                                <p>Developed using secure coding practices aligned with OWASP Top 10 guidelines to proactively mitigate common web application security risks and vulnerabilities.</p>
+                            </div>
+                        </div>
+                        <div className="security-item">
+                            <div className="security-item-icon"><i className="fas fa-user-check"></i></div>
+                            <div className="security-item-content">
+                                <h4>VAPT & STQC Validation</h4>
+                                <p>VSDOX undergoes comprehensive Vulnerability Assessment & Penetration Testing (VAPT) and STQC evaluation by MeitY-empanelled security auditing agencies, with all identified vulnerabilities systematically mitigated to ensure compliance and secure deployment readiness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* End-to-End Digital Content Transformation Section */}
+            <section className="content-lifecycle-section reveal" style={{ padding: '80px 0' }}>
+                <div className="max-container">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px' }}>End-to-End Digital Content Transformation</h2>
+                        <p style={{ color: 'var(--text-muted)', maxWidth: '1000px', margin: '0 auto', fontSize: '18px', lineHeight: '1.6' }}>
+                            From physical file digitization to secure digital storage, VSDOX manages the complete content journey—capturing, structuring, routing through intelligent workflows, and enabling secure search and retrieval within a controlled environment.
+                        </p>
+                    </div>
+
+                    {/* Capture Section */}
+                    <div className="lifecycle-block capture-block reveal">
+                        <div className="lifecycle-header">
+                            <div className="info-tag">Digital Ingestion</div>
+                            <h3 style={{ fontSize: '32px', fontWeight: '800', margin: '15px 0' }}>Capture Solution</h3>
+                            <p style={{ fontSize: '16px', color: 'var(--text-main)', marginBottom: '24px' }}>
+                                A Capture Solution is specialized software designed to manage and monitor the complete workflow of document digitization—from physical file receipt to secure repository upload—ensuring traceability, accountability, and quality control at every stage.
+                            </p>
+                        </div>
+                        <div className="capture-workflow-grid">
+                            {[
+                                { title: "Inventory In & Batch Creation", desc: "Logging physical files and organizing them into trackable batches" },
+                                { title: "Batch Preparation & Barcoding", desc: "Sorting, tagging, and preparing files for systematic scanning" },
+                                { title: "High-Resolution Scanning", desc: "Converting physical documents into digital images" },
+                                { title: "Automated Image Processing", desc: "Auto punch-hole removal, despeckle, deskew, and intelligent enhancement" },
+                                { title: "Advanced Image Cleaning", desc: "Noise removal, dark spot correction, brightness adjustment, and quality optimization" },
+                                { title: "Multilingual OCR", desc: "Accurate text recognition across multiple languages to make documents searchable" },
+                                { title: "Metadata Indexing", desc: "Manual or AI-powered extraction of case numbers, names, IDs, and dates" },
+                                { title: "Page-Level Classification", desc: "Intelligent segregation and structuring of document sections" },
+                                { title: "Multi-Level Quality Checks", desc: "Scanning QC, Indexing QC, and Client QC for absolute accuracy" },
+                                { title: "Export & Secure Upload", desc: "Verified records exported as compliant PDFs (PDF/A) or ZIP with Dublin Core metadata." },
+                                { title: "Inventory Out Tracking", desc: "Recording physical file movement after digitization" }
+                            ].map((step, idx) => (
+                                <div key={idx} className="capture-step">
+                                    <span className="step-num">{idx + 1}</span>
+                                    <div>
+                                        <h5>{step.title}</h5>
+                                        <p>{step.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <p style={{ marginTop: '30px', padding: '20px', background: '#f8fafc', borderRadius: '12px', fontSize: '14px', fontStyle: 'italic', borderLeft: '4px solid var(--primary)' }}>
+                            The Capture Solution enforces process transparency, ensures data integrity, and provides real-time visibility into digitization progress and productivity metrics.
+                        </p>
+                    </div>
+
+                    {/* ECM Section */}
+                    <div className="lifecycle-block ecm-block reveal" style={{ marginTop: '100px' }}>
+                        <div className="lifecycle-header">
+                            <div className="info-tag">Strategic Content Management</div>
+                            <h3 style={{ fontSize: '32px', fontWeight: '800', margin: '15px 0' }}>VSDOX Enterprise Content Management System</h3>
+                            <p style={{ fontSize: '16px', color: 'var(--text-main)', marginBottom: '32px' }}>
+                                VSDOX delivers instant, secure, and intelligent access to enterprise, judicial, and institutional content through a robust platform built on a modern open-source technology stack.
+                            </p>
+                        </div>
+                        <div className="ecm-features-grid-v2">
+                            {[
+                                { title: "Built on Open-Source", desc: "Ensuring cost efficiency, flexibility, high performance, and freedom from vendor lock-in." },
+                                { title: "Multi-Factor Authentication", desc: "Layered verification (CAPTCHA, OTP, SMTP) to prevent unauthorized entry." },
+                                { title: "LDAP / AD Integration", desc: "Secure authentication through existing identity management systems." },
+                                { title: "Hierarchical Access", desc: "Structured repository with granular department and document-level controls." },
+                                { title: "Role-Based Access (RBAC)", desc: "Granular permissions for upload, view, edit, and delete rights." },
+                                { title: "Smart Categorization", desc: "Automatically organizes documents by type, status, or domain." },
+                                { title: "Workflow Steering", desc: "Configurable review and verification with role-based approval controls." },
+                                { title: "Advanced Faceted Search", desc: "Refined discovery using structured filters and dynamic facets." },
+                                { title: "Intelligent Search", desc: "Phonetic, fuzzy, thesaurus-based, and nested-faceted document discovery." },
+                                { title: "Multilingual UI", desc: "Seamless experience in the user's selected language scripts." },
+                                { title: "RAG-Based Q&A", desc: "Internal Retrieval-Augmented Generation for contextual document queries." }
+                            ].map((feat, idx) => (
+                                <div key={idx} className="ecm-feature-v2">
+                                    <div className="feat-icon"><i className="fas fa-check-circle"></i></div>
+                                    <div>
+                                        <h5>{feat.title}</h5>
+                                        <p>{feat.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Workflow Section */}
+                    <div className="lifecycle-block workflow-master-block reveal" style={{ marginTop: '100px' }}>
+                        <div className="lifecycle-header" style={{ textAlign: 'center', marginBottom: '50px' }}>
+                            <div className="info-tag">Process Automation</div>
+                            <h3 style={{ fontSize: '32px', fontWeight: '800', margin: '15px 0' }}>Workflow Management</h3>
+                            <p style={{ fontSize: '16px', color: 'var(--text-main)', maxWidth: '900px', margin: '0 auto' }}>
+                                VSDOX enables organizations to digitize physical document movement—transforming manual file circulation into secure, trackable, and auditable digital workflows tailored to organizational hierarchies.
+                            </p>
+                        </div>
+
+                        {/* Workflow Types Grid */}
+                        <div className="workflow-variants-grid">
+                            {/* Static Workflow */}
+                            <div className="workflow-variant-card">
+                                <h4>Static Multi-Level Approval</h4>
+                                <p className="variant-intro">A configurable, sequential approval chain (1, 2, or 3 levels) designed for structured verification and accountability.</p>
+                                <ul className="variant-details">
+                                    <li><strong>Structure:</strong> Sequential approval tailored to organizational hierarchy.</li>
+                                    <li><strong>Review:</strong> Reviewers validate content & metadata with mandatory comments.</li>
+                                    <li><strong>Correction:</strong> Rejected docs are corrected and resubmitted.</li>
+                                    <li><strong>Audit:</strong> Full action logging for compliance and traceability.</li>
+                                </ul>
+                                <div className="variant-footer">Structured, transparent, and flexible document integrity.</div>
+                            </div>
+
+                            {/* Dynamic Workflow */}
+                            <div className="workflow-variant-card">
+                                <h4>Dynamic / Ad-Hoc Workflow</h4>
+                                <p className="variant-intro">Highly flexible model enabling real-time routing and hierarchy modification for exceptional or complex cases.</p>
+                                <ul className="variant-details">
+                                    <li><strong>Flexibility:</strong> Real-time routing with on-the-fly reviewer assignment.</li>
+                                    <li><strong>Review:</strong> Authorized officers can assign/reassign reviewers at any stage.</li>
+                                    <li><strong>Multi-cycle:</strong> Documents can be resubmitted multiple times for verification.</li>
+                                    <li><strong>Logging:</strong> Every dynamic routing action is captured for full auditability.</li>
+                                </ul>
+                                <div className="variant-footer">Supports exceptional-case escalation and real-time collaboration.</div>
+                            </div>
+
+                            {/* Hierarchical/Sensitive Workflow */}
+                            <div className="workflow-variant-card highlight">
+                                <h4>Hierarchical Verification & Correction</h4>
+                                <p className="variant-intro">Multi-tier, audit-driven path for sensitive records (e.g., land docs) with dedicated reviewer and modifier levels.</p>
+                                <ul className="variant-details">
+                                    <li><strong>Hierarchy:</strong> Follows path (e.g., SR → DSR → IGR) with specific modifiers.</li>
+                                    <li><strong>Validation:</strong> Checks property details, party names, and critical fields.</li>
+                                    <li><strong>Modification:</strong> Rejected docs go to modifiers for data creation/correction.</li>
+                                    <li><strong>Traceability:</strong> Maintaining operational accuracy for critical information.</li>
+                                </ul>
+                                <div className="variant-footer">Precise multi-level correction for high-compliance records.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
 
 
 
@@ -280,14 +416,11 @@ const Home = () => {
                     <div className="trust-header-premium">
                         <div className="trust-title-area">
                             <div className="info-tag">Industry Validation</div>
-                            <h2 style={{ fontSize: '40px', fontWeight: '800', margin: '20px 0' }}>Trusted Recognition & Global Scale</h2>
+                            <h2 style={{ fontSize: '40px', fontWeight: '800', margin: '20px 0' }}>Trusted Recognition</h2>
                             <p style={{ fontSize: '18px', color: 'var(--text-muted)', maxWidth: '600px' }}>
-                                Awarded for excellence in DMS and BPM solutions by global industry experts for our commitment to security and innovation.
+                                VSDOX is recognized for its commitment to quality and operational excellence through international certifications and maturity standards.
                             </p>
                             <div className="industry-pills">
-                                <span className="pill-item">Government Seal</span>
-                                <span className="pill-item">Banking Compliance</span>
-                                <span className="pill-item">Judiciary Ready</span>
                                 <span className="pill-item">ISO 9001:2015</span>
                                 <span className="pill-item">CMMI Level 3</span>
                             </div>
@@ -301,7 +434,7 @@ const Home = () => {
                             <div className="recognition-badge">
                                 <img src={cmmiCert} alt="CMMI Level 3 Maturity" />
                                 <h4>Maturity</h4>
-                                <p>CMMI Level 3</p>
+                                <p>CMMI Level 3 from CMMI Institute</p>
                             </div>
                         </div>
                     </div>
@@ -311,7 +444,7 @@ const Home = () => {
                     <div className="max-container">
                         <div className="trust-stats-grid">
                             <div className="stat-item-premium">
-                                <span className="stat-number">2M+</span>
+                                <span className="stat-number">200M+</span>
                                 <span className="stat-label">Documents Processed</span>
                             </div>
                             <div className="stat-item-premium">
@@ -343,18 +476,8 @@ const Home = () => {
 
                     <div className="verticals-grid">
                         <div className="vertical-card">
-                            <div className="vertical-icon"><i className="fas fa-city"></i></div>
-                            <h3>Corporate</h3>
-                            <ul className="vertical-list">
-                                <li><strong>Human Resource:</strong> Employee docs & employment policies</li>
-                                <li><strong>Secretarial:</strong> Shareholder, Investor relation documents</li>
-                                <li><strong>Regular functions:</strong> R&D, Finance, Customer Experience content</li>
-                            </ul>
-                        </div>
-
-                        <div className="vertical-card">
-                            <div className="vertical-icon"><i className="fas fa-building-columns"></i></div>
-                            <h3>BFSI</h3>
+                            <div className="vertical-icon"><i className="fas fa-university"></i></div>
+                            <h3>Banking & BFSI</h3>
                             <ul className="vertical-list">
                                 <li><strong>Banking:</strong> Account opening forms, Account holder details & forms, Retail & Commercial lending</li>
                                 <li><strong>Insurance:</strong> New policies, Policy Servicing, Service request management</li>
@@ -362,11 +485,21 @@ const Home = () => {
                         </div>
 
                         <div className="vertical-card">
-                            <div className="vertical-icon"><i className="fas fa-scale-balanced"></i></div>
-                            <h3>Government</h3>
+                            <div className="vertical-icon"><i className="fas fa-hospital"></i></div>
+                            <h3>Healthcare</h3>
                             <ul className="vertical-list">
-                                <li><strong>Judiciary:</strong> Case File Digitization</li>
-                                <li><strong>Ministries:</strong> Automation Repositories, Grants management</li>
+                                <li><strong>Hospitals & Clinics:</strong> Patient Records digitization, easy access for appointments</li>
+                                <li><strong>Insurance:</strong> Patient case history and claims management</li>
+                            </ul>
+                        </div>
+
+                        <div className="vertical-card">
+                            <div className="vertical-icon"><i className="fas fa-building"></i></div>
+                            <h3>Corporate</h3>
+                            <ul className="vertical-list">
+                                <li><strong>Human Resource:</strong> Employee docs & employment policies</li>
+                                <li><strong>Secretarial:</strong> Shareholder, Investor relation documents</li>
+                                <li><strong>Regular functions:</strong> R&D, Finance, Customer Experience content</li>
                             </ul>
                         </div>
 
@@ -380,11 +513,20 @@ const Home = () => {
                         </div>
 
                         <div className="vertical-card">
-                            <div className="vertical-icon"><i className="fas fa-hospital-user"></i></div>
-                            <h3>Health</h3>
+                            <div className="vertical-icon"><i className="fas fa-landmark"></i></div>
+                            <h3>Government</h3>
                             <ul className="vertical-list">
-                                <li><strong>Hospitals & Clinics:</strong> Patient Records digitization, easy access for appointments</li>
-                                <li><strong>Insurance:</strong> Patient case history and claims management</li>
+                                <li><strong>Ministries:</strong> Automation Repositories, Grants management</li>
+                                <li><strong>Public Services:</strong> Citizen record digitization & portal integration</li>
+                            </ul>
+                        </div>
+
+                        <div className="vertical-card">
+                            <div className="vertical-icon"><i className="fas fa-gavel"></i></div>
+                            <h3>Judiciary</h3>
+                            <ul className="vertical-list">
+                                <li><strong>Case Records:</strong> Digital case files, evidence management, & judgment archives</li>
+                                <li><strong>E-Courts:</strong> Integration with court management systems for faster retrieval</li>
                             </ul>
                         </div>
                     </div>
@@ -422,7 +564,7 @@ const Home = () => {
                     <div className="why-vir-card">
                         <div className="why-icon"><i className="fas fa-industry"></i></div>
                         <h4>Industry-specific solutions</h4>
-                        <p>Vertical solutions for Corporate, BFSI, Government, Education, and Health industries.</p>
+                        <p>Vertical solutions for Banking & BFSI, Healthcare, Corporate, Education, Government, and Judiciary.</p>
                     </div>
                     <div className="why-vir-card">
                         <div className="why-icon"><i className="fas fa-ranking-star"></i></div>

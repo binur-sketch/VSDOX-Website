@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ClientLogos from '../components/ClientLogos';
+import MilestoneTimeline from '../components/MilestoneTimeline';
 
 const PageHero = ({ title, subtitle, bgImage }) => (
     <section className="page-hero-container">
@@ -334,15 +335,6 @@ export const About = () => {
         window.scrollTo(0, 0);
         document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in'));
     }, []);
-    const milestones = [
-        { year: "2015", title: "Inception", desc: "Vir Softech conceived by passionate technologists." },
-        { year: "2016", title: "First Product", desc: "Launch of Eval OMR. Recognized as Showcase Startup by Delhi Govt." },
-        { year: "2017", title: "Govt Recognition", desc: "Recognized as 'Startup India'. MoE deploys Eval OMR in 700 districts." },
-        { year: "2018", title: "Global Expansion", desc: "Japanese Print OEM contract. Top 20 DMS by CIO Review." },
-        { year: "2019", title: "Major Wins", desc: "Signed major insurance DMS contract. Launched Eval CBT." },
-        { year: "2020", title: "Auto Sector", desc: "Large automobile DMS implementation. Prestigious medical entrance exams." },
-        { year: "2021", title: "US Market", desc: "US print software released. Top 10 ECM by CIO Review." }
-    ];
 
     const achievementList = [
         "Showcase Start-up - India International Trade Fair 2016",
@@ -397,24 +389,11 @@ export const About = () => {
                 </div>
             </section>
 
-            <section style={{ background: 'var(--section-alt)', padding: '80px 0' }}>
+            <section style={{ background: 'var(--section-alt)', padding: '0' }}>
+                <MilestoneTimeline />
+
                 <div className="max-container reveal">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <span className="info-tag">OUR JOURNEY</span>
-                        <h2>Milestones & Achievements</h2>
-                    </div>
-
-                    <div className="capabilities-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '60px' }}>
-                        {milestones.map((m, i) => (
-                            <div key={i} className="industry-block" style={{ position: 'relative', overflow: 'hidden' }}>
-                                <div style={{ fontSize: '40px', fontWeight: '800', color: 'rgba(29, 99, 237, 0.1)', position: 'absolute', top: '10px', right: '20px' }}>{m.year}</div>
-                                <h4 style={{ color: 'var(--primary)', marginBottom: '10px' }}>{m.title}</h4>
-                                <p>{m.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div style={{ background: 'white', padding: '40px', borderRadius: '20px', border: '1px solid var(--border)' }}>
+                    <div style={{ background: 'white', padding: '40px', borderRadius: '20px', border: '1px solid var(--border)', marginBottom: '80px' }}>
                         <h3 style={{ marginBottom: '20px', textAlign: 'center' }}>Awards & Recognition</h3>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
                             {achievementList.map((ach, i) => (

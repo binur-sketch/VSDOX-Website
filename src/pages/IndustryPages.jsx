@@ -436,3 +436,59 @@ export const Government = () => {
         </>
     );
 };
+
+/* ═══════════════════════════════════════════════════════════
+   JUDICIARY
+   ═══════════════════════════════════════════════════════════ */
+export const Judiciary = () => {
+    useEffect(() => { window.scrollTo(0, 0); document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in')); }, []);
+    return (
+        <>
+            <PageHero
+                tag="INDUSTRY SOLUTION · JUDICIARY"
+                title="Digital Transformation for Courts & Legal Systems"
+                subtitle="Streamline e-filing, digitize case records, and enable intelligent information retrieval for high courts, district courts, and legal institutions."
+                bgColor="linear-gradient(135deg, #0f172a 0%, #2d3748 100%)"
+            />
+
+            <StatsStrip stats={[
+                { value: '15+', label: 'High Courts Digitized' },
+                { value: '25M+', label: 'Judicial Records Managed' },
+                { value: '75%', label: 'Faster Case File Retrieval' },
+                { value: 'Secure', label: 'End-to-End Encryption' }
+            ]} />
+
+            <section style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', padding: '100px 0' }}>
+                <div className="max-container">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }} className="reveal">
+                        <span className="info-tag" style={{ background: 'rgba(29,99,237,0.15)', color: '#60a5fa', border: '1px solid rgba(29,99,237,0.2)' }}>Platform Capabilities</span>
+                        <h2 style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: '800', color: 'white', margin: '20px 0' }}>E-Court & Legal Document Management</h2>
+                        <p style={{ color: '#94a3b8', maxWidth: '700px', margin: '0 auto', fontSize: '17px' }}>Trusted by over 15 High Courts in India to manage the digitisation and retrieval of millions of case files.</p>
+                    </div>
+                    <FeatureGrid features={[
+                        { icon: 'fa-gavel', title: 'Case File Digitization', desc: 'Convert legacy physical case files into structured, searchable digital records with high-fidelity OCR.' },
+                        { icon: 'fa-file-signature', title: 'E-Filing Workflows', desc: 'Secure digital submission of petitions, evidence, and legal documents with automated indexing.' },
+                        { icon: 'fa-scale-balanced', title: 'Judgment & Order Repository', desc: 'Searchable database of judgments and orders with AI-powered semantic search and citation cross-linking.' },
+                        { icon: 'fa-book', title: 'Legal Research & Discovery', desc: 'Advanced search capabilities to find precedents and relevant case law across multiple years and courts.' },
+                        { icon: 'fa-user-lock', title: 'Audit Trail & Compliance', desc: 'Complete history of document access and modifications to ensure the integrity of judicial records.' },
+                        { icon: 'fa-network-wired', title: 'Integrated Court Ecosystem', desc: 'Connect with ICJS and other judicial data grids for seamless information exchange.' },
+                    ]} />
+                </div>
+            </section>
+
+            <BenefitsList
+                title="Modernizing Justice Through Technology"
+                desc="VsDOX enables judiciary systems to reduce pendency, improve transparency, and provide faster access to justice through digital transformation."
+                benefits={[
+                    { icon: 'fa-bolt-lightning', title: 'Instant Record Retrieval', desc: 'Judges and legal staff can find precise case information in seconds, not hours.' },
+                    { icon: 'fa-shield-halved', title: 'Tamper-Proof Storage', desc: 'Ensuring the long-term preservation and security of sensitive legal documents.' },
+                    { icon: 'fa-users-viewfinder', title: 'Improved Citizen Access', desc: 'Enable citizens to access case status and orders online through secure portals.' },
+                    { icon: 'fa-paper-plane', title: 'Paperless Courtrooms', desc: 'Reduce the reliance on physical files and move towards a modern, efficient digital environment.' },
+                ]}
+            />
+
+            <CTABanner title="Ready to Modernize Your Judicial System?" subtitle="Join the 15+ High Courts already using VsDOX to power their digital transformation." />
+            <ClientLogos />
+        </>
+    );
+};
