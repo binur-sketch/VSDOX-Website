@@ -17,37 +17,30 @@ import client15 from '../assets/client_15.jpg';
 import client16 from '../assets/client_16.webp';
 import client17 from '../assets/client_17.png';
 
-const clients = [
-    { name: "Army Medical College", logo: "🏥" },
-    { name: "Bihar Haj Committe", logo: "🕌" },
-    { name: "Himalayan Forest Research Institute, Shimla", logo: "🌲" },
-    { name: "Indian Coast Guard", logo: "⚓" },
-    { name: "NCERT", logo: "📚" },
-    { name: "NIA", logo: "🕵️" },
-    { name: "Army Public School", logo: "🏫" },
-    { name: "CRPF", logo: "🛡️" },
-    { name: "India Post", logo: "📯" },
-    { name: "Indian Army", logo: "⚔️" },
-    { name: "NCRB", logo: "📜" },
-    { name: "NID, MP", logo: "🎨" },
+const baseClients = [
     { name: "Indian Patent Office", logo: client1 },
     { name: "National Archives", logo: client2 },
+    { name: "OCAC", logo: client3 },
+    { name: "Odisha High Court", logo: client4 },
+    { name: "Madras High Court", logo: client5 },
+    { name: "Allahabad High Court", logo: client6 },
     { name: "HDFC Life", logo: client7 },
+    { name: "Rajasthan High Court", logo: client8 },
     { name: "Hero MotoCorp", logo: client9 },
+    { name: "Aditya Birla Capital", logo: client10 },
     { name: "IIT Delhi", logo: client11 },
+    { name: "CONCOR", logo: client12 },
     { name: "AIIMS New Delhi", logo: client13 },
-    { name: "C-DAC", logo: "💻" },
-    { name: "Ministry of Defense", logo: "🎖️" },
-    { name: "Department of Justice", logo: "⚖️" },
-    { name: "NIC Cloud", logo: "☁️" },
-    { name: "STPI", logo: "🛰️" },
-    { name: "World Bank Projects", logo: "🌍" },
-    { name: "NABARD", logo: "🚜" },
-    { name: "SEBI", logo: "📈" },
-    { name: "RBI Archives", logo: "🏦" },
-    { name: "GeM Support", logo: "🛒" },
-    { name: "Startup India", logo: "🚀" },
-    { name: "NITI Aayog", logo: "📋" }
+    { name: "Utkarsh Bank", logo: client14 },
+    { name: "Govt of Maharashtra", logo: client15 },
+    { name: "Kerala High Court", logo: client16 },
+    { name: "IIC Delhi", logo: client17 }
+];
+
+// Repeat logos to fill the 6x5 grid (30 items total)
+const clients = [
+    ...baseClients,
+    ...baseClients.slice(0, 13) // Add 13 more to make it 30
 ];
 
 const ClientLogos = () => {
