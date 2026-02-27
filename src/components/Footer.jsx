@@ -16,17 +16,20 @@ const Footer = () => {
                             Empowering organizations with AI-driven Enterprise Content Management solutions. Move your document databases online with confidence.
                         </p>
                         <div className="social-links-footer">
-                            <a href="https://www.instagram.com/virsoftech" target="_blank" rel="noopener noreferrer" className="social-icon-box social-instagram" title="Instagram">
+                            <a href="https://www.instagram.com/virsoftech/" target="_blank" rel="noopener noreferrer" className="social-icon-box social-instagram" title="Instagram">
                                 <i className="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.youtube.com/@virsoftech" target="_blank" rel="noopener noreferrer" className="social-icon-box social-youtube" title="YouTube">
+                            <a href="https://www.youtube.com/c/VirSoftech" target="_blank" rel="noopener noreferrer" className="social-icon-box social-youtube" title="YouTube">
                                 <i className="fab fa-youtube"></i>
                             </a>
-                            <a href="https://www.facebook.com/virsoftech" target="_blank" rel="noopener noreferrer" className="social-icon-box social-facebook" title="Facebook">
+                            <a href="https://www.facebook.com/virsoftech.official/" target="_blank" rel="noopener noreferrer" className="social-icon-box social-facebook" title="Facebook">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://www.linkedin.com/company/vir-softech" target="_blank" rel="noopener noreferrer" className="social-icon-box social-linkedin" title="LinkedIn">
+                            <a href="https://in.linkedin.com/company/virsoftech" target="_blank" rel="noopener noreferrer" className="social-icon-box social-linkedin" title="LinkedIn">
                                 <i className="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/virsoftech" target="_blank" rel="noopener noreferrer" className="social-icon-box social-x" title="X (Twitter)">
+                                <i className="fab fa-x-twitter"></i>
                             </a>
                         </div>
                     </div>
@@ -84,7 +87,14 @@ const Footer = () => {
                             </li>
                             <li>
                                 <span className="info-icon"><i className="fas fa-phone"></i></span>
-                                <a href="tel:+911204325497">+91 120 432 5497</a>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                                    <a href="tel:18005717711">18005717711</a>
+                                    <a href="tel:01204325497">0120 - 4325 497</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span className="info-icon"><i className="fab fa-whatsapp"></i></span>
+                                <a href="https://wa.me/919319086751" target="_blank" rel="noopener noreferrer">9319086751</a>
                             </li>
                         </ul>
                     </div>

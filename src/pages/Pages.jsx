@@ -287,16 +287,26 @@ export const Contact = () => (
                 </div>
                 <div className="contact-info-boxes">
                     <div className="contact-box glass-card">
-                        <h4>Headquarters</h4>
+                        <h4>Corporate Office (HQ)</h4>
                         <p>Vir Softech Pvt. Ltd.<br />A 306, The I Thum, Plot No. A 40, Sector 62, Noida, UP, India</p>
                     </div>
                     <div className="contact-box glass-card">
-                        <h4>Phone & Email</h4>
-                        <p>Tel: +91 120 432 5497<br />Email: corp@virsoftech.com</p>
+                        <h4>International Offices</h4>
+                        <p><strong>Japan:</strong> West Bldg. 302, 3-26-8 Takaido Higashi, Suginami-ku, Tokyo</p>
+                        <p><strong>USA:</strong> Silicon Valley, California</p>
                     </div>
                     <div className="contact-box glass-card">
-                        <h4>Business Hours</h4>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday/Sunday: Closed</p>
+                        <h4>Phone & Email</h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            <p style={{ margin: 0 }}><strong>Toll-Free:</strong> <a href="tel:18005717711">18005717711</a></p>
+                            <p style={{ margin: 0 }}><strong>Landline:</strong> <a href="tel:01204325497">0120 - 4325 497</a></p>
+                            <p style={{ margin: 0 }}><strong>WhatsApp:</strong> <a href="https://wa.me/919319086751" target="_blank" rel="noopener noreferrer">9319086751</a></p>
+                            <p style={{ margin: 0 }}><strong>Email:</strong> <a href="mailto:corp@virsoftech.com">corp@virsoftech.com</a></p>
+                        </div>
+                    </div>
+                    <div className="contact-box glass-card">
+                        <h4>Registered Office</h4>
+                        <p>C-2/54, Ashok Vihar, Phase-II, North West, New Delhi, India – 110052</p>
                     </div>
                 </div>
             </div>
@@ -317,12 +327,12 @@ export const Legal = () => (
                 <h3>Privacy Policy</h3>
                 <p>Effective Date: January 1, 2024</p>
                 <p>
-                    At VsDox, we are committed to protecting your privacy. This policy outlines how we handle your data and documents...
+                    At VSDox, we are committed to protecting your privacy. This policy outlines how we handle your data and documents...
                 </p>
                 <hr style={{ margin: '40px 0', border: 'none', borderTop: '1px solid var(--border)' }} />
                 <h3>Terms of Service</h3>
                 <p>
-                    By using VsDox, you agree to comply with our acceptable use policies. We provide a 99.9% uptime guarantee for all professional tier accounts...
+                    By using VSDox, you agree to comply with our acceptable use policies. We provide a 99.9% uptime guarantee for all professional tier accounts...
                 </p>
             </div>
         </section>

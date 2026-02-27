@@ -154,7 +154,7 @@ export const BankingBFSI = () => {
 
             <BenefitsList
                 title="Measurable Business Impact"
-                desc="Organizations in the BFSI sector using VsDOX have transformed their document operations, reducing processing time and compliance risk dramatically."
+                desc="Organizations in the BFSI sector using VSDOX have transformed their document operations, reducing processing time and compliance risk dramatically."
                 benefits={[
                     { icon: 'fa-clock', title: 'Faster Customer Onboarding', desc: 'Reduce account opening time from days to hours with automated KYC and digital verification.' },
                     { icon: 'fa-circle-check', title: 'Zero Compliance Gaps', desc: 'Automated retention policies and regulatory reporting ensure zero audit findings.' },
@@ -179,7 +179,7 @@ export const BankingBFSI = () => {
                 </div>
             </section>
 
-            <CTABanner title="Ready to Modernize Your BFSI Operations?" subtitle="Join leading banks and insurers digitizing their document workflows with VsDOX." />
+            <CTABanner title="Ready to Modernize Your BFSI Operations?" subtitle="Join leading banks and insurers digitizing their document workflows with VSDOX." />
             <ClientLogos />
         </>
     );
@@ -227,7 +227,7 @@ export const Healthcare = () => {
 
             <BenefitsList
                 title="Transforming Patient Care Through Digital Records"
-                desc="Healthcare organizations using VsDOX improve care quality by having the right documents at the right time — securely, efficiently, and in compliance."
+                desc="Healthcare organizations using VSDOX improve care quality by having the right documents at the right time — securely, efficiently, and in compliance."
                 benefits={[
                     { icon: 'fa-bolt', title: 'Instant Record Access', desc: 'Retrieve any patient record in seconds with full-text and metadata search.' },
                     { icon: 'fa-hospital-user', title: 'Improved Patient Safety', desc: 'Reduce medical errors with accurate, always-accessible patient history.' },
@@ -284,7 +284,7 @@ export const Corporate = () => {
 
             <BenefitsList
                 title="Drive Operational Excellence on the Shop Floor"
-                desc="Leading manufacturers trust VsDOX to maintain product quality, reduce downtime, and pass audits with confidence."
+                desc="Leading manufacturers trust VSDOX to maintain product quality, reduce downtime, and pass audits with confidence."
                 benefits={[
                     { icon: 'fa-code-branch', title: 'Version Control & Change Management', desc: 'Never use an outdated drawing again. Enforce controlled document distribution.' },
                     { icon: 'fa-triangle-exclamation', title: 'ISO & IATF Compliance', desc: 'Out-of-the-box support for ISO 9001, IATF 16949, and other international quality standards.' },
@@ -318,7 +318,6 @@ export const Education = () => {
                 { value: '2M+', label: 'Academic Records Managed' },
                 { value: '100+', label: 'Institutions Served' },
                 { value: '90%', label: 'Reduction in Record Retrieval Time' },
-                { value: 'DSpace', label: 'Certified RSP Partner' }
             ]} />
 
             <section style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', padding: '100px 0' }}>
@@ -329,7 +328,7 @@ export const Education = () => {
                         <p style={{ color: '#94a3b8', maxWidth: '700px', margin: '0 auto', fontSize: '17px' }}>A trusted platform powering digital transformation for IITs, AIIMs, universities, and research institutions.</p>
                     </div>
                     <FeatureGrid features={[
-                        { icon: 'fa-book-open', title: 'Institutional Repositories', desc: 'DSpace-powered digital repository for research papers, theses, journals, and grey literature with DOI minting.' },
+                        { icon: 'fa-book-open', title: 'Institutional Repositories', desc: 'Digital repository for research papers, theses, journals, and grey literature with DOI minting.' },
                         { icon: 'fa-graduation-cap', title: 'Student Records Management', desc: 'Secure, searchable management of admission forms, transcripts, certificates, and examination records.' },
                         { icon: 'fa-landmark', title: 'Library Digitization', desc: 'Convert rare books, maps, manuscripts, and physical archives into searchable, accessible digital assets.' },
                         { icon: 'fa-share-nodes', title: 'Knowledge Sharing & Discovery', desc: 'Enable cross-institutional knowledge sharing with OAI-PMH compliant open-access repositories.' },
@@ -341,7 +340,7 @@ export const Education = () => {
 
             <BenefitsList
                 title="Empowering Academic Excellence Through Digital Transformation"
-                desc="From the library basement to the cloud — VsDOX preserves, organizes, and makes accessible the institutional knowledge that shapes the future."
+                desc="From the library basement to the cloud — VSDOX preserves, organizes, and makes accessible the institutional knowledge that shapes the future."
                 benefits={[
                     { icon: 'fa-server', title: 'Scalable to Any Institution Size', desc: 'From small colleges to research universities managing terabytes of academic content.' },
                     { icon: 'fa-magnifying-glass-plus', title: 'Full-Text Search Across Languages', desc: 'Students and researchers find relevant content instantly with multilingual full-text indexing.' },
@@ -410,7 +409,7 @@ export const Government = () => {
 
             <BenefitsList
                 title="Powering e-Governance for a Digital India"
-                desc="From the Cabinet Secretariat to the district court, VsDOX enables governments to serve citizens faster, more transparently, and more securely."
+                desc="From the Cabinet Secretariat to the district court, VSDOX enables governments to serve citizens faster, more transparently, and more securely."
                 benefits={[
                     { icon: 'fa-server', title: 'On-Premise Sovereignty', desc: 'Full on-premise deployment option for sensitive government data with no cloud dependency.' },
                     { icon: 'fa-gem', title: 'GeM Registered', desc: 'Available on Government e-Marketplace for simplified government procurement.' },
@@ -431,7 +430,7 @@ export const Government = () => {
                 </div>
             </section>
 
-            <CTABanner title="Partner With Us for a Digital Government" subtitle="Join India's leading government institutions in the digital transformation journey with VsDOX." />
+            <CTABanner title="Partner With Us for a Digital Government" subtitle="Join India's leading government institutions in the digital transformation journey with VSDOX." />
             <ClientLogos />
         </>
     );
@@ -478,7 +477,7 @@ export const Judiciary = () => {
 
             <BenefitsList
                 title="Modernizing Justice Through Technology"
-                desc="VsDOX enables judiciary systems to reduce pendency, improve transparency, and provide faster access to justice through digital transformation."
+                desc="VSDOX enables judiciary systems to reduce pendency, improve transparency, and provide faster access to justice through digital transformation."
                 benefits={[
                     { icon: 'fa-bolt-lightning', title: 'Instant Record Retrieval', desc: 'Judges and legal staff can find precise case information in seconds, not hours.' },
                     { icon: 'fa-shield-halved', title: 'Tamper-Proof Storage', desc: 'Ensuring the long-term preservation and security of sensitive legal documents.' },
@@ -487,7 +486,7 @@ export const Judiciary = () => {
                 ]}
             />
 
-            <CTABanner title="Ready to Modernize Your Judicial System?" subtitle="Join the 15+ High Courts already using VsDOX to power their digital transformation." />
+            <CTABanner title="Ready to Modernize Your Judicial System?" subtitle="Join the 15+ High Courts already using VSDOX to power their digital transformation." />
             <ClientLogos />
         </>
     );

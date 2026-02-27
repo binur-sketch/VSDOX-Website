@@ -39,7 +39,7 @@ const caseStudies = [
         logo: '🏛️',
         title: 'How HDFC Life Digitized 10M+ Policy Documents',
         challenge: 'HDFC Life faced mounting pressure from paper-based policy storage, slow claim processing, and regulatory audits requiring rapid document retrieval.',
-        solution: 'Deployed VsDOX ECM with AI-powered document classification, OCR, and a rules-based workflow engine for automated claim routing.',
+        solution: 'Deployed VSDOX ECM with AI-powered document classification, OCR, and a rules-based workflow engine for automated claim routing.',
         results: ['70% faster claim settlement processing', '10M+ policy documents digitized in 6 months', 'Zero failed regulatory audits post-deployment', '45% reduction in document storage costs'],
         industry: 'Insurance'
     },
@@ -50,7 +50,7 @@ const caseStudies = [
         logo: '⚖️',
         title: 'Allahabad High Court: 5M+ Case Files Digitized',
         challenge: 'One of India\'s largest High Courts was managing millions of physical case files, causing severe retrieval delays, physical space constraints, and access issues.',
-        solution: 'VsDOX deployed a custom judicial ECM with multilingual OCR (Hindi & English), full-text search across all case documents, and e-filing workflows.',
+        solution: 'VSDOX deployed a custom judicial ECM with multilingual OCR (Hindi & English), full-text search across all case documents, and e-filing workflows.',
         results: ['5M+ case files fully digitized', '95% reduction in physical document retrieval time', 'Judges access files remotely from any device', 'Robust audit trail for all document lifecycle events'],
         industry: 'Government / Judiciary'
     },
@@ -61,7 +61,7 @@ const caseStudies = [
         logo: '🏍️',
         title: 'Hero MotoCorp Saves 40% Operational Cost with ECM',
         challenge: 'Hero MotoCorp\'s engineering, compliance, and HR teams were managing thousands of critical documents across disconnected shared drives and physical files.',
-        solution: 'Enterprise-wide VsDOX deployment integrating with their SAP ERP, automated document routing, version-controlled engineering drawing management.',
+        solution: 'Enterprise-wide VSDOX deployment integrating with their SAP ERP, automated document routing, version-controlled engineering drawing management.',
         results: ['40% reduction in overall operational document costs', 'Engineering drawings now version-controlled across 12 plants', '100% paperless HR onboarding process', 'SAP-integrated purchase order document workflow'],
         industry: 'Corporate / Automotive'
     },
@@ -72,7 +72,7 @@ const caseStudies = [
         logo: '🏥',
         title: 'AIIMS New Delhi: Paperless OPD & Patient Records',
         challenge: 'AIIMS was handling hundreds of thousands of OPD records, referral letters, and lab reports in physical form, causing delays in treatment workflows.',
-        solution: 'VsDOX was deployed to digitize all patient-facing documents, with role-based access for doctors and HIPAA-compliant document handling.',
+        solution: 'VSDOX was deployed to digitize all patient-facing documents, with role-based access for doctors and HIPAA-compliant document handling.',
         results: ['3M+ patient records securely digitized', 'Doctors access patient history in under 5 seconds', 'Insurance claim documentation automated', 'HIPAA-compliant access controls fully enforced'],
         industry: 'Healthcare'
     },
@@ -83,7 +83,7 @@ const caseStudies = [
         logo: '🎓',
         title: 'IIT Delhi Builds World-Class Research Repository',
         challenge: 'IIT Delhi needed a scalable, open-access institutional repository for research papers, theses, and conference proceedings to boost global academic visibility.',
-        solution: 'Custom DSpace-based institutional repository with OAI-PMH open access compliance, multilingual search, and full integration with the university\'s existing library systems.',
+        solution: 'Custom institutional repository with OAI-PMH open access compliance, multilingual search, and full integration with the university\'s existing library systems.',
         results: ['200,000+ research publications accessible online', 'DOI minting for all published research', 'Global discoverability via Google Scholar integration', 'Zero licensing cost with open-source ECM foundation'],
         industry: 'Education / Research'
     },
@@ -94,7 +94,7 @@ const caseStudies = [
         logo: '📋',
         title: 'Indian Patent Office: Patent Archive Modernization',
         challenge: 'IPO was managing decades of physical patent applications, drawings, and correspondence that needed to be digitized, indexed, and made searchable.',
-        solution: 'VsDOX captured, OCR\'d, and structured millions of patent documents with specialized metadata schemas for IPC classification and applicant data.',
+        solution: 'VSDOX captured, OCR\'d, and structured millions of patent documents with specialized metadata schemas for IPC classification and applicant data.',
         results: ['Millions of patent records digitized and indexed', 'Patent examiners find prior art in minutes vs. hours', 'Full integration with CGPDTM national IP database', 'Reduced examination turnaround time by 35%'],
         industry: 'Government / IPR'
     }
@@ -111,7 +111,7 @@ export const CaseStudies = () => {
             <CompanyPageHero
                 tag="SUCCESS STORIES"
                 title="Real Results. Real Clients. Real Impact."
-                subtitle="Discover how leading organizations across India and the globe transformed their document operations with VsDOX AI-powered ECM."
+                subtitle="Discover how leading organizations across India and the globe transformed their document operations with VSDOX AI-powered ECM."
             />
 
             {/* Filter Bar */}
@@ -178,7 +178,7 @@ export const CaseStudies = () => {
             <section className="cta-section reveal">
                 <div className="max-container" style={{ textAlign: 'center' }}>
                     <h2>Your Success Story Starts Here</h2>
-                    <p>Join hundreds of organizations who have transformed their document operations with VsDOX.</p>
+                    <p>Join hundreds of organizations who have transformed their document operations with VSDOX.</p>
                     <Link to="/contact" className="btn-primary" style={{ background: 'white', color: 'var(--primary)', marginTop: '30px', display: 'inline-block' }}>Schedule a Demo</Link>
                 </div>
             </section>
@@ -279,10 +279,12 @@ export const ContactUs = () => {
                             <div style={{ marginBottom: '32px' }}>
                                 <h3 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '24px', color: 'var(--text-dark)' }}>Contact Information</h3>
                                 {[
-                                    { icon: 'fa-location-dot', color: '#dc2626', title: 'Headquarters', lines: ['Vir Softech Pvt. Ltd.', 'A 306, The I Thum, Plot No. A 40,', 'Sector 62, Noida, UP – 201301, India'] },
-                                    { icon: 'fa-phone', color: '#16a34a', title: 'Phone', lines: ['+91 120 432 5497'] },
+                                    { icon: 'fa-location-dot', color: '#dc2626', title: 'Corporate Office (HQ)', lines: ['Vir Softech Pvt. Ltd.', 'A 306, The I Thum, Plot No. A 40,', 'Sector 62, Noida, UP – 201301, India'] },
+                                    { icon: 'fa-globe', color: '#6366f1', title: 'International Presence', lines: ['Japan: West Bldg. 302, 3-26-8 Takaido Higashi, Suginami-ku, Tokyo', 'USA: Silicon Valley, California'] },
+                                    { icon: 'fa-phone', color: '#16a34a', title: 'Call Us', lines: ['18005717711 (Toll-Free)', '0120 - 4325 497 (Landline)'] },
+                                    { icon: 'fa-whatsapp', color: '#25d366', title: 'WhatsApp', lines: ['9319086751'] },
                                     { icon: 'fa-envelope', color: '#1877f2', title: 'Email', lines: ['corp@virsoftech.com', 'support@virsoftech.com'] },
-                                    { icon: 'fa-clock', color: '#9333ea', title: 'Business Hours', lines: ['Monday – Friday: 9 AM – 6 PM IST', 'Saturday – Sunday: Closed'] },
+                                    { icon: 'fa-building', color: '#64748b', title: 'Registered Office', lines: ['C-2/54, Ashok Vihar, Phase-II,', 'North West, New Delhi – 110052'] },
                                 ].map((info, i) => (
                                     <div key={i} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', marginBottom: '24px', background: 'white', padding: '20px', borderRadius: '14px', border: '1px solid var(--border)', boxShadow: '0 4px 6px rgba(0,0,0,0.03)' }}>
                                         <span style={{ width: '44px', height: '44px', borderRadius: '12px', background: info.color, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexShrink: 0, fontSize: '18px' }}>
@@ -299,7 +301,7 @@ export const ContactUs = () => {
                             {/* Quick links */}
                             <div style={{ background: 'linear-gradient(135deg, var(--primary), #60a5fa)', borderRadius: '20px', padding: '28px', color: 'white' }}>
                                 <h4 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '16px' }}>Quick Demos</h4>
-                                <p style={{ fontSize: '14px', opacity: 0.9, marginBottom: '20px', lineHeight: 1.6 }}>Want a personalized walkthrough of VsDOX for your industry? Schedule a 30-minute demo call.</p>
+                                <p style={{ fontSize: '14px', opacity: 0.9, marginBottom: '20px', lineHeight: 1.6 }}>Want a personalized walkthrough of VSDOX for your industry? Schedule a 30-minute demo call.</p>
                                 <a href="mailto:corp@virsoftech.com?subject=Demo Request" style={{ display: 'inline-block', background: 'white', color: 'var(--primary)', padding: '12px 24px', borderRadius: '10px', fontWeight: '700', textDecoration: 'none', fontSize: '14px' }}>
                                     Schedule a Demo →
                                 </a>
@@ -349,7 +351,7 @@ export const PrivacyPolicy = () => {
                         {/* Sidebar TOC */}
                         <div style={{ position: 'sticky', top: '100px', background: '#f8fafc', borderRadius: '16px', padding: '24px', border: '1px solid var(--border)' }}>
                             <p style={{ fontSize: '12px', fontWeight: '700', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '16px' }}>On This Page</p>
-                            {['Information We Collect', 'How We Use Data', 'Data Sharing', 'Data Security', 'Your Rights', 'Cookies', 'Contact DPO'].map((item, i) => (
+                            {['Information We Collect', 'How We Use Data', 'Data Sharing', 'Data Security', 'Your Rights', 'Cookies', 'Contact Us'].map((item, i) => (
                                 <a key={i} href={`#pp-${i}`} style={{ display: 'block', padding: '8px 12px', borderRadius: '8px', color: 'var(--text-muted)', textDecoration: 'none', fontSize: '14px', fontWeight: '500', marginBottom: '4px', transition: 'all 0.2s' }}
                                     onMouseEnter={e => { e.target.style.background = 'white'; e.target.style.color = 'var(--primary)'; }}
                                     onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--text-muted)'; }}>
@@ -371,9 +373,9 @@ export const PrivacyPolicy = () => {
                                 { id: 'pp-1', title: '2. How We Use Your Data', body: 'We use the information collected to: (a) Respond to your inquiries and provide customer support; (b) Send product updates, newsletters, and marketing communications (with your consent); (c) Improve and personalize your experience on our platform and website; (d) Analyze usage patterns to enhance product functionality; (e) Comply with legal obligations and enforce our terms. We never sell your personal data to third parties.' },
                                 { id: 'pp-2', title: '3. Data Sharing & Third Parties', body: 'We may share your data with trusted service providers who assist in operating our website and delivering services (e.g., CRM software, email platforms, analytics tools). These providers are contractually required to protect your data. We may also disclose data if required by law, court order, or regulatory authority. In the event of a merger or acquisition, data may be transferred as part of that transaction, with prior notice given to you.' },
                                 { id: 'pp-3', title: '4. Data Security', body: 'We implement industry-standard security measures including TLS/SSL encryption for data in transit, AES-256 encryption for data at rest, role-based access controls, regular security audits, and vulnerability assessments. Our platform is ISO 27001-aligned. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.' },
-                                { id: 'pp-4', title: '5. Your Rights', body: 'Depending on your jurisdiction, you may have the right to: access the personal data we hold about you; request correction of inaccurate data; request deletion of your data ("right to be forgotten"); object to processing; request data portability; withdraw consent at any time. To exercise any of these rights, please contact our Data Protection Officer at dpo@virsoftech.com.' },
+                                { id: 'pp-4', title: '5. Your Rights', body: 'Depending on your jurisdiction, you may have the right to: access the personal data we hold about you; request correction of inaccurate data; request deletion of your data ("right to be forgotten"); object to processing; request data portability; withdraw consent at any time. To exercise any of these rights, please contact our Data Protection Officer at corp@virsoftech.com.' },
                                 { id: 'pp-5', title: '6. Cookies & Tracking', body: 'We use essential cookies to provide site functionality, analytical cookies to understand site usage, and optional marketing cookies for personalized advertising. You can manage cookie preferences through our cookie consent banner or your browser settings. Disabling certain cookies may impact site functionality.' },
-                                { id: 'pp-6', title: '7. Contact Our DPO', body: 'For any privacy-related concerns, please contact our Data Protection Officer: Vir Softech Pvt. Ltd., A 306, The I Thum, Sector 62, Noida, India. Email: dpo@virsoftech.com. We aim to respond to all requests within 30 days.' },
+                                { id: 'pp-6', title: '7. Contact Us', body: 'For any privacy-related concerns, please contact our Data Protection Officer: Vir Softech Pvt. Ltd., A 306, The I Thum, Sector 62, Noida, India. Email: corp@virsoftech.com. We aim to respond to all requests within 30 days.' },
                             ].map((section, i) => (
                                 <div key={i} id={section.id} style={{ marginBottom: '40px', paddingBottom: '40px', borderBottom: i < 6 ? '1px solid var(--border)' : 'none' }}>
                                     <h2 style={{ fontSize: '22px', fontWeight: '800', color: 'var(--text-dark)', marginBottom: '16px' }}>{section.title}</h2>
@@ -399,7 +401,7 @@ export const TermsConditions = () => {
             <CompanyPageHero
                 tag="LEGAL"
                 title="Terms & Conditions"
-                subtitle="Please read these terms carefully before using the VsDOX platform or accessing our services."
+                subtitle="Please read these terms carefully before using the VSDOX platform or accessing our services."
             />
             <section style={{ padding: '80px 0' }}>
                 <div className="max-container">
@@ -421,14 +423,14 @@ export const TermsConditions = () => {
                             <div className="glass-card" style={{ padding: '12px 20px', background: '#fff7ed', borderColor: 'rgba(234,88,12,0.2)', marginBottom: '40px' }}>
                                 <p style={{ color: '#c2410c', fontSize: '14px', fontWeight: '600' }}>
                                     <i className="fas fa-triangle-exclamation" style={{ marginRight: '8px' }}></i>
-                                    Last updated: January 1, 2025 · By using VsDOX, you agree to these terms.
+                                    Last updated: January 1, 2025 · By using VSDOX, you agree to these terms.
                                 </p>
                             </div>
                             {[
-                                { id: 'tc-0', title: '1. Acceptance of Terms', body: 'By accessing or using any VsDOX service, website, or platform offered by Vir Softech Pvt. Ltd. ("Vir Softech," "we," "us"), you agree to be bound by these Terms and Conditions. If you are entering into these terms on behalf of an organization, you represent that you have the authority to bind that organization. If you do not agree to these terms, please do not use our services.' },
-                                { id: 'tc-1', title: '2. Acceptable Use of Services', body: 'You agree to use VsDOX services only for lawful purposes and in accordance with these Terms. You shall not: use the service to upload, process, or distribute malicious content; attempt to reverse engineer, decompile, or extract source code from any VsDOX component; use automated scripts to scrape or overload our infrastructure; share account credentials with unauthorized parties; or violate any applicable local, national, or international laws or regulations.' },
-                                { id: 'tc-2', title: '3. Intellectual Property', body: 'All VsDOX software, documentation, branding, and content are the exclusive intellectual property of Vir Softech Pvt. Ltd. or its licensors. The platform may include open-source components (such as DSpace) governed by their respective licenses. Customer data uploaded to VsDOX remains the intellectual property of the customer. Vir Softech claims no ownership over customer-uploaded content.' },
-                                { id: 'tc-3', title: '4. Data Ownership & Privacy', body: 'You retain full ownership of all data you upload or process through VsDOX. By using our services, you grant Vir Softech a limited, non-exclusive license to store, process, and transmit your data solely for the purpose of delivering the contracted services. We process personal data in accordance with our Privacy Policy and applicable data protection laws, including DPDP Act (India) and GDPR where applicable.' },
+                                { id: 'tc-0', title: '1. Acceptance of Terms', body: 'By accessing or using any VSDOX service, website, or platform offered by Vir Softech Pvt. Ltd. ("Vir Softech," "we," "us"), you agree to be bound by these Terms and Conditions. If you are entering into these terms on behalf of an organization, you represent that you have the authority to bind that organization. If you do not agree to these terms, please do not use our services.' },
+                                { id: 'tc-1', title: '2. Acceptable Use of Services', body: 'You agree to use VSDOX services only for lawful purposes and in accordance with these Terms. You shall not: use the service to upload, process, or distribute malicious content; attempt to reverse engineer, decompile, or extract source code from any VSDOX component; use automated scripts to scrape or overload our infrastructure; share account credentials with unauthorized parties; or violate any applicable local, national, or international laws or regulations.' },
+                                { id: 'tc-2', title: '3. Intellectual Property', body: 'All VSDOX software, documentation, branding, and content are the exclusive intellectual property of Vir Softech Pvt. Ltd. or its licensors. The platform may include open-source components governed by their respective licenses. Customer data uploaded to VSDOX remains the intellectual property of the customer. Vir Softech claims no ownership over customer-uploaded content.' },
+                                { id: 'tc-3', title: '4. Data Ownership & Privacy', body: 'You retain full ownership of all data you upload or process through VSDOX. By using our services, you grant Vir Softech a limited, non-exclusive license to store, process, and transmit your data solely for the purpose of delivering the contracted services. We process personal data in accordance with our Privacy Policy and applicable data protection laws, including DPDP Act (India) and GDPR where applicable.' },
                                 { id: 'tc-4', title: '5. Limitation of Liability', body: 'To the maximum extent permitted by applicable law, Vir Softech shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of data, revenue, profits, or business interruption. Vir Softech\'s total cumulative liability to you for any claims arising under these terms shall not exceed the fees paid by you to Vir Softech in the 12 months preceding the claim.' },
                                 { id: 'tc-5', title: '6. Service Level Agreement (SLA)', body: 'For Professional and Enterprise tier customers, Vir Softech commits to a 99.9% monthly platform uptime SLA, excluding scheduled maintenance windows (communicated at least 48 hours in advance) and events beyond our reasonable control (force majeure). Service credits may apply for downtime exceeding the committed SLA, as specified in individual customer agreements.' },
                                 { id: 'tc-6', title: '7. Termination', body: 'Either party may terminate a service agreement with 30 days written notice. Vir Softech may immediately suspend or terminate access if you breach these Terms, engage in abusive or illegal activity, or fail to make payments when due. Upon termination, you will have 30 days to export your data before it is permanently deleted from our systems.' },
@@ -442,7 +444,7 @@ export const TermsConditions = () => {
                             <div style={{ background: '#f8fafc', borderRadius: '16px', padding: '28px', border: '1px solid var(--border)' }}>
                                 <h3 style={{ fontWeight: '800', marginBottom: '12px' }}>Questions About These Terms?</h3>
                                 <p style={{ color: 'var(--text-muted)', marginBottom: '20px' }}>Contact our legal team for any clarifications.</p>
-                                <a href="mailto:legal@virsoftech.com" className="btn-primary" style={{ display: 'inline-block', textDecoration: 'none' }}>legal@virsoftech.com</a>
+                                <a href="mailto:corp@virsoftech.com" className="btn-primary" style={{ display: 'inline-block', textDecoration: 'none' }}>corp@virsoftech.com</a>
                             </div>
                         </div>
                     </div>
