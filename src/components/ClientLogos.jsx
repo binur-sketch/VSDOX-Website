@@ -18,49 +18,39 @@ import client16 from '../assets/client_16.webp';
 import client17 from '../assets/client_17.png';
 
 const clients = [
+    { name: "Army Medical College", logo: "🏥" },
+    { name: "Bihar Haj Committe", logo: "🕌" },
+    { name: "Himalayan Forest Research Institute, Shimla", logo: "🌲" },
+    { name: "Indian Coast Guard", logo: "⚓" },
+    { name: "NCERT", logo: "📚" },
+    { name: "NIA", logo: "🕵️" },
+    { name: "Army Public School", logo: "🏫" },
+    { name: "CRPF", logo: "🛡️" },
+    { name: "India Post", logo: "📯" },
+    { name: "Indian Army", logo: "⚔️" },
+    { name: "NCRB", logo: "📜" },
+    { name: "NID, MP", logo: "🎨" },
     { name: "Indian Patent Office", logo: client1 },
     { name: "National Archives", logo: client2 },
-    { name: "OCAC", logo: client3 },
-    { name: "Odisha High Court", logo: client4 },
-    { name: "Madras High Court", logo: client5 },
-    { name: "Allahabad High Court", logo: client6 },
     { name: "HDFC Life", logo: client7 },
-    { name: "Rajasthan High Court", logo: client8 },
     { name: "Hero MotoCorp", logo: client9 },
-    { name: "Aditya Birla Capital", logo: client10 },
     { name: "IIT Delhi", logo: client11 },
-    { name: "CONCOR", logo: client12 },
-    { name: "AIIMS New Delhi", logo: client13 },
-    { name: "Utkarsh Bank", logo: client14 },
-    { name: "Govt of Maharashtra", logo: client15 },
-    { name: "Kerala High Court", logo: client16 },
-    { name: "IIC Delhi", logo: client17 }
+    { name: "AIIMS New Delhi", logo: client13 }
 ];
 
-const ClientLogo = ({ client }) => {
-    const [failed, setFailed] = React.useState(false);
-
-    if (failed || !client.logo) {
-        return (
-            <div className="client-logo-box fallback">
-                <span className="client-placeholder">{client.name}</span>
-            </div>
-        );
-    }
-
-    return (
-        <div className="client-logo-box" title={client.name}>
-            <img
-                src={client.logo}
-                alt={client.name}
-                loading="lazy"
-                onError={() => setFailed(true)}
-            />
-        </div>
-    );
-};
-
 const ClientLogos = () => {
+    const scrollRef = React.useRef(null);
+
+    const scroll = (direction) => {
+        if (scrollRef.current) {
+            const { scrollLeft, clientWidth } = scrollRef.current;
+            const scrollTo = direction === 'left'
+                ? scrollLeft - clientWidth / 2
+                : scrollLeft + clientWidth / 2;
+            scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="clientele-section reveal">
             <div className="max-container">
@@ -70,10 +60,37 @@ const ClientLogos = () => {
                     <p>Powering documentation for world-class government bodies, healthcare institutions, and enterprise leaders across the globe.</p>
                 </div>
 
-                <div className="clientele-grid">
-                    {clients.map((client, index) => (
-                        <ClientLogo key={index} client={client} />
-                    ))}
+                <div className="clientele-carousel-wrapper">
+                    <button className="carousel-control prev" onClick={() => scroll('left')} aria-label="Previous">
+                        <i className="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div className="clientele-scroll-container" ref={scrollRef}>
+                        <div className="clientele-grid-horizontal">
+                            {clients.map((client, index) => (
+                                <div key={index} className="client-circle-item">
+                                    <div className="client-circle">
+                                        {typeof client.logo === 'string' && client.logo.length < 5 ? (
+                                            <span className="client-emoji">{client.logo}</span>
+                                        ) : (
+                                            <img src={client.logo} alt={client.name} onError={(e) => {
+                                                e.target.style.display = 'none';
+                                                e.target.nextSibling.style.display = 'block';
+                                            }} />
+                                        )}
+                                        <div className="client-initials" style={{ display: 'none' }}>
+                                            {client.name.substring(0, 2).toUpperCase()}
+                                        </div>
+                                    </div>
+                                    <span className="client-name-label">{client.name}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <button className="carousel-control next" onClick={() => scroll('right')} aria-label="Next">
+                        <i className="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>

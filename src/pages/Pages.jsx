@@ -353,12 +353,54 @@ export const About = () => {
     ];
 
     const leadership = [
-        { name: "Deepak Garg", role: "Managing Director", img: "https://www.virsoftech.com/img/deepak_garg.jpg", desc: "Over 20 years of experience in product innovation, strategic planning, and customer acquisition. Ex-HCL, Adobe." },
-        { name: "Abhijeet Jain", role: "Chief Technology Officer", img: "https://www.virsoftech.com/img/abhijeet_pic.jpg", desc: "Programming guru with 20+ years in R&D. Key solution architect for PDF centric products. Ex-Adobe." },
-        { name: "Pralaypati Ta", role: "Principal Architect", img: "https://www.virsoftech.com/img/Pralay-photo.png", desc: "18+ years tech leadership. Solution architect for Cloud based solutions in DAM/CMS. Ex-Samsung, Adobe." },
-        { name: "Sameer Manuja", role: "Principal Architect", img: "https://www.virsoftech.com/sameer_manuja.jpg", desc: "Key solution architect for print technologies. Several US patents to his name. Ex-Samsung, Adobe." },
-        { name: "Akihide Sugino", role: "Country Head, Japan", img: "https://www.virsoftech.com/img/sugino.jpg", desc: "35+ years in Sales & Marketing. Managed partnerships for top global firms like Epson and Adobe." },
-        { name: "Manu Paliwal", role: "Vice President – Sales", img: "https://www.virsoftech.com/img/manu-photo.jpg?v=1", desc: "Driving growth strategy. 25+ years in Sales, marketing, and operations. Ex-President Business Solutions at Sharp." }
+        {
+            name: "Deepak Garg",
+            role: "Managing Director",
+            img: "https://www.virsoftech.com/img/deepak_garg.jpg",
+            linkedin: "https://www.linkedin.com/in/deepakgarg76/",
+            email: "deepak.garg@virsoftech.com",
+            desc: "A quintessentially gifted techno-businessman, Deepak has over 20 years of experience in growing products and dreams through product innovation, strategic planning, and customer acquisition. He has huge experience in the govt. and business IT solutions, serving clients globally, in the past for companies like HCL Technologies and Adobe Systems. Deepak is the mind behind our products and service offerings. As the Managing Director, he oversees the sales, business development, operations, and financial division."
+        },
+        {
+            name: "Abhijeet Jain",
+            role: "Chief Technology Officer",
+            img: "https://www.virsoftech.com/img/abhijeet_pic.jpg",
+            linkedin: "https://www.linkedin.com/in/abhijeet-jain-5a9b313/",
+            email: "abhijeet.jain@virsoftech.com",
+            desc: "Abhijeet is a Computer Scientist, Entrepreneur, and Business Executive with a deep background in technology. He is a programming guru with over 20 years industry experience of leading R&D teams at global product companies. In the past, he's worked in Adobe Systems where he was the key solution architect for PDF centric products and services for Print & Publishing domain. He is a contributor to PDF ISO specifications. Abhijeet is still very hands on with coding and is chief architect for our print domain projects."
+        },
+        {
+            name: "Pralaypati Ta",
+            role: "Principal Architect",
+            img: "https://www.virsoftech.com/img/Pralay-photo.png",
+            linkedin: "https://www.linkedin.com/in/pralaypati-ta-3944691/",
+            email: "pralaypati.ta@virsoftech.com",
+            desc: "Pralaypati is a coding geek. He has over 18 years of tech leadership experience leading R&D teams at global Product companies, such as Samsung and Adobe Systems. Pralaypati is our solution architect for Cloud based solutions in DAM/CMS and Analytics technologies."
+        },
+        {
+            name: "Sameer Manuja",
+            role: "Principal Architect",
+            img: "https://www.virsoftech.com/sameer_manuja.jpg",
+            linkedin: "https://www.linkedin.com/in/sameermanuja/",
+            email: "sameer.manuja@virsoftech.com",
+            desc: "Sameer is our key solution architect for print and publishing technologies. He has over 20 years of industry experience in creating path-setting technologies for companies like Samsung and Adobe Systems. He has several US patents to his name."
+        },
+        {
+            name: "Akihide Sugino",
+            role: "Country Head, Japan",
+            img: "https://www.virsoftech.com/img/sugino.jpg",
+            linkedin: "#",
+            email: "sugino.ak@virsoftech.com",
+            desc: "Sugino is a seasoned industry veteran with over 35 years of experience in Sales, Marketing, and License Compliance Service for top global firms such as Epson and Adobe, he has managed vendors, partnerships, product line development, and enterprise sales for print and publishing domain. Sugino oversees corporate management and sales at Vir Softech."
+        },
+        {
+            name: "Manu Paliwal",
+            role: "Vice President – Sales",
+            img: "https://www.virsoftech.com/img/manu-photo.jpg?v=1",
+            linkedin: "https://www.linkedin.com/in/manu-paliwal-159b324/",
+            email: "corp@virsoftech.com",
+            desc: "Manu is driving the growth strategy for the business, delivering differentiated customer value, and expanding business reach with diversified digital solutions. He has over 25 years of experience in the Sales and marketing, strategic alliances and operations including supply chain management. He has delivered turnaround results in most challenging business situations, prior to his current role, Manu held several leadership roles with P&L responsibility with global companies including his role as President – Business Solutions for Sharp."
+        }
     ];
 
     return (
@@ -416,25 +458,53 @@ export const About = () => {
             </section>
 
             <section className="section max-container reveal" style={{ padding: '80px 0' }}>
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                    <span className="info-tag">LEADERSHIP</span>
-                    <h2>Meet the Team</h2>
-                    <p style={{ maxWidth: '700px', margin: '20px auto', color: 'var(--text-muted)' }}>
-                        A few passionate technologists behind world’s foremost enterprise Imaging and Print products formed Vir Softech in Nov 2015.
+                <div style={{ textAlign: 'left', marginBottom: '60px' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '800', color: 'var(--primary)', marginBottom: '16px' }}>Leadership at Vir Softech</h2>
+                    <p style={{ maxWidth: '1000px', fontSize: '18px', lineHeight: '1.6', color: 'var(--text-dark)' }}>
+                        A few passionate technologists behind world’s foremost enterprise Imaging and Print products formed Vir Softech in Nov 2015. With time the team has expanded to include brilliant product engineers, research scientists, programmers, workflow engineers, data scientists, marketing executives, and dev-ops experts.
                     </p>
                 </div>
-                <div className="industry-grid-detailed" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(480px, 1fr))', gap: '30px' }}>
                     {leadership.map((leader, i) => (
-                        <div key={i} className="glass-card" style={{ padding: '0', overflow: 'hidden' }}>
-                            <div style={{ height: '220px', overflow: 'hidden', background: '#e2e8f0' }}>
-                                <img src={leader.img} alt={leader.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/400x300?text=Leader" }} />
+                        <div key={i} className="glass-card" style={{
+                            padding: '30px',
+                            border: '4px solid #a78bfa70',
+                            borderRadius: '20px',
+                            background: i % 2 === 0 ? 'white' : 'rgba(167, 139, 250, 0.1)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '20px'
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                    <div style={{
+                                        width: '100px',
+                                        height: '100px',
+                                        borderRadius: '50%',
+                                        overflow: 'hidden',
+                                        border: '3px solid white',
+                                        boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
+                                    }}>
+                                        <img src={leader.img} alt={leader.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                            onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/150?text=Leader" }} />
+                                    </div>
+                                    <div>
+                                        <h4 style={{ fontSize: '28px', fontWeight: '800', color: '#6d28d9', margin: 0 }}>{leader.name}</h4>
+                                        <div style={{ fontSize: '20px', fontWeight: '700', color: 'var(--text-dark)' }}>{leader.role}</div>
+                                    </div>
+                                </div>
+                                <div style={{ display: 'flex', gap: '10px' }}>
+                                    <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" style={{
+                                        width: '40px', height: '40px', borderRadius: '50%', background: '#0a66c2', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'
+                                    }}><i className="fab fa-linkedin-in"></i></a>
+                                    <a href={`mailto:${leader.email}`} style={{
+                                        width: '40px', height: '40px', borderRadius: '50%', background: '#f59e0b', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'
+                                    }}><i className="fas fa-envelope"></i></a>
+                                </div>
                             </div>
-                            <div style={{ padding: '30px' }}>
-                                <h4 style={{ fontSize: '20px', marginBottom: '5px' }}>{leader.name}</h4>
-                                <div style={{ color: 'var(--primary)', fontWeight: '600', marginBottom: '15px', fontSize: '14px' }}>{leader.role}</div>
-                                <p style={{ fontSize: '14px', lineHeight: '1.6' }}>{leader.desc}</p>
-                            </div>
+                            <p style={{ fontSize: '15px', lineHeight: '1.7', color: 'var(--text-main)', margin: 0 }}>
+                                {leader.desc}
+                            </p>
                         </div>
                     ))}
                 </div>
