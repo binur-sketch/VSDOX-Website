@@ -18,7 +18,7 @@ import client16 from '../assets/client_16.webp';
 import client17 from '../assets/client_17.png';
 
 const baseClients = [
-    { name: "Indian Patent Office", logo: client1 },
+    { name: "Indian Pharmacopoeia Online ", logo: client1 },
     { name: "National Archives", logo: client2 },
     { name: "OCAC", logo: client3 },
     { name: "Odisha High Court", logo: client4 },
