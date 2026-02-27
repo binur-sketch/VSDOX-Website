@@ -311,23 +311,6 @@ export const ContactUs = () => {
                 </div>
             </section>
 
-            {/* Global offices / map placeholder */}
-            <section style={{ padding: '80px 0', background: 'white' }} className="reveal">
-                <div className="max-container" style={{ textAlign: 'center' }}>
-                    <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: '800', marginBottom: '16px' }}>Global Presence</h2>
-                    <p style={{ color: 'var(--text-muted)', marginBottom: '48px' }}>With clients and partners across multiple continents</p>
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-                        {[{ flag: '🇮🇳', country: 'India', city: 'Noida (HQ)' }, { flag: '🇺🇸', country: 'USA', city: 'North America' }, { flag: '🇬🇧', country: 'UK', city: 'Europe' }, { flag: '🇯🇵', country: 'Japan', city: 'APAC' }, { flag: '🇦🇺', country: 'Australia', city: 'Oceania' }, { flag: '🇦🇪', country: 'UAE', city: 'Middle East' }].map((loc, i) => (
-                            <div key={i} style={{ background: '#f8fafc', border: '1px solid var(--border)', borderRadius: '16px', padding: '20px 28px', textAlign: 'center', minWidth: '140px' }}>
-                                <div style={{ fontSize: '32px', marginBottom: '8px' }}>{loc.flag}</div>
-                                <div style={{ fontWeight: '800', color: 'var(--text-dark)', fontSize: '15px' }}>{loc.country}</div>
-                                <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{loc.city}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-            <ClientLogos />
         </>
     );
 };

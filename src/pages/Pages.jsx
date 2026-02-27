@@ -311,7 +311,6 @@ export const Contact = () => (
                 </div>
             </div>
         </section>
-        <ClientLogos />
     </>
 );
 
@@ -440,7 +439,6 @@ export const About = () => {
                     ))}
                 </div>
             </section>
-            <ClientLogos />
         </>
     );
 };
