@@ -35,22 +35,22 @@ const clients = [
     { name: "HDFC Life", logo: client7 },
     { name: "Hero MotoCorp", logo: client9 },
     { name: "IIT Delhi", logo: client11 },
-    { name: "AIIMS New Delhi", logo: client13 }
+    { name: "AIIMS New Delhi", logo: client13 },
+    { name: "C-DAC", logo: "💻" },
+    { name: "Ministry of Defense", logo: "🎖️" },
+    { name: "Department of Justice", logo: "⚖️" },
+    { name: "NIC Cloud", logo: "☁️" },
+    { name: "STPI", logo: "🛰️" },
+    { name: "World Bank Projects", logo: "🌍" },
+    { name: "NABARD", logo: "🚜" },
+    { name: "SEBI", logo: "📈" },
+    { name: "RBI Archives", logo: "🏦" },
+    { name: "GeM Support", logo: "🛒" },
+    { name: "Startup India", logo: "🚀" },
+    { name: "NITI Aayog", logo: "📋" }
 ];
 
 const ClientLogos = () => {
-    const scrollRef = React.useRef(null);
-
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const { scrollLeft, clientWidth } = scrollRef.current;
-            const scrollTo = direction === 'left'
-                ? scrollLeft - clientWidth / 2
-                : scrollLeft + clientWidth / 2;
-            scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
-        }
-    };
-
     return (
         <section className="clientele-section reveal">
             <div className="max-container">
@@ -60,37 +60,25 @@ const ClientLogos = () => {
                     <p>Powering documentation for world-class government bodies, healthcare institutions, and enterprise leaders across the globe.</p>
                 </div>
 
-                <div className="clientele-carousel-wrapper">
-                    <button className="carousel-control prev" onClick={() => scroll('left')} aria-label="Previous">
-                        <i className="fas fa-chevron-left"></i>
-                    </button>
-
-                    <div className="clientele-scroll-container" ref={scrollRef}>
-                        <div className="clientele-grid-horizontal">
-                            {clients.map((client, index) => (
-                                <div key={index} className="client-circle-item">
-                                    <div className="client-circle">
-                                        {typeof client.logo === 'string' && client.logo.length < 5 ? (
-                                            <span className="client-emoji">{client.logo}</span>
-                                        ) : (
-                                            <img src={client.logo} alt={client.name} onError={(e) => {
-                                                e.target.style.display = 'none';
-                                                e.target.nextSibling.style.display = 'block';
-                                            }} />
-                                        )}
-                                        <div className="client-initials" style={{ display: 'none' }}>
-                                            {client.name.substring(0, 2).toUpperCase()}
-                                        </div>
-                                    </div>
-                                    <span className="client-name-label">{client.name}</span>
+                <div className="clientele-grid-static">
+                    {clients.map((client, index) => (
+                        <div key={index} className="client-circle-item">
+                            <div className="client-circle">
+                                {typeof client.logo === 'string' && client.logo.length < 5 ? (
+                                    <span className="client-emoji">{client.logo}</span>
+                                ) : (
+                                    <img src={client.logo} alt={client.name} onError={(e) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextSibling.style.display = 'block';
+                                    }} />
+                                )}
+                                <div className="client-initials" style={{ display: 'none' }}>
+                                    {client.name.substring(0, 2).toUpperCase()}
                                 </div>
-                            ))}
+                            </div>
+                            <span className="client-name-label">{client.name}</span>
                         </div>
-                    </div>
-
-                    <button className="carousel-control next" onClick={() => scroll('right')} aria-label="Next">
-                        <i className="fas fa-chevron-right"></i>
-                    </button>
+                    ))}
                 </div>
             </div>
         </section>

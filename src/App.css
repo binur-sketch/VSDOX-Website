@@ -675,36 +675,13 @@ img {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Clientele Carousel Section */
-.clientele-carousel-wrapper {
-  position: relative;
+/* Clientele Static Grid Section */
+.clientele-grid-static {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
   margin-top: 50px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.clientele-scroll-container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE/Edge */
-  padding: 20px 0;
-  width: 100%;
-}
-
-.clientele-scroll-container::-webkit-scrollbar {
-  display: none;
-  /* Chrome/Safari */
-}
-
-.clientele-grid-horizontal {
-  display: flex;
-  gap: 40px;
-  width: max-content;
-  padding: 0 40px;
+  justify-items: center;
 }
 
 .client-circle-item {
@@ -712,7 +689,8 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 140px;
+  width: 100%;
+  max-width: 160px;
   transition: transform 0.3s ease;
 }
 
@@ -721,8 +699,8 @@ img {
 }
 
 .client-circle {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   border: 1px solid #e2e8f0;
   display: flex;
@@ -753,46 +731,19 @@ img {
 }
 
 .client-emoji {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .client-name-label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #64748b;
   text-align: center;
-  line-height: 1.4;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 1.3;
+  width: 100%;
 }
 
-.carousel-control {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: white;
-  color: var(--text-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-  flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.carousel-control:hover {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-  transform: scale(1.1);
-}
-
-/* Fix X Twitter icon visibility if needed */
+/* Fix X Twitter icon visibility */
 .social-x i {
   font-size: 18px;
 }

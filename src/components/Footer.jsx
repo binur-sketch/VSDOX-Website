@@ -67,7 +67,6 @@ const Footer = () => {
                             <li><Link to="/about">About Vir Softech</Link></li>
                             <li><Link to="/case-studies">Case Studies</Link></li>
                             <li><Link to="/contact">Contact Us</Link></li>
-                            <li><Link to="/resources">Resources</Link></li>
                             <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                             <li><Link to="/terms">Terms &amp; Conditions</Link></li>
                         </ul>
