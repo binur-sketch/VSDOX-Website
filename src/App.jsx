@@ -26,7 +26,8 @@ import {
   CaseStudies,
   ContactUs,
   PrivacyPolicy,
-  TermsConditions
+  TermsConditions,
+  Blog
 } from './pages/CompanyPages';
 
 import ScrollToTop from './components/ScrollToTop';
@@ -60,6 +61,7 @@ function App() {
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsConditions />} />
+          <Route path="blog" element={<Blog />} />
 
           {/* Legacy route kept for backward compatibility */}
           <Route path="legal" element={<PrivacyPolicy />} />

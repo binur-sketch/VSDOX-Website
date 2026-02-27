@@ -65,6 +65,7 @@ const Footer = () => {
                         <h5>Company</h5>
                         <ul>
                             <li><Link to="/about">About Vir Softech</Link></li>
+                            <li><Link to="/blog">Blog & Insights</Link></li>
                             <li><Link to="/case-studies">Case Studies</Link></li>
                             <li><Link to="/contact">Contact Us</Link></li>
                             <li><Link to="/privacy-policy">Privacy Policy</Link></li>
@@ -103,7 +104,8 @@ const Footer = () => {
                     <p>© {new Date().getFullYear()} Vir Softech Pvt. Ltd. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <Link to="/privacy-policy">Privacy Policy</Link>
-                        <Link to="/terms">Terms &amp; Conditions</Link>
+                        <Link to="/terms">Terms & Cond.</Link>
+                        <Link to="/blog">Blog</Link>
                         <Link to="/case-studies">Case Studies</Link>
                         <Link to="/contact">Contact</Link>
                     </div>
