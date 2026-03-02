@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ClientLogos from '../components/ClientLogos';
+
 
 const BlogCard = ({ category, date, title, excerpt, image, author, authorRole }) => (
     <div className="glass-card blog-card reveal" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
@@ -147,7 +147,7 @@ const Blog = () => {
                 </div>
             </section>
 
-            <ClientLogos />
+
         </main>
     );
 };

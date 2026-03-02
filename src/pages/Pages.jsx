@@ -1,19 +1,25 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ClientLogos from '../components/ClientLogos';
+
 import MilestoneTimeline from '../components/MilestoneTimeline';
+import teamBanner from '../assets/team-member.jpeg';
 
 const PageHero = ({ title, subtitle, bgImage }) => (
-    <section className="page-hero-container">
-        <div
-            className="page-hero-bg"
-            style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url(${bgImage})` }}
-        ></div>
-        <div className="max-container">
-            <div className="page-hero-content reveal">
-                <h1>{title}</h1>
-                <p>{subtitle}</p>
-                <div className="breadcrumb">
+    <section className="page-hero-container" style={{
+        backgroundImage: bgImage
+            ? `linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url("${bgImage}")`
+            : 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)',
+        backgroundColor: '#0f172a',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        padding: '120px 0'
+    }}>
+        <div className="max-container" style={{ position: 'relative', zIndex: 2 }}>
+            <div className="page-hero-content reveal" style={{ textAlign: 'center', margin: '0 auto' }}>
+                <h1 style={{ color: 'white' }}>{title}</h1>
+                <p style={{ color: 'white', margin: '0 auto 30px', maxWidth: '800px' }}>{subtitle}</p>
+                <div className="breadcrumb" style={{ justifyContent: 'center' }}>
                     <Link to="/">Home</Link> <span>/</span> <span>{title}</span>
                 </div>
             </div>
@@ -53,32 +59,294 @@ export const Products = () => {
         window.scrollTo(0, 0);
         document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in'));
     }, []);
+
+    const coreModules = [
+        {
+            icon: 'fa-folder-open',
+            title: 'Document Management System (DMS)',
+            color: '#1d63ed',
+            features: [
+                'Hierarchical repository with department & folder-level access',
+                'Multi-format support: PDF, DOCX, XLSX, images, videos & more',
+                'Version control with full revision history',
+                'Bulk upload, drag-and-drop, and scanner integration',
+                'PDF/A compliant archival format',
+                'Dublin Core metadata indexing standard',
+            ]
+        },
+        {
+            icon: 'fa-magnifying-glass',
+            title: 'Intelligent Search & Retrieval',
+            color: '#7c3aed',
+            features: [
+                'Full-text search across all ingested documents',
+                'Phonetic, fuzzy & thesaurus-based search',
+                'Advanced faceted & nested-faceted filtering',
+                'Multilingual search with transliteration support',
+                'Voice-based search (Speech-to-Text)',
+                'RAG-Based Q&A for document-level contextual queries',
+            ]
+        },
+        {
+            icon: 'fa-diagram-project',
+            title: 'Workflow & Process Automation',
+            color: '#059669',
+            features: [
+                'Static multi-level approval workflows (1, 2, 3 levels)',
+                'Dynamic / ad-hoc workflow with real-time routing',
+                'Hierarchical verification for sensitive records',
+                'Role-based reviewer assignment & escalation',
+                'Mandatory comments at every approval stage',
+                'Full audit trail of every workflow action',
+            ]
+        },
+        {
+            icon: 'fa-robot',
+            title: 'AI-Powered Capabilities',
+            color: '#db2777',
+            features: [
+                'Automatic Document Type Association & Segregation',
+                'AI Metadata Extraction (case IDs, dates, names, IDs)',
+                'Document Summarization for long case files (50–500 pages)',
+                'On-premise RAG-Based Q&A Engine',
+                'AI Translation into multiple languages',
+                'AI Transliteration for multilingual search',
+                'Multilingual Speech-to-Text input',
+                'Full UI localization in Hindi, Malayalam & more',
+            ]
+        },
+        {
+            icon: 'fa-camera',
+            title: 'Capture & Digitization Solution',
+            color: '#d97706',
+            features: [
+                'Physical file inventory & batch creation',
+                'High-resolution scanning & automated image processing',
+                'Auto deskew, despeckle, punch-hole removal',
+                'Multilingual OCR for text recognition',
+                'Multi-level Quality Checks (Scanning QC, Indexing QC, Client QC)',
+                'Export as PDF/A with Dublin Core metadata ZIP',
+            ]
+        },
+        {
+            icon: 'fa-shield-halved',
+            title: 'Security & Compliance',
+            color: '#dc2626',
+            features: [
+                'AES-256 encryption at rest & TLS/SSL in transit',
+                'Multi-Factor Authentication (CAPTCHA, OTP, SMTP)',
+                'Role-Based Access Control (RBAC) at department & file level',
+                'LDAP / Active Directory SSO integration',
+                'Digitally signed JWT session tokens',
+                'OWASP compliance & VAPT/STQC validated',
+                'Time-bound access control & backup scheduler',
+            ]
+        },
+    ];
+
+    const aiHighlights = [
+        { icon: 'fa-microchip', label: 'Document Summarization' },
+        { icon: 'fa-comments', label: 'RAG-Based Q&A' },
+        { icon: 'fa-language', label: 'AI Translation & Transliteration' },
+        { icon: 'fa-tags', label: 'Auto Metadata Extraction' },
+        { icon: 'fa-object-group', label: 'Document Type Association' },
+        { icon: 'fa-microphone', label: 'Speech-to-Text' },
+        { icon: 'fa-globe', label: 'UI Multilingual Localization' },
+        { icon: 'fa-filter', label: 'Document Segregation' },
+    ];
+
+    const deploymentOptions = [
+        {
+            icon: 'fa-server',
+            title: 'On-Premise',
+            desc: 'Full control over your data, infrastructure, security and compliance. Hosted on your own servers.',
+            color: '#1d63ed',
+        },
+        {
+            icon: 'fa-cloud',
+            title: 'Cloud',
+            desc: 'Host on MeitY-empanelled NIC Cloud, STPI, AWS, or GCP for scalable, managed infrastructure.',
+            color: '#7c3aed',
+        },
+        {
+            icon: 'fa-network-wired',
+            title: 'Hybrid',
+            desc: 'Combine on-premise and cloud in a seamless hybrid architecture for optimal compliance and performance.',
+            color: '#059669',
+        },
+    ];
+
+    const stats = [
+        { number: '200M+', label: 'Documents Processed' },
+        { number: '500+', label: 'Enterprise Clients' },
+        { number: '25+', label: 'Years Combined Expertise' },
+        { number: '99.9%', label: 'Platform Uptime' },
+    ];
+
     return (
         <>
+            {/* Hero */}
             <PageHero
-                title="Our Products"
-                subtitle="Next-generation document management suite powered by AI."
-                bgImage="https://images.unsplash.com/photo-1454165833467-03a669d96971?q=80&w=2340&auto=format&fit=crop"
+                title="VSDOX — Enterprise Content Management"
+                subtitle="A secure, AI-powered, open-source based platform for intelligent document management, workflow automation, and enterprise-grade compliance."
+                bgImage="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2340&auto=format&fit=crop"
             />
-            <SectionInfo
-                title="Unified Content Services"
-                subtitle="CONTEXTUAL CONTENT"
-                content="Manage the entire lifecycle of your enterprise content from capture to archival. Our AI-driven platform provides a single source of truth across all business functions, integrated with your existing ERP and CRM systems."
-                image="https://images.unsplash.com/photo-1557200134-90327ee9fafa?q=80&w=2340&auto=format&fit=crop"
-                items={["Content Management & Archival", "AI-powered Content Extraction", "Contextual Information Retrieval", "Federated Records Management"]}
-            />
-            <SectionInfo
-                title="Low-Code Application Platform"
-                subtitle="AGILE DEVELOPMENT"
-                content="Design and deploy complex, high-volume business applications in weeks instead of months. Our visual designers empower business users to create intuitive interfaces and data models without IT bottlenecks."
-                image="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2340&auto=format&fit=crop"
-                reverse
-                items={["Application Studio", "Visual Data Modeling", "Mobile App Designer", "Low-Code DevOps"]}
-            />
-            <ClientLogos />
+
+            {/* Stats Strip */}
+            <section style={{ background: '#0f172a', padding: '40px 0' }}>
+                <div className="max-container">
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', textAlign: 'center' }}>
+                        {stats.map((s, i) => (
+                            <div key={i}>
+                                <div style={{ fontSize: '42px', fontWeight: '900', color: '#1d63ed' }}>{s.number}</div>
+                                <div style={{ fontSize: '14px', color: '#94a3b8', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '4px' }}>{s.label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Product Overview */}
+            <section style={{ padding: '100px 0', background: 'white' }}>
+                <div className="max-container reveal">
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
+                        <div>
+                            <span style={{ display: 'inline-block', background: 'rgba(29,99,237,0.08)', color: '#1d63ed', padding: '6px 16px', borderRadius: '30px', fontWeight: '700', fontSize: '13px', marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '1px' }}>What is VSDOX?</span>
+                            <h2 style={{ fontSize: '44px', fontWeight: '900', lineHeight: '1.1', marginBottom: '24px', color: '#0f172a', letterSpacing: '-0.02em' }}>The Intelligent Heart of Your Document Operations</h2>
+                            <p style={{ fontSize: '17px', color: '#475569', lineHeight: '1.8', marginBottom: '24px', textAlign: 'justify' }}>
+                                VSDOX is Vir Softech's flagship Enterprise Content Management platform — a secure, scalable, and AI-powered solution built on a modern open-source technology stack. It is designed to manage the complete lifecycle of enterprise, judicial, and institutional content: from physical digitization to intelligent search and controlled access.
+                            </p>
+                            <p style={{ fontSize: '17px', color: '#475569', lineHeight: '1.8', marginBottom: '32px', textAlign: 'justify' }}>
+                                VSDOX eliminates vendor lock-in, reduces operational costs, and empowers organizations to digitally transform their document workflows without replacing existing infrastructure.
+                            </p>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                                {['Open-Source Based', 'No Seat-Based Licensing', 'ISO 9001:2015 Certified', 'CMMI Level 3', 'VAPT Validated', 'OWASP Compliant'].map((badge, i) => (
+                                    <span key={i} style={{ background: '#f1f5f9', padding: '8px 16px', borderRadius: '30px', fontSize: '13px', fontWeight: '700', color: '#334155', border: '1px solid #e2e8f0' }}>{badge}</span>
+                                ))}
+                            </div>
+                        </div>
+                        <div style={{ position: 'relative' }}>
+                            <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 40px 80px -20px rgba(0,0,0,0.2)', border: '1px solid #e2e8f0' }}>
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop" alt="VSDOX Dashboard" style={{ width: '100%', height: '420px', objectFit: 'cover' }} />
+                            </div>
+                            <div style={{ position: 'absolute', bottom: '-24px', left: '-24px', background: '#1d63ed', color: 'white', padding: '20px 28px', borderRadius: '16px', boxShadow: '0 10px 30px rgba(29,99,237,0.4)' }}>
+                                <div style={{ fontSize: '28px', fontWeight: '900' }}>200M+</div>
+                                <div style={{ fontSize: '13px', opacity: 0.85 }}>Documents Managed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Core Modules */}
+            <section style={{ padding: '100px 0', background: '#f8fafc' }}>
+                <div className="max-container">
+                    <div style={{ textAlign: 'center', marginBottom: '64px' }} className="reveal">
+                        <span style={{ display: 'inline-block', background: 'rgba(29,99,237,0.08)', color: '#1d63ed', padding: '6px 16px', borderRadius: '30px', fontWeight: '700', fontSize: '13px', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '1px' }}>Core Modules</span>
+                        <h2 style={{ fontSize: '44px', fontWeight: '900', color: '#0f172a', marginBottom: '16px', letterSpacing: '-0.02em' }}>Everything You Need, In One Platform</h2>
+                        <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>Six integrated modules that cover the entire content management lifecycle.</p>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px' }}>
+                        {coreModules.map((mod, i) => (
+                            <div key={i} className="reveal" style={{
+                                background: 'white',
+                                borderRadius: '20px',
+                                padding: '36px',
+                                border: '1px solid #e2e8f0',
+                                transition: 'all 0.3s ease',
+                                cursor: 'default',
+                            }}
+                                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)'; e.currentTarget.style.borderColor = mod.color; }}
+                                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = '#e2e8f0'; }}
+                            >
+                                <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: `${mod.color}15`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px', color: mod.color, marginBottom: '20px' }}>
+                                    <i className={`fas ${mod.icon}`}></i>
+                                </div>
+                                <h3 style={{ fontSize: '19px', fontWeight: '800', color: '#0f172a', marginBottom: '16px', lineHeight: '1.3' }}>{mod.title}</h3>
+                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                    {mod.features.map((f, j) => (
+                                        <li key={j} style={{ display: 'flex', gap: '10px', fontSize: '14px', color: '#475569', alignItems: 'flex-start' }}>
+                                            <i className="fas fa-check-circle" style={{ color: mod.color, marginTop: '2px', flexShrink: 0 }}></i>
+                                            {f}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* AI Section */}
+            <section style={{ padding: '100px 0', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }}>
+                <div className="max-container reveal">
+                    <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                        <span style={{ display: 'inline-block', background: 'rgba(96,165,250,0.15)', color: '#60a5fa', padding: '6px 16px', borderRadius: '30px', fontWeight: '700', fontSize: '13px', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '1px' }}>AI Intelligence</span>
+                        <h2 style={{ fontSize: '44px', fontWeight: '900', color: 'white', marginBottom: '16px', letterSpacing: '-0.02em' }}>Built-In AI — Not Bolted On</h2>
+                        <p style={{ fontSize: '18px', color: '#94a3b8', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>Every AI feature is part of the core VSDOX platform, available on-premise or cloud — no external AI API dependency.</p>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+                        {aiHighlights.map((ai, i) => (
+                            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px', padding: '28px', textAlign: 'center', transition: 'all 0.3s ease', cursor: 'default' }}
+                                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(29,99,237,0.15)'; e.currentTarget.style.borderColor = 'rgba(29,99,237,0.4)'; }}
+                                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
+                            >
+                                <div style={{ fontSize: '32px', color: '#60a5fa', marginBottom: '14px' }}><i className={`fas ${ai.icon}`}></i></div>
+                                <div style={{ fontSize: '14px', fontWeight: '700', color: 'white', lineHeight: '1.4' }}>{ai.label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Deployment */}
+            <section style={{ padding: '100px 0', background: 'white' }}>
+                <div className="max-container reveal">
+                    <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                        <span style={{ display: 'inline-block', background: 'rgba(29,99,237,0.08)', color: '#1d63ed', padding: '6px 16px', borderRadius: '30px', fontWeight: '700', fontSize: '13px', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '1px' }}>Deployment Flexibility</span>
+                        <h2 style={{ fontSize: '44px', fontWeight: '900', color: '#0f172a', marginBottom: '16px', letterSpacing: '-0.02em' }}>Deploy Your Way</h2>
+                        <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>VSDOX is architected for maximum deployment flexibility — built on high-availability, containerized, and modular infrastructure.</p>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
+                        {deploymentOptions.map((opt, i) => (
+                            <div key={i} style={{ background: '#f8fafc', borderRadius: '20px', padding: '40px', border: '1px solid #e2e8f0', textAlign: 'center', transition: 'all 0.3s ease' }}
+                                onMouseEnter={e => { e.currentTarget.style.borderColor = opt.color; e.currentTarget.style.background = 'white'; e.currentTarget.style.boxShadow = `0 20px 40px rgba(0,0,0,0.08)`; e.currentTarget.style.transform = 'translateY(-6px)'; }}
+                                onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.background = '#f8fafc'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                            >
+                                <div style={{ width: '64px', height: '64px', borderRadius: '18px', background: `${opt.color}15`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '26px', color: opt.color, margin: '0 auto 24px' }}>
+                                    <i className={`fas ${opt.icon}`}></i>
+                                </div>
+                                <h3 style={{ fontSize: '22px', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>{opt.title}</h3>
+                                <p style={{ fontSize: '15px', color: '#64748b', lineHeight: '1.7' }}>{opt.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section style={{ background: 'linear-gradient(135deg, #1d63ed 0%, #7c3aed 100%)', padding: '80px 0', textAlign: 'center' }}>
+                <div className="max-container reveal">
+                    <h2 style={{ fontSize: '42px', fontWeight: '900', color: 'white', marginBottom: '16px', letterSpacing: '-0.02em' }}>Ready to Transform Your Document Operations?</h2>
+                    <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.85)', maxWidth: '700px', margin: '0 auto 40px', lineHeight: '1.7' }}>
+                        Talk to our ECM experts and get a personalized demo tailored to your industry and scale.
+                    </p>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+                        <a href="/contact" style={{ background: 'white', color: '#1d63ed', padding: '16px 36px', borderRadius: '10px', fontWeight: '800', fontSize: '16px', textDecoration: 'none', transition: 'all 0.3s ease' }}
+                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+                        >Request a Demo</a>
+                        <a href="/solutions" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', padding: '16px 36px', borderRadius: '10px', fontWeight: '800', fontSize: '16px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.3)', transition: 'all 0.3s ease' }}
+                            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.25)'}
+                            onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
+                        >Explore Solutions</a>
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
+
 
 export const Solutions = () => {
     useEffect(() => {
@@ -107,7 +375,7 @@ export const Solutions = () => {
                 reverse
                 items={["Dynamic Document Generation", "Omnichannel Distribution", "Multilingual Communication", "Interactive Digital Forms"]}
             />
-            <ClientLogos />
+
         </>
     );
 };
@@ -178,7 +446,7 @@ export const Industries = () => {
                     </div>
                 </div>
             </div>
-            <ClientLogos />
+
         </>
     );
 };
@@ -209,7 +477,7 @@ export const Resources = () => (
                 </div>
             </div>
         </section>
-        <ClientLogos />
+
     </>
 );
 
@@ -260,7 +528,7 @@ export const Pricing = () => (
                 </div>
             </div>
         </div>
-        <ClientLogos />
+
     </>
 );
 
@@ -335,7 +603,7 @@ export const Legal = () => (
                 </p>
             </div>
         </section>
-        <ClientLogos />
+
     </>
 );
 
@@ -408,7 +676,7 @@ export const About = () => {
             <PageHero
                 title="About Vir Softech"
                 subtitle="Business-led IT process transformation for a digital world."
-                bgImage="https://images.unsplash.com/photo-1522071823991-b99c223c7483?q=80&w=2340&auto=format&fit=crop"
+                bgImage={teamBanner}
             />
 
             <section className="section max-container reveal" style={{ padding: '80px 0' }}>

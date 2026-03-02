@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ClientLogos from '../components/ClientLogos';
+
 
 /* ── Shared inner-page hero ─────────────────────────────── */
-const CompanyPageHero = ({ tag, title, subtitle }) => (
+const CompanyPageHero = ({ tag, title, subtitle, bgImage }) => (
     <section style={{
-        background: 'linear-gradient(135deg, #0f172a 0%, #1d2f4a 100%)',
+        backgroundImage: bgImage
+            ? `linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url(${bgImage})`
+            : 'linear-gradient(135deg, #0f172a 0%, #1d2f4a 100%)',
+        backgroundColor: '#0f172a',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         padding: '160px 0 80px',
         position: 'relative',
         overflow: 'hidden',
@@ -106,6 +112,7 @@ export const CaseStudies = () => {
                 tag="SUCCESS STORIES"
                 title="Real Results. Real Clients. Real Impact."
                 subtitle="Discover how leading organizations across India and the globe transformed their document operations with VSDOX AI-powered ECM."
+                bgImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2400&auto=format&fit=crop"
             />
 
             {/* Filter Bar */}
@@ -181,7 +188,7 @@ export const CaseStudies = () => {
                     <Link to="/contact" className="btn-primary" style={{ background: 'white', color: 'var(--primary)', marginTop: '30px', display: 'inline-block' }}>Schedule a Demo</Link>
                 </div>
             </section>
-            <ClientLogos />
+
         </>
     );
 };
@@ -204,6 +211,7 @@ export const ContactUs = () => {
                 tag="GET IN TOUCH"
                 title="Let's Talk About Your Document Challenges"
                 subtitle="Our ECM experts are ready to help you digitize, automate, and secure your document operations. Reach out today."
+                bgImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2400&auto=format&fit=crop"
             />
 
             <section style={{ padding: '100px 0', background: '#f8fafc' }}>
@@ -326,6 +334,7 @@ export const PrivacyPolicy = () => {
                 tag="LEGAL"
                 title="Privacy Policy"
                 subtitle="We are committed to protecting your personal data and being transparent about how it is collected and used."
+                bgImage="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?q=80&w=2400&auto=format&fit=crop"
             />
             <section style={{ padding: '80px 0' }}>
                 <div className="max-container">
@@ -384,6 +393,7 @@ export const TermsConditions = () => {
                 tag="LEGAL"
                 title="Terms & Conditions"
                 subtitle="Please read these terms carefully before using the VSDOX platform or accessing our services."
+                bgImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2400&auto=format&fit=crop"
             />
             <section style={{ padding: '80px 0' }}>
                 <div className="max-container">
@@ -476,6 +486,7 @@ export const Blog = () => {
                 tag="INSIGHTS & TRENDS"
                 title="The VSDOX Blog"
                 subtitle="Expert perspectives on ECM, AI-driven automation, and the future of digital documentation."
+                bgImage="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2400&auto=format&fit=crop"
             />
             <section style={{ padding: '100px 0', background: '#f8fafc' }}>
                 <div className="max-container">
@@ -502,7 +513,7 @@ export const Blog = () => {
                     </div>
                 </div>
             </section>
-            <ClientLogos />
+
         </>
     );
 };

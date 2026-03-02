@@ -707,6 +707,7 @@ img {
   color: #94a3b8;
   font-size: 15px;
   line-height: 1.6;
+  text-align: left;
 }
 
 /* Clientele Static Grid Section */
@@ -904,7 +905,6 @@ img {
   margin-top: 80px;
   background: #0f172a;
   min-height: 400px;
-  /* Fallback */
 }
 
 .page-hero-bg {
@@ -915,33 +915,54 @@ img {
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1;
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
 }
 
 .page-hero-content h1 {
   font-size: 56px;
   font-weight: 800;
   margin-bottom: 16px;
+  letter-spacing: -0.02em;
 }
 
 .page-hero-content p {
   font-size: 20px;
   opacity: 0.9;
-  max-width: 600px;
+  max-width: 700px;
   margin-bottom: 24px;
+  line-height: 1.6;
 }
 
 .breadcrumb {
   display: flex;
+  align-items: center;
   gap: 12px;
   font-size: 14px;
   font-weight: 600;
-  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
 }
 
 .breadcrumb a {
   color: white;
   text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  opacity: 1;
+}
+
+.breadcrumb span {
+  opacity: 0.4;
 }
 
 /* Section Info */
@@ -2025,10 +2046,11 @@ img {
 .contact-info-list li {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.4;
+  flex-wrap: nowrap;
 }
 
 .info-icon {
@@ -2060,10 +2082,15 @@ img {
   background: #38a169;
 }
 
+.info-icon:has(.fa-whatsapp) {
+  background: #25D366;
+}
+
 .contact-info-list a {
   color: var(--text-muted);
   text-decoration: none;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .contact-info-list a:hover {
@@ -3781,6 +3808,7 @@ img {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.5;
+  text-align: left;
 }
 
 @media (max-width: 992px) {
@@ -3970,5 +3998,78 @@ img {
 @media (max-width: 768px) {
   .workflow-variants-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Page Hero Section (used in Pages.jsx) */
+.page-hero-container {
+  min-height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: left;
+}
+
+.page-hero-content h1 {
+  font-size: 56px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.page-hero-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  opacity: 1;
+}
+
+.breadcrumb span {
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .page-hero-container {
+    min-height: 400px;
+    padding-top: 40px;
+  }
+
+  .page-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .page-hero-content p {
+    font-size: 16px;
   }
 }

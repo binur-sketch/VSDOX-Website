@@ -87,8 +87,9 @@ const Footer = () => {
                             </li>
                             <li>
                                 <span className="info-icon"><i className="fas fa-phone"></i></span>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                                <div style={{ display: 'flex', gap: '15px' }}>
                                     <a href="tel:18005717711">18005717711</a>
+                                    <span>|</span>
                                     <a href="tel:01204325497">0120 - 4325 497</a>
                                 </div>
                             </li>

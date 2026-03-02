@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ClientLogos from '../components/ClientLogos';
+
 
 /* ── Shared hero banner ─────────────────────────────────── */
-const PageHero = ({ title, subtitle, tag, bgColor }) => (
+const PageHero = ({ title, subtitle, tag, bgColor, bgImage }) => (
     <section style={{
-        background: bgColor || 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)',
+        backgroundImage: bgImage
+            ? `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url(${bgImage})`
+            : (bgColor || 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)'),
+        backgroundColor: '#0f172a',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         padding: '160px 0 100px',
         position: 'relative',
         overflow: 'hidden',
@@ -124,7 +130,7 @@ export const BankingBFSI = () => {
                 tag="INDUSTRY SOLUTION · BFSI"
                 title="Document Intelligence for Banking & Financial Services"
                 subtitle="Accelerate loan processing, ensure regulatory compliance, and digitize operations with an enterprise-grade ECM platform trusted by leading banks and insurers."
-                bgColor="linear-gradient(135deg, #0f172a 0%, #1a2f55 100%)"
+                bgImage="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?q=80&w=2400&auto=format&fit=crop"
             />
 
             <StatsStrip stats={[
@@ -180,7 +186,7 @@ export const BankingBFSI = () => {
             </section>
 
             <CTABanner title="Ready to Modernize Your BFSI Operations?" subtitle="Join leading banks and insurers digitizing their document workflows with VSDOX." />
-            <ClientLogos />
+
         </>
     );
 };
@@ -197,7 +203,7 @@ export const Healthcare = () => {
                 tag="INDUSTRY SOLUTION · HEALTHCARE"
                 title="Secure Patient Records & Clinical Document Management"
                 subtitle="Digitize patient files, streamline clinical operations, and ensure HIPAA-compliant document handling across hospitals, clinics, and insurance providers."
-                bgColor="linear-gradient(135deg, #0f2027 0%, #0d3b2e 100%)"
+                bgImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2400&auto=format&fit=crop"
             />
 
             <StatsStrip stats={[
@@ -237,7 +243,7 @@ export const Healthcare = () => {
             />
 
             <CTABanner title="Digitize Your Healthcare Records Today" subtitle="Trusted by hospitals, clinics, and health insurers across India. Let's transform your care delivery." />
-            <ClientLogos />
+
         </>
     );
 };
@@ -254,7 +260,7 @@ export const Corporate = () => {
                 tag="INDUSTRY SOLUTION · Corporate"
                 title="Smart Document Control for Modern Corporate"
                 subtitle="Automate engineering document control, quality management records, and supply chain documentation to drive operational excellence across your plant floor."
-                bgColor="linear-gradient(135deg, #0f172a 0%, #1a1f2e 100%)"
+                bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop"
             />
 
             <StatsStrip stats={[
@@ -294,7 +300,7 @@ export const Corporate = () => {
             />
 
             <CTABanner title="Ready to Achieve Manufacturing Excellence?" subtitle="Global manufacturers trust Vir Softech for document control, quality, and compliance." />
-            <ClientLogos />
+
         </>
     );
 };
@@ -311,7 +317,7 @@ export const Education = () => {
                 tag="INDUSTRY SOLUTION · EDUCATION"
                 title="Next-Generation Digital Archives for Academic Institutions"
                 subtitle="Manage research repositories, student records, institutional archives, and library collections with an intelligent, scalable, open-source ECM platform."
-                bgColor="linear-gradient(135deg, #0f172a 0%, #1f1535 100%)"
+                bgImage="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2400&auto=format&fit=crop"
             />
 
             <StatsStrip stats={[
@@ -362,7 +368,7 @@ export const Education = () => {
             </section>
 
             <CTABanner title="Preserve & Unlock Your Institution's Knowledge" subtitle="Build a world-class digital repository that serves students, researchers, and the public." />
-            <ClientLogos />
+
         </>
     );
 };
@@ -379,7 +385,7 @@ export const Government = () => {
                 tag="INDUSTRY SOLUTION · GOVERNMENT"
                 title="Digital Document Governance for Public Sector Excellence"
                 subtitle="Enable e-governance, digitize citizen records, and modernize judiciary and ministry document workflows with a secure, sovereign-grade ECM platform."
-                bgColor="linear-gradient(135deg, #0f172a 0%, #002147 100%)"
+                bgImage="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2400&auto=format&fit=crop"
             />
 
             <StatsStrip stats={[
@@ -431,7 +437,7 @@ export const Government = () => {
             </section>
 
             <CTABanner title="Partner With Us for a Digital Government" subtitle="Join India's leading government institutions in the digital transformation journey with VSDOX." />
-            <ClientLogos />
+
         </>
     );
 };
@@ -447,7 +453,7 @@ export const Judiciary = () => {
                 tag="INDUSTRY SOLUTION · JUDICIARY"
                 title="Digital Transformation for Courts & Legal Systems"
                 subtitle="Streamline e-filing, digitize case records, and enable intelligent information retrieval for high courts, district courts, and legal institutions."
-                bgColor="linear-gradient(135deg, #0f172a 0%, #2d3748 100%)"
+                bgImage="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2400&auto=format&fit=crop"
             />
 
             <StatsStrip stats={[
@@ -487,7 +493,7 @@ export const Judiciary = () => {
             />
 
             <CTABanner title="Ready to Modernize Your Judicial System?" subtitle="Join the 15+ High Courts already using VSDOX to power their digital transformation." />
-            <ClientLogos />
+
         </>
     );
 };
