@@ -41,7 +41,7 @@ const Home = () => {
                             </p>
                             <div className="hero-buttons-v4">
                                 <Link to="/products" className="btn-primary">Learn More About VSDOX</Link>
-                                <a href="#demo" className="btn-primary">Platform Demo</a>
+                                <a href="/request-demo" className="btn-primary">Platform Demo</a>
                             </div>
                         </div>
 
@@ -98,29 +98,9 @@ const Home = () => {
 
                     <div className="ai-features-grid">
                         <div className="ai-feature-card">
-                            <div className="ai-icon"><i className="fas fa-microchip"></i></div>
-                            <h3>Document Summarization</h3>
-                            <p>Automatically condenses lengthy documents (e.g., 50–500 page case files) into concise, easy-to-review summaries, enabling faster understanding and decision-making.</p>
-                        </div>
-                        <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-file-contract"></i></div>
                             <h3>RAG-Based Q&A</h3>
                             <p>An on-premise, cloud based Retrieval-Augmented Generation solution that securely answers user queries by retrieving and generating responses directly from your organization’s internal documents and DMS data.</p>
-                        </div>
-                        <div className="ai-feature-card">
-                            <div className="ai-icon"><i className="fas fa-robot"></i></div>
-                            <h3>AI Translation</h3>
-                            <p>Automatically translates uploaded documents into multiple languages and stores parallel versions, enabling seamless multilingual access to the same content anytime.</p>
-                        </div>
-                        <div className="ai-feature-card">
-                            <div className="ai-icon"><i className="fas fa-language"></i></div>
-                            <h3>AI Transliteration</h3>
-                            <p>Enables multilingual search by automatically converting user queries (e.g., “Amit” to “अमित”) into the selected language, ensuring accurate retrieval of documents across language scripts.</p>
-                        </div>
-                        <div className="ai-feature-card">
-                            <div className="ai-icon"><i className="fas fa-sitemap"></i></div>
-                            <h3>Automatic Document Type Association</h3>
-                            <p>Intelligently classifies and segments bulk-uploaded or scanned files by identifying document types and page ranges (e.g., index, judgment, petition, ID proofs, salary slips), ensuring structured and organized record management.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-layer-group"></i></div>
@@ -128,20 +108,26 @@ const Home = () => {
                             <p>Automatically captures and indexes key information (e.g., case details, patient data, IDs, dates) from ingested documents, enabling accurate classification, faster search, and streamlined document management across domains.</p>
                         </div>
                         <div className="ai-feature-card">
-                            <div className="ai-icon"><i className="fas fa-magnifying-glass-plus"></i></div>
-                            <h3>Document Segregation</h3>
-                            <p> Automatically analyzes bulk-uploaded files, identifies their category or status (e.g., civil, criminal, pending, disposed), and routes them to the appropriate department or folder for structured and efficient document management.</p>
+                            <div className="ai-icon"><i className="fas fa-sitemap"></i></div>
+                            <h3>Automatic Document Type Association</h3>
+                            <p>Intelligently classifies and segments bulk-uploaded or scanned files by identifying document types and page ranges (e.g., index, judgment, petition, ID proofs, salary slips), ensuring structured and organized record management.</p>
+                        </div>
+                        <div className="ai-feature-card">
+                            <div className="ai-icon"><i className="fas fa-microchip"></i></div>
+                            <h3>Document Summarization</h3>
+                            <p>Automatically condenses lengthy documents (e.g., 50–500 page case files) into concise, easy-to-review summaries, enabling faster understanding and decision-making.</p>
+                        </div>
+                        <div className="ai-feature-card">
+                            <div className="ai-icon"><i className="fas fa-language"></i></div>
+                            <h3>AI Translation & Transliteration</h3>
+                            <p>Automatically translates uploaded documents into multiple languages and maintains linked parallel versions for multilingual access. It also converts search queries across scripts (e.g., “Amit” ↔ “अमित”) to ensure accurate and seamless document retrieval across languages.</p>
                         </div>
                         <div className="ai-feature-card">
                             <div className="ai-icon"><i className="fas fa-chart-line"></i></div>
                             <h3>Multilingual Speech-to-Text</h3>
                             <p>Converts spoken input in the selected language (e.g., Hindi) into accurate text, enabling hands-free note creation and voice-powered search across the system.</p>
                         </div>
-                        <div className="ai-feature-card">
-                            <div className="ai-icon"><i className="fas fa-chart-line"></i></div>
-                            <h3>Multilingual Localization</h3>
-                            <p>Instantly adapts the entire VSDOX interface into the user’s selected language (e.g., Hindi, Malayalam, many more), delivering a seamless and user-friendly multilingual experience across the platform.</p>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -477,22 +463,28 @@ const Home = () => {
                     <div className="verticals-grid">
                         <div className="vertical-card">
                             <div className="vertical-icon"><i className="fas fa-university"></i></div>
-                            <h3>Banking & BFSI</h3>
+                            <h3>BFSI</h3>
                             <ul className="vertical-list">
                                 <li><strong>Banking:</strong> Account opening forms, Account holder details & forms, Retail & Commercial lending</li>
                                 <li><strong>Insurance:</strong> New policies, Policy Servicing, Service request management</li>
                             </ul>
                         </div>
-
                         <div className="vertical-card">
-                            <div className="vertical-icon"><i className="fas fa-hospital"></i></div>
-                            <h3>Healthcare</h3>
+                            <div className="vertical-icon"><i className="fas fa-landmark"></i></div>
+                            <h3>Government</h3>
                             <ul className="vertical-list">
-                                <li><strong>Hospitals & Clinics:</strong> Patient Records digitization, easy access for appointments</li>
-                                <li><strong>Insurance:</strong> Patient case history and claims management</li>
+                                <li><strong>Ministries:</strong> Automation Repositories, Grants management</li>
+                                <li><strong>Public Services:</strong> Citizen record digitization & portal integration</li>
                             </ul>
                         </div>
-
+                        <div className="vertical-card">
+                            <div className="vertical-icon"><i className="fas fa-gavel"></i></div>
+                            <h3>Judiciary</h3>
+                            <ul className="vertical-list">
+                                <li><strong>Case Records:</strong> Digital case files, evidence management, & judgment archives</li>
+                                <li><strong>E-Courts:</strong> Integration with court management systems for faster retrieval</li>
+                            </ul>
+                        </div>
                         <div className="vertical-card">
                             <div className="vertical-icon"><i className="fas fa-building"></i></div>
                             <h3>Corporate</h3>
@@ -502,31 +494,20 @@ const Home = () => {
                                 <li><strong>Regular functions:</strong> R&D, Finance, Customer Experience content</li>
                             </ul>
                         </div>
-
+                        <div className="vertical-card">
+                            <div className="vertical-icon"><i className="fas fa-hospital"></i></div>
+                            <h3>Healthcare</h3>
+                            <ul className="vertical-list">
+                                <li><strong>Hospitals & Clinics:</strong> Patient Records digitization, easy access for appointments</li>
+                                <li><strong>Insurance:</strong> Patient case history and claims management</li>
+                            </ul>
+                        </div>
                         <div className="vertical-card">
                             <div className="vertical-icon"><i className="fas fa-graduation-cap"></i></div>
                             <h3>Education</h3>
                             <ul className="vertical-list">
                                 <li><strong>Libraries:</strong> Research, Journals, Archives, Subject Text Repositories</li>
                                 <li><strong>Institutions:</strong> Managing access to Repositories</li>
-                            </ul>
-                        </div>
-
-                        <div className="vertical-card">
-                            <div className="vertical-icon"><i className="fas fa-landmark"></i></div>
-                            <h3>Government</h3>
-                            <ul className="vertical-list">
-                                <li><strong>Ministries:</strong> Automation Repositories, Grants management</li>
-                                <li><strong>Public Services:</strong> Citizen record digitization & portal integration</li>
-                            </ul>
-                        </div>
-
-                        <div className="vertical-card">
-                            <div className="vertical-icon"><i className="fas fa-gavel"></i></div>
-                            <h3>Judiciary</h3>
-                            <ul className="vertical-list">
-                                <li><strong>Case Records:</strong> Digital case files, evidence management, & judgment archives</li>
-                                <li><strong>E-Courts:</strong> Integration with court management systems for faster retrieval</li>
                             </ul>
                         </div>
                     </div>
@@ -543,7 +524,7 @@ const Home = () => {
             <section className="max-container reveal" style={{ padding: '100px 0' }}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                     <h2 style={{ fontSize: '36px', fontWeight: '800' }}>Why Vir Softech</h2>
-                    <p style={{ color: 'var(--text-muted)' }}>Vir Softech reduces the pain and cost of implementation, support and maintenance of organizational data.</p>
+                    <p style={{ color: 'var(--text-muted)' }}>Vir Softech is a Registered Service Provider of DSpace, ensuring certified expertise, reliable customization, and professional support for enterprise-grade DMS solutions.</p>
                 </div>
                 <div className="why-vir-grid">
                     <div className="why-vir-card">
@@ -589,7 +570,7 @@ const Home = () => {
             {/* CTA Section */}
             <section className="cta-section reveal">
                 <div className="max-container" style={{ textAlign: 'center' }}>
-                    <h2>Transform Your Documentation Today</h2>
+                    <h2>Transform the way of Document Management</h2>
                     <p>Regardless of your industry or scale, contact us for transforming your documentation management systems.</p>
                     <Link to="/contact" className="btn-primary" style={{ background: 'white', color: 'var(--primary)', marginTop: '30px' }}>Contact Us Now</Link>
                 </div>

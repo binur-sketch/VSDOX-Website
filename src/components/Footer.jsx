@@ -38,12 +38,13 @@ const Footer = () => {
                     <div className="footer-links-col">
                         <h5>Solutions</h5>
                         <ul>
-                            <li><Link to="/solutions/banking-bfsi">Banking &amp; BFSI</Link></li>
-                            <li><Link to="/solutions/healthcare">Healthcare</Link></li>
+                            <li><Link to="/solutions/banking-bfsi">BFSI</Link></li>
                             <li><Link to="/solutions/government">Government</Link></li>
-                            <li><Link to="/solutions/corporate">Corporate</Link></li>
-                            <li><Link to="/solutions/education">Education</Link></li>
                             <li><Link to="/solutions/judiciary">Judiciary</Link></li>
+                            <li><Link to="/solutions/corporate">Corporate</Link></li>
+                            <li><Link to="/solutions/healthcare">Healthcare</Link></li>
+                            <li><Link to="/solutions/education">Education</Link></li>
+
 
                         </ul>
                     </div>
@@ -56,7 +57,7 @@ const Footer = () => {
                             <li><Link to="/products">Workflow Designer</Link></li>
                             <li><Link to="/products">AI Capture</Link></li>
                             <li><Link to="/products">Integrations</Link></li>
-                            <li><Link to="/solutions">Low-Code Platform</Link></li>
+                            <li><Link to="/products">Low-Code Platform</Link></li>
                         </ul>
                     </div>
 

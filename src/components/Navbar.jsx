@@ -1,31 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../logo.png';
+import { Underline } from 'lucide-react';
 
 const solutionsDropdown = [
     {
         to: '/solutions/banking-bfsi',
-        label: 'Banking & BFSI',
+        label: 'BFSI',
         icon: 'fa-university',
         desc: 'Advanced document processing for financial institutions.'
-    },
-    {
-        to: '/solutions/healthcare',
-        label: 'Healthcare',
-        icon: 'fa-hospital',
-        desc: 'Secure medical record management and digitization.'
-    },
-    {
-        to: '/solutions/corporate',
-        label: 'Corporate',
-        icon: 'fa-building',
-        desc: 'Enterprise-grade ECM for streamlined workflows.'
-    },
-    {
-        to: '/solutions/education',
-        label: 'Education',
-        icon: 'fa-graduation-cap',
-        desc: 'Digital campus solutions for schools and universities.'
     },
     {
         to: '/solutions/government',
@@ -39,6 +22,26 @@ const solutionsDropdown = [
         icon: 'fa-gavel',
         desc: 'E-court management and legal document organization.'
     },
+    {
+        to: '/solutions/corporate',
+        label: 'Corporate',
+        icon: 'fa-building',
+        desc: 'Enterprise-grade ECM for streamlined workflows.'
+    },
+    {
+        to: '/solutions/healthcare',
+        label: 'Healthcare',
+        icon: 'fa-hospital',
+        desc: 'Secure medical record management and digitization.'
+    },
+
+    {
+        to: '/solutions/education',
+        label: 'Education',
+        icon: 'fa-graduation-cap',
+        desc: 'Digital campus solutions for schools and universities.'
+    },
+
 ];
 
 /* Pure CSS hover dropdown — no gap, no state flicker */
@@ -93,7 +96,7 @@ const Navbar = () => {
                 <Link to="/contact" className="nav-link">Contact Us</Link>
             </div>
 
-            <Link to="/contact" className="btn-signin desktop-only">Request Demo</Link>
+            <Link to="/request-demo" className="btn-signin desktop-only">Request Demo</Link>
 
             {/* Hamburger Button */}
             <button
@@ -108,25 +111,27 @@ const Navbar = () => {
             </button>
 
             {/* Mobile Menu */}
-            {menuOpen && (
-                <div className="mobile-menu">
-                    <div className="mobile-section-label">Solutions</div>
-                    {solutionsDropdown.map((item, i) => (
-                        <Link key={i} to={item.to} className="mobile-menu-link mobile-sub-link" onClick={closeMenu}>
-                            <i className={`fas ${item.icon}`} style={{ marginRight: '10px', color: 'var(--primary)' }}></i>
-                            {item.label}
-                        </Link>
-                    ))}
+            {
+                menuOpen && (
+                    <div className="mobile-menu">
+                        <div className="mobile-section-label">Solutions</div>
+                        {solutionsDropdown.map((item, i) => (
+                            <Link key={i} to={item.to} className="mobile-menu-link mobile-sub-link" onClick={closeMenu}>
+                                <i className={`fas ${item.icon}`} style={{ marginRight: '10px', color: 'var(--primary)' }}></i>
+                                {item.label}
+                            </Link>
+                        ))}
 
-                    <Link to="/case-studies" className="mobile-menu-link" onClick={closeMenu}>Case Studies</Link>
-                    <Link to="/about" className="mobile-menu-link" onClick={closeMenu}>About Us</Link>
-                    <Link to="/blog" className="mobile-menu-link" onClick={closeMenu}>Blog</Link>
-                    <Link to="/contact" className="mobile-menu-link" onClick={closeMenu}>Contact Us</Link>
+                        <Link to="/case-studies" className="mobile-menu-link" onClick={closeMenu}>Case Studies</Link>
+                        <Link to="/about" className="mobile-menu-link" onClick={closeMenu}>About Us</Link>
+                        <Link to="/blog" className="mobile-menu-link" onClick={closeMenu}>Blog</Link>
+                        <Link to="/contact" className="mobile-menu-link" onClick={closeMenu}>Contact Us</Link>
 
-                    <Link to="/contact" className="btn-signin mobile-demo-btn" onClick={closeMenu}>Request Demo</Link>
-                </div>
-            )}
-        </nav>
+                        <Link to="/request-demo" className="btn-signin mobile-demo-btn" onClick={closeMenu}>Request Demo</Link>
+                    </div>
+                )
+            }
+        </nav >
     );
 };
 

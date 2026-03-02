@@ -227,7 +227,7 @@ export const Products = () => {
                         </div>
                         <div style={{ position: 'relative' }}>
                             <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 40px 80px -20px rgba(0,0,0,0.2)', border: '1px solid #e2e8f0' }}>
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop" alt="VSDOX Dashboard" style={{ width: '100%', height: '420px', objectFit: 'cover' }} />
+                                <img src="./src/assets/dashboard.png" alt="VSDOX Dashboard" style={{ width: '100%', height: '420px', objectFit: 'cover' }} />
                             </div>
                             <div style={{ position: 'absolute', bottom: '-24px', left: '-24px', background: '#1d63ed', color: 'white', padding: '20px 28px', borderRadius: '16px', boxShadow: '0 10px 30px rgba(29,99,237,0.4)' }}>
                                 <div style={{ fontSize: '28px', fontWeight: '900' }}>200M+</div>
@@ -332,7 +332,7 @@ export const Products = () => {
                         Talk to our ECM experts and get a personalized demo tailored to your industry and scale.
                     </p>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-                        <a href="/contact" style={{ background: 'white', color: '#1d63ed', padding: '16px 36px', borderRadius: '10px', fontWeight: '800', fontSize: '16px', textDecoration: 'none', transition: 'all 0.3s ease' }}
+                        <a href="/request-demo" style={{ background: 'white', color: '#1d63ed', padding: '16px 36px', borderRadius: '10px', fontWeight: '800', fontSize: '16px', textDecoration: 'none', transition: 'all 0.3s ease' }}
                             onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
                             onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
                         >Request a Demo</a>

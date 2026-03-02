@@ -41,7 +41,7 @@ const caseStudies = [
     {
         tag: 'JUDICIARY',
         tagColor: '#7c3aed',
-        client: 'Allahabad High Court',
+        client: 'Multiple State and District Courts',
         logo: '⚖️',
         title: 'Paperless E-Court Solution',
         challenge: 'Ensuring robust protection against sensitive data breaches while training judges and staff to transition from millions of physical files to a digital system without workflow disruption.',
@@ -49,18 +49,6 @@ const caseStudies = [
         results: ['Instant remote access for judges', '95% reduction in physical file clutter', 'Automated case tracking & scheduling', 'Robust protection against unauthorized access'],
         industry: 'Judiciary',
         tech: 'Java, React JS, PostgreSQL'
-    },
-    {
-        tag: 'GOVERNMENT',
-        tagColor: '#dc2626',
-        client: 'National Archives of India',
-        logo: '📜',
-        title: 'Abhilekh Patal: Historical Digitization',
-        challenge: 'Digitizing vast, delicate, and aging historical records including manuscripts and maps in multiple languages while ensuring long-term preservation.',
-        solution: 'High-resolution non-contact scanning, multilingual metadata indexing, and an intuitive public portal with advanced search and role-based access.',
-        results: ['Long-term preservation of national heritage', 'Global access for international researchers', 'Multilingual OCR for deep content search', 'Secure handling of sensitive archives'],
-        industry: 'Government / Archives',
-        tech: 'Java, JSP, PostgreSQL, Tomcat'
     },
     {
         tag: 'LIBRARY',
@@ -185,7 +173,7 @@ export const CaseStudies = () => {
                 <div className="max-container" style={{ textAlign: 'center' }}>
                     <h2>Your Success Story Starts Here</h2>
                     <p>Join hundreds of organizations who have transformed their document operations with VSDOX.</p>
-                    <Link to="/contact" className="btn-primary" style={{ background: 'white', color: 'var(--primary)', marginTop: '30px', display: 'inline-block' }}>Schedule a Demo</Link>
+                    <Link to="/request-demo" className="btn-primary" style={{ background: 'white', color: 'var(--primary)', marginTop: '30px', display: 'inline-block' }}>Schedule a Demo</Link>
                 </div>
             </section>
 

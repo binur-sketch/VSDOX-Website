@@ -31,6 +31,7 @@ import {
 } from './pages/CompanyPages';
 
 import ScrollToTop from './components/ScrollToTop';
+import RequestDemo from './pages/RequestDemo';
 
 function App() {
   return (
@@ -65,6 +66,9 @@ function App() {
 
           {/* Legacy route kept for backward compatibility */}
           <Route path="legal" element={<PrivacyPolicy />} />
+
+          {/* Request Demo */}
+          <Route path="request-demo" element={<RequestDemo />} />
         </Route>
       </Routes>
     </Router>

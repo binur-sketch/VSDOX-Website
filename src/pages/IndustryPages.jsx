@@ -33,7 +33,7 @@ const PageHero = ({ title, subtitle, tag, bgColor, bgImage }) => (
                 <h1 style={{ fontSize: 'clamp(32px, 5vw, 60px)', fontWeight: '900', color: 'white', marginBottom: '20px', lineHeight: 1.1 }}>{title}</h1>
                 <p style={{ fontSize: 'clamp(15px, 2vw, 20px)', color: 'rgba(255,255,255,0.75)', maxWidth: '640px', lineHeight: 1.7, marginBottom: '36px' }}>{subtitle}</p>
                 <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                    <Link to="/contact" className="btn-primary">Request a Demo</Link>
+                    <Link to="/request-demo" className="btn-primary">Request a Demo</Link>
                     <Link to="/products" style={{ display: 'inline-block', padding: '12px 28px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.3)', color: 'white', textDecoration: 'none', fontWeight: '600', transition: 'all 0.3s ease' }}>Explore Platform</Link>
                 </div>
             </div>
