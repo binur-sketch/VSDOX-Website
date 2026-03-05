@@ -103,7 +103,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom-v2">
-                    <p>© {new Date().getFullYear()} <a href="https://virsoftech.com" style={{ textDecoration: 'none' }}>Vir Softech Pvt. Ltd.</a> All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} <a href="https://www.virsoftech.com" style={{ textDecoration: 'none' }}>Vir Softech Pvt. Ltd.</a> All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <Link to="/privacy-policy">Privacy Policy</Link>
                         <Link to="/terms">Terms & Cond.</Link>
