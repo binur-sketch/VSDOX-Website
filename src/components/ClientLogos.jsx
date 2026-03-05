@@ -9,7 +9,7 @@ import bda from '../assets/BDA.webp';
 import bmc from '../assets/bmclogo.png';
 import iitDelhi from '../assets/IIT Delhi.svg';
 import cskAgri from '../assets/CSK HImachal.jpg';
-import iicDelhi from '../assets/IIC.png';
+import iicDelhi from '../assets/iic.png';
 import hdfcPension from '../assets/images.jpg';
 import meghalayaHealth from '../assets/top-left.jpg';
 import dcTelangana from '../assets/District courts of telangana.png';
