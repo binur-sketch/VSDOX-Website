@@ -42,7 +42,7 @@ const caseStudies = [
         tag: 'JUDICIARY',
         tagColor: '#7c3aed',
         client: 'Multiple State and District Courts',
-        logo: '⚖️',
+        logo: 'fa-scale-balanced',
         title: 'Paperless E-Court Solution',
         challenge: 'Ensuring robust protection against sensitive data breaches while training judges and staff to transition from millions of physical files to a digital system without workflow disruption.',
         solution: 'Custom judicial ECM with advanced search, automated cause-list generation, and secure workflows for document submission, approval, and archiving.',
@@ -51,10 +51,10 @@ const caseStudies = [
         tech: 'Java, React JS, PostgreSQL'
     },
     {
-        tag: 'LIBRARY',
+        tag: 'EDUCATION',
         tagColor: '#0891b2',
         client: 'India International Center',
-        logo: '🎥',
+        logo: 'fa-video',
         title: 'Digilib: Multimedia DMS & Streaming',
         challenge: 'Integrating high-quality multimedia streaming with a DMS while protecting against piracy and managing diverse content types across varied internet bandwidths.',
         solution: 'Real-time streaming integration, complex file handling, payment gateway for monetization, and a subscription-based pay-per-view accessibility model.',
@@ -66,7 +66,7 @@ const caseStudies = [
         tag: 'EDUCATION',
         tagColor: '#059669',
         client: 'Deccan College',
-        logo: '🎓',
+        logo: 'fa-graduation-cap',
         title: '2 Million Records Digitization Project',
         challenge: 'Scanning 2 million diverse records including rare books, microfilms, and micro-cards that require specialized equipment and precise metadata indexing.',
         solution: 'Centralized high-resolution repository with batch import/export tools and a custom DMS optimized for microfilm and fragile book digitization.',
@@ -78,20 +78,71 @@ const caseStudies = [
         tag: 'GOVERNMENT',
         tagColor: '#dc2626',
         client: 'Presidential Estate',
-        logo: '🏛️',
+        logo: 'fa-landmark-dome',
         title: 'Presidential Estate Digitization',
         challenge: 'Preserving discolored historical documents and large-format maps while building a comprehensive metadata schema for government-level retrieval.',
         solution: 'Phased digitization approach using color correction enhancement, OCR tagging, and secure cloud storage with strict role-based access controls.',
         results: ['Enhanced accessibility to historical maps', 'Full-text OCR for rapid document discovery', 'Digital backups for disaster recovery', 'Improved historical research efficiency'],
         industry: 'Government / Heritage',
         tech: 'Java, PostgreSQL'
+    },
+    {
+        tag: 'BFSI',
+        tagColor: '#d97706',
+        client: 'Aditya Birla Group',
+        logo: 'fa-building-columns',
+        title: 'Enterprise DMS for a Global Conglomerate',
+        challenge: 'Fragmented document handling across ABHFL, ABFL, and ABCDL subsidiaries resulted in critical retrieval delays, high licensing costs, limited security, and poor version control across 36+ countries.',
+        solution: 'VSDOX DMS deployed across three subsidiaries — ABHFL for automated loan-journey capture & DSA indexing, ABFL for time-bound distributor document management, and ABCDL for integrated DSA journey storage & retrieval on AWS.',
+        results: [
+            'Automated capture & indexing sped up document retrieval',
+            'Reduced licensing costs with open-source VsDox DMS',
+            'Enhanced batch barcoding improved document precision',
+            'Role-based access & compliance strengthened data protection'
+        ],
+        industry: 'Banking & Financial Services',
+        tech: 'AWS, Java, Elasticsearch, PostgreSQL'
+    },
+    {
+        tag: 'CORPORATE',
+        tagColor: '#0f766e',
+        client: 'Hero MotoCorp Ltd.',
+        logo: 'fa-motorcycle',
+        title: 'All-Department ECM for Two-Wheeler Leader',
+        challenge: 'Inefficient manual document management, lack of system integration, difficulty in compliance tracking, inconsistent metadata, fragmented departmental systems, and high volume of paper records spread across multiple departments.',
+        solution: 'Open-source VsDox DMS deployed across all departments — HR (500K records + SAP/Google Enterprise integration), CAD (300K pages), Plant Maintenance (250K pages + GSS + mobile app), Secretariat (drag-and-drop + audit logs), Corporate (dynamic watermarking), and Strategic Sourcing (configurable workflows).',
+        results: [
+            'Automated digitization & indexing reduced manual handling',
+            'Advanced search enabled faster, reliable document retrieval',
+            'Metadata categorization enhanced document organization',
+            'SAP & Google Enterprise integration ensured scalability'
+        ],
+        industry: 'Manufacturing / Automotive',
+        tech: 'SAP, Java, Google Enterprise, Solr, PostgreSQL'
+    },
+    {
+        tag: 'HEALTHCARE',
+        tagColor: '#e11d48',
+        client: 'Indian Pharmacopoeia Commission (IPC)',
+        logo: 'fa-flask-vial',
+        title: 'Digitization of the Indian Pharmacopoeia',
+        challenge: 'Limited availability of the Indian Pharmacopoeia (IP) to remote researchers and healthcare professionals, time-consuming manual updates, difficulty verifying authenticity and accuracy of IP standards, and a cumbersome process for ordering reference substances.',
+        solution: 'Online portal making the IP accessible to a wider audience with real-time updates, authenticity verification features, streamlined reference substance ordering, and hyperlinked references for easy access to additional information and context.',
+        results: [
+            'Over 3000+ monographs discoverable online',
+            'Real-time updates on monograph revisions',
+            'Increased transparency & enhanced patient safety',
+            'Digital library with one-click reference substance ordering'
+        ],
+        industry: 'Healthcare / Pharma',
+        tech: 'Java, Solr, PostgreSQL, Apache Tomcat, AWS'
     }
 ];
 
 export const CaseStudies = () => {
     useEffect(() => { window.scrollTo(0, 0); document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in')); }, []);
     const [activeFilter, setActiveFilter] = useState('All');
-    const filters = ['All', 'JUDICIARY', 'GOVERNMENT', 'LIBRARY', 'EDUCATION'];
+    const filters = ['All', 'BFSI', 'GOVERNMENT', 'JUDICIARY', 'CORPORATE', 'HEALTHCARE', 'EDUCATION'];
     const filtered = activeFilter === 'All' ? caseStudies : caseStudies.filter(c => c.tag === activeFilter);
 
     return (
@@ -130,7 +181,9 @@ export const CaseStudies = () => {
                                 {/* Card Header */}
                                 <div style={{ background: 'linear-gradient(135deg, #0f172a, #1e293b)', padding: '32px', position: 'relative' }}>
                                     <span style={{ display: 'inline-block', background: cs.tagColor, color: 'white', fontSize: '11px', fontWeight: '800', letterSpacing: '0.1em', padding: '4px 12px', borderRadius: '100px', marginBottom: '16px' }}>{cs.tag}</span>
-                                    <p style={{ fontSize: '24px', marginBottom: '8px' }}>{cs.logo}</p>
+                                    <div style={{ fontSize: '24px', marginBottom: '8px', color: 'rgba(255,255,255,0.8)' }}>
+                                        <i className={`fas ${cs.logo}`}></i>
+                                    </div>
                                     <h3 style={{ color: 'white', fontSize: '20px', fontWeight: '700', lineHeight: 1.3 }}>{cs.title}</h3>
                                     <p style={{ color: '#94a3b8', fontSize: '13px', marginTop: '8px', fontWeight: '600' }}>{cs.client} · {cs.industry}</p>
                                 </div>

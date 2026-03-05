@@ -32,6 +32,7 @@ import {
 
 import ScrollToTop from './components/ScrollToTop';
 import RequestDemo from './pages/RequestDemo';
+import DigitizationServices from './pages/DigitizationServices';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsConditions />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="digitization-services" element={<DigitizationServices />} />
 
           {/* Legacy route kept for backward compatibility */}
           <Route path="legal" element={<PrivacyPolicy />} />

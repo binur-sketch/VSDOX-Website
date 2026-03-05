@@ -50,7 +50,7 @@ const Footer = () => {
                     </div>
 
                     {/* Products Column */}
-                    <div className="footer-links-col">
+                    { /*<div className="footer-links-col">
                         <h5>Products</h5>
                         <ul>
                             <li><Link to="/products">DMS Core</Link></li>
@@ -59,7 +59,7 @@ const Footer = () => {
                             <li><Link to="/products">Integrations</Link></li>
                             <li><Link to="/products">Low-Code Platform</Link></li>
                         </ul>
-                    </div>
+                    </div>*/}
 
                     {/* Company Column */}
                     <div className="footer-links-col">

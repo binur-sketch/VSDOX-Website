@@ -5,6 +5,12 @@ import { Underline } from 'lucide-react';
 
 const solutionsDropdown = [
     {
+        to: '/digitization-services',
+        label: 'Digitization Services',
+        icon: 'fa-file-zipper',
+        desc: 'Multimedia & heritage preservation (Manuscripts, AV, Maps).'
+    },
+    {
         to: '/solutions/banking-bfsi',
         label: 'BFSI',
         icon: 'fa-university',
@@ -121,7 +127,6 @@ const Navbar = () => {
                                 {item.label}
                             </Link>
                         ))}
-
                         <Link to="/case-studies" className="mobile-menu-link" onClick={closeMenu}>Case Studies</Link>
                         <Link to="/about" className="mobile-menu-link" onClick={closeMenu}>About Us</Link>
                         <Link to="/blog" className="mobile-menu-link" onClick={closeMenu}>Blog</Link>

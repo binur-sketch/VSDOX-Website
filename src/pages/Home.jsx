@@ -579,40 +579,42 @@ const Home = () => {
 
             {/* Why Vir Softech Section */}
             <section className="why-vir-softech-section section-padding reveal">
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                    <h2 style={{ fontSize: '36px', fontWeight: '800' }}>Why Vir Softech</h2>
-                    <p style={{ color: 'var(--text-muted)' }}>Vir Softech is a Registered Service Provider of DSpace, ensuring certified expertise, reliable customization, and professional support for enterprise-grade DMS solutions.</p>
-                </div>
-                <div className="why-vir-grid">
-                    <div className="why-vir-card">
-                        <div className="why-icon"><i className="fas fa-unlock-keyhole"></i></div>
-                        <h4>No proprietary licensing</h4>
-                        <p>Save seat-based, recurring costs of popular ECM vendors with opensource ECM.</p>
+                <div className="max-container">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <h2 style={{ fontSize: '36px', fontWeight: '800' }}>Why Vir Softech</h2>
+                        <p style={{ color: 'var(--text-muted)' }}>Vir Softech is a Registered Service Provider of DSpace, ensuring certified expertise, reliable customization, and professional support for enterprise-grade DMS solutions.</p>
                     </div>
-                    <div className="why-vir-card">
-                        <div className="why-icon"><i className="fas fa-wand-sparkles"></i></div>
-                        <h4>Worry-free magic</h4>
-                        <p>Technology is independent of the workflow. You concentrate on your workflow and the ECM-magic is all transparent to you.</p>
-                    </div>
-                    <div className="why-vir-card">
-                        <div className="why-icon"><i className="fas fa-hand-holding-dollar"></i></div>
-                        <h4>Reduced cost of ownership</h4>
-                        <p>Significant savings in your return on investments. You save at all three phases of project: implementation, run-time, and future-scalability.</p>
-                    </div>
-                    <div className="why-vir-card">
-                        <div className="why-icon"><i className="fas fa-industry"></i></div>
-                        <h4>Industry-specific solutions</h4>
-                        <p>Vertical solutions for Banking & BFSI, Healthcare, Corporate, Education, Government, and Judiciary.</p>
-                    </div>
-                    <div className="why-vir-card">
-                        <div className="why-icon"><i className="fas fa-ranking-star"></i></div>
-                        <h4>Track record of success</h4>
-                        <p>Large scale and mid-scale implementation across the globe.</p>
-                    </div>
-                    <div className="why-vir-card">
-                        <div className="why-icon"><i className="fas fa-leaf"></i></div>
-                        <h4>Greener and cleaner world</h4>
-                        <p>Leave the world greener and cleaner by reducing paper-based footprint and yet not losing any data, efficiency, and be scale-ready.</p>
+                    <div className="why-vir-grid">
+                        <div className="why-vir-card">
+                            <div className="why-icon"><i className="fas fa-unlock-keyhole"></i></div>
+                            <h4>No proprietary licensing</h4>
+                            <p>Save seat-based, recurring costs of popular ECM vendors with opensource ECM.</p>
+                        </div>
+                        <div className="why-vir-card">
+                            <div className="why-icon"><i className="fas fa-wand-sparkles"></i></div>
+                            <h4>Worry-free magic</h4>
+                            <p>Technology is independent of the workflow. You concentrate on your workflow and the ECM-magic is all transparent to you.</p>
+                        </div>
+                        <div className="why-vir-card">
+                            <div className="why-icon"><i className="fas fa-hand-holding-dollar"></i></div>
+                            <h4>Reduced cost of ownership</h4>
+                            <p>Significant savings in your return on investments. You save at all three phases of project: implementation, run-time, and future-scalability.</p>
+                        </div>
+                        <div className="why-vir-card">
+                            <div className="why-icon"><i className="fas fa-industry"></i></div>
+                            <h4>Industry-specific solutions</h4>
+                            <p>Vertical solutions for Banking & BFSI, Healthcare, Corporate, Education, Government, and Judiciary.</p>
+                        </div>
+                        <div className="why-vir-card">
+                            <div className="why-icon"><i className="fas fa-ranking-star"></i></div>
+                            <h4>Track record of success</h4>
+                            <p>Large scale and mid-scale implementation across the globe.</p>
+                        </div>
+                        <div className="why-vir-card">
+                            <div className="why-icon"><i className="fas fa-leaf"></i></div>
+                            <h4>Greener and cleaner world</h4>
+                            <p>Leave the world greener and cleaner by reducing paper-based footprint and yet not losing any data, efficiency, and be scale-ready.</p>
+                        </div>
                     </div>
                 </div>
             </section>

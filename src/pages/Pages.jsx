@@ -361,6 +361,13 @@ export const Solutions = () => {
                 bgImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2340&auto=format&fit=crop"
             />
             <SectionInfo
+                title="Multimedia & Heritage Digitization"
+                subtitle="SPECIALIZED CONTENT SERVICES"
+                content="Expert preservation of fragile archives, rare manuscripts, and legacy media. We transform physical heritage into permanent, searchable digital assets using non-invasive imaging and restoration technologies."
+                image="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2400&auto=format&fit=crop"
+                items={["Rare Manuscripts & Pothis", "Audio Video Digitization", "Large Format Maps & Atlases", "Microfilm & Microfiche Conversion"]}
+            />
+            <SectionInfo
                 title="Native Process Automation"
                 subtitle="NATIVE BPM"
                 content="Streamline complex end-to-end processes with our native business process management engine. From simple approvals to mission-critical operational workflows, automate everything on a single platform."
@@ -395,7 +402,7 @@ export const Industries = () => {
             <div className="max-container reveal" style={{ padding: '80px 0' }}>
                 <div className="industry-grid-detailed">
                     <div className="industry-block">
-                        <div className="icon-main">🏢</div>
+                        <div className="icon-main" style={{ color: 'var(--primary)' }}><i className="fas fa-building"></i></div>
                         <h3>Corporate</h3>
                         <ul className="dot-list">
                             <li><strong>HR:</strong> Employee docs & employment policies</li>
@@ -404,7 +411,7 @@ export const Industries = () => {
                         </ul>
                     </div>
                     <div className="industry-block">
-                        <div className="icon-main">🏦</div>
+                        <div className="icon-main" style={{ color: 'var(--primary)' }}><i className="fas fa-university"></i></div>
                         <h3>BFSI</h3>
                         <ul className="dot-list">
                             <li><strong>Banking:</strong> Account opening & commercial lending</li>
@@ -413,7 +420,7 @@ export const Industries = () => {
                         </ul>
                     </div>
                     <div className="industry-block">
-                        <div className="icon-main">🏛️</div>
+                        <div className="icon-main" style={{ color: 'var(--primary)' }}><i className="fas fa-landmark"></i></div>
                         <h3>Government</h3>
                         <ul className="dot-list">
                             <li><strong>Judiciary:</strong> Case File Digitization & e-Filing</li>
@@ -422,7 +429,7 @@ export const Industries = () => {
                         </ul>
                     </div>
                     <div className="industry-block">
-                        <div className="icon-main">🎓</div>
+                        <div className="icon-main" style={{ color: 'var(--primary)' }}><i className="fas fa-graduation-cap"></i></div>
                         <h3>Education</h3>
                         <ul className="dot-list">
                             <li><strong>Libraries:</strong> Research, Journals, & Archives</li>
@@ -431,7 +438,7 @@ export const Industries = () => {
                         </ul>
                     </div>
                     <div className="industry-block">
-                        <div className="icon-main">🏥</div>
+                        <div className="icon-main" style={{ color: 'var(--primary)' }}><i className="fas fa-hospital"></i></div>
                         <h3>Healthcare</h3>
                         <ul className="dot-list">
                             <li><strong>Records:</strong> Patient records digitization</li>
@@ -440,7 +447,7 @@ export const Industries = () => {
                         </ul>
                     </div>
                     <div className="industry-block" style={{ background: 'var(--primary)', color: 'white' }}>
-                        <div className="icon-main" style={{ color: 'white' }}>🚀</div>
+                        <div className="icon-main" style={{ color: 'white' }}><i className="fas fa-rocket"></i></div>
                         <h3>Startups</h3>
                         <p style={{ color: 'rgba(255,255,255,0.9)' }}>Scaling with expansive dreams? Move your documentation to a secure, cloud-ready environment today.</p>
                     </div>
@@ -627,7 +634,7 @@ export const About = () => {
             img: "https://www.virsoftech.com/img/deepak_garg.jpg",
             linkedin: "https://www.linkedin.com/in/deepakgarg76/",
             email: "deepak.garg@virsoftech.com",
-            desc: "A quintessentially gifted techno-businessman, Deepak has over 20 years of experience in growing products and dreams through product innovation, strategic planning, and customer acquisition. He has huge experience in the govt. and business IT solutions, serving clients globally, in the past for companies like HCL Technologies and Adobe Systems. Deepak is the mind behind our products and service offerings. As the Managing Director, he oversees the sales, business development, operations, and financial division."
+            desc: "A gifted techno-businessman with over 20 years of experience in product innovation, strategic planning, and customer acquisition. Previously at HCL Technologies and Adobe Systems, Deepak is the mind behind our products and services. As Managing Director, he oversees sales, business development, operations, and the financial division across global markets."
         },
         {
             name: "Abhijeet Jain",
@@ -635,7 +642,7 @@ export const About = () => {
             img: "https://www.virsoftech.com/img/abhijeet_pic.jpg",
             linkedin: "https://www.linkedin.com/in/abhijeet-jain-5a9b313/",
             email: "abhijeet.jain@virsoftech.com",
-            desc: "Abhijeet is a Computer Scientist, Entrepreneur, and Business Executive with a deep background in technology. He is a programming guru with over 20 years industry experience of leading R&D teams at global product companies. In the past, he's worked in Adobe Systems where he was the key solution architect for PDF centric products and services for Print & Publishing domain. He is a contributor to PDF ISO specifications. Abhijeet is still very hands on with coding and is chief architect for our print domain projects."
+            desc: "A Computer Scientist, Entrepreneur, and Business Executive with over 20 years of R&D leadership at global product companies. Previously at Adobe Systems as key solution architect for PDF-centric products in Print & Publishing. A contributor to PDF ISO specifications, Abhijeet remains hands-on with coding and serves as chief architect for our print domain projects."
         },
         {
             name: "Pralaypati Ta",
@@ -643,7 +650,7 @@ export const About = () => {
             img: "https://www.virsoftech.com/img/Pralay-photo.png",
             linkedin: "https://www.linkedin.com/in/pralaypati-ta-3944691/",
             email: "pralaypati.ta@virsoftech.com",
-            desc: "Pralaypati is a coding geek. He has over 18 years of tech leadership experience leading R&D teams at global Product companies, such as Samsung and Adobe Systems. Pralaypati is our solution architect for Cloud based solutions in DAM/CMS and Analytics technologies."
+            desc: "A coding geek with over 18 years of tech leadership experience leading R&D teams at global product companies like Samsung and Adobe Systems. Pralaypati is our solution architect for cloud-based solutions in DAM/CMS and analytics technologies, driving innovation in platform architecture for enterprise-scale content management and digital asset solutions."
         },
         {
             name: "Sameer Manuja",
@@ -651,7 +658,7 @@ export const About = () => {
             img: "https://www.virsoftech.com/sameer_manuja.jpg",
             linkedin: "https://www.linkedin.com/in/sameermanuja/",
             email: "sameer.manuja@virsoftech.com",
-            desc: "Sameer is our key solution architect for print and publishing technologies. He has over 20 years of industry experience in creating path-setting technologies for companies like Samsung and Adobe Systems. He has several US patents to his name."
+            desc: "Our key solution architect for print and publishing technologies with over 20 years of industry experience creating path-setting innovations at Samsung and Adobe Systems. Sameer holds several US patents to his name and drives the architecture of our advanced print domain solutions, rendering engines, and document processing frameworks."
         },
         {
             name: "Akihide Sugino",
@@ -659,7 +666,7 @@ export const About = () => {
             img: "https://www.virsoftech.com/img/sugino.jpg",
             linkedin: "#",
             email: "sugino.ak@virsoftech.com",
-            desc: "Sugino is a seasoned industry veteran with over 35 years of experience in Sales, Marketing, and License Compliance Service for top global firms such as Epson and Adobe, he has managed vendors, partnerships, product line development, and enterprise sales for print and publishing domain. Sugino oversees corporate management and sales at Vir Softech."
+            desc: "A seasoned industry veteran with over 35 years of experience in sales, marketing, and license compliance at top global firms including Epson and Adobe. Sugino has managed vendor partnerships, product line development, and enterprise sales for print and publishing. He oversees corporate management and Japan operations at Vir Softech."
         },
         {
             name: "Manu Paliwal",
@@ -667,7 +674,7 @@ export const About = () => {
             img: "https://www.virsoftech.com/img/manu-photo.jpg?v=1",
             linkedin: "https://www.linkedin.com/in/manu-paliwal-159b324/",
             email: "corp@virsoftech.com",
-            desc: "Manu is driving the growth strategy for the business, delivering differentiated customer value, and expanding business reach with diversified digital solutions. He has over 25 years of experience in the Sales and marketing, strategic alliances and operations including supply chain management. He has delivered turnaround results in most challenging business situations, prior to his current role, Manu held several leadership roles with P&L responsibility with global companies including his role as President – Business Solutions for Sharp."
+            desc: "Driving growth strategy, differentiated customer value, and expanding business reach with digital solutions. With over 25 years of experience in sales, marketing, and strategic alliances, Manu has delivered turnaround results in challenging business situations. Previously he held P&L leadership roles at global companies including President – Business Solutions for Sharp."
         }
     ];
 
@@ -691,18 +698,18 @@ export const About = () => {
                             We are a tech leader in four key domains:
                         </p>
                         <ul className="info-list">
-                            <li><span style={{ color: 'var(--primary)' }}>✓</span> Enterprise Content Management & Digital Imaging</li>
-                            <li><span style={{ color: 'var(--primary)' }}>✓</span> Print Technology Products & Services</li>
-                            <li><span style={{ color: 'var(--primary)' }}>✓</span> Design & Artwork Process Automation</li>
-                            <li><span style={{ color: 'var(--primary)' }}>✓</span> EVAL - Educational Evaluation, Assessments & Learning</li>
+                            <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Enterprise Content Management & Digital Imaging</li>
+                            <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Print Technology Products & Services</li>
+                            <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> Design & Artwork Process Automation</li>
+                            <li><i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginRight: '10px' }}></i> EVAL - Educational Evaluation, Assessments & Learning</li>
                         </ul>
                     </div>
                     <div className="info-image">
                         <div className="glass-card image-wrapper" style={{ background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '40px' }}>
                             <h3 style={{ marginBottom: '20px', color: 'var(--primary)' }}>Global Impact</h3>
                             <p style={{ marginBottom: '10px' }}><strong>CAGR:</strong> 40% per annum</p>
-                            <p style={{ marginBottom: '10px' }}><strong>Presence:</strong> US, UK, Japan, Asia, Australia, Middle East, India</p>
-                            <p><strong>Clients:</strong> Fortune 500, Govt, BFSI, Education, Health, Print</p>
+                            <p style={{ marginBottom: '10px' }}><strong>Presence:</strong> US, UK, Japan, Australia, India</p>
+                            <p><strong>Clients:</strong> Fortune 500, Govt, BFSI,Judiciary,Corporate, Health & Education</p>
                         </div>
                     </div>
                 </div>
@@ -717,7 +724,7 @@ export const About = () => {
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
                             {achievementList.map((ach, i) => (
                                 <div key={i} style={{ background: '#f8fafc', padding: '15px 25px', borderRadius: '50px', fontSize: '14px', fontWeight: '600', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                    🏆 {ach}
+                                    <i className="fas fa-award" style={{ color: 'var(--primary)' }}></i> {ach}
                                 </div>
                             ))}
                         </div>
@@ -725,56 +732,38 @@ export const About = () => {
                 </div>
             </section>
 
-            <section className="section max-container reveal" style={{ padding: '80px 0' }}>
-                <div style={{ textAlign: 'left', marginBottom: '60px' }}>
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', color: 'var(--primary)', marginBottom: '16px' }}>Leadership at Vir Softech</h2>
-                    <p style={{ maxWidth: '1000px', fontSize: '18px', lineHeight: '1.6', color: 'var(--text-dark)' }}>
-                        A few passionate technologists behind world’s foremost enterprise Imaging and Print products formed Vir Softech in Nov 2015. With time the team has expanded to include brilliant product engineers, research scientists, programmers, workflow engineers, data scientists, marketing executives, and dev-ops experts.
-                    </p>
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(480px, 1fr))', gap: '30px' }}>
-                    {leadership.map((leader, i) => (
-                        <div key={i} className="glass-card" style={{
-                            padding: '30px',
-                            border: '4px solid #a78bfa70',
-                            borderRadius: '20px',
-                            background: i % 2 === 0 ? 'white' : 'rgba(167, 139, 250, 0.1)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '20px'
-                        }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                                    <div style={{
-                                        width: '100px',
-                                        height: '100px',
-                                        borderRadius: '50%',
-                                        overflow: 'hidden',
-                                        border: '3px solid white',
-                                        boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
-                                    }}>
-                                        <img src={leader.img} alt={leader.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            <section style={{ padding: '80px 0', background: '#f8fafc' }}>
+                <div className="max-container reveal">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <span className="info-tag">OUR TEAM</span>
+                        <h2 style={{ fontSize: '42px', fontWeight: '800', color: 'var(--text-dark)', marginBottom: '16px' }}>Leadership at Vir Softech</h2>
+                        <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '18px', lineHeight: '1.6', color: 'var(--text-muted)' }}>
+                            A few passionate technologists behind world's foremost enterprise Imaging and Print products formed Vir Softech in Nov 2015. With time the team has expanded to include brilliant product engineers, research scientists, programmers, workflow engineers, data scientists, marketing executives, and dev-ops experts.
+                        </p>
+                    </div>
+                    <div className="leadership-grid">
+                        {leadership.map((leader, i) => (
+                            <div key={i} className="leader-card">
+                                <div className="leader-card-top">
+                                    <div className="leader-photo">
+                                        <img src={leader.img} alt={leader.name}
                                             onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/150?text=Leader" }} />
                                     </div>
-                                    <div>
-                                        <h4 style={{ fontSize: '28px', fontWeight: '800', color: '#6d28d9', margin: 0 }}>{leader.name}</h4>
-                                        <div style={{ fontSize: '20px', fontWeight: '700', color: 'var(--text-dark)' }}>{leader.role}</div>
+                                    <h4 className="leader-name">{leader.name}</h4>
+                                    <div className="leader-role">{leader.role}</div>
+                                    <div className="leader-socials">
+                                        <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="leader-social-btn linkedin">
+                                            <i className="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a href={`mailto:${leader.email}`} className="leader-social-btn email">
+                                            <i className="fas fa-envelope"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <div style={{ display: 'flex', gap: '10px' }}>
-                                    <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" style={{
-                                        width: '40px', height: '40px', borderRadius: '50%', background: '#0a66c2', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'
-                                    }}><i className="fab fa-linkedin-in"></i></a>
-                                    <a href={`mailto:${leader.email}`} style={{
-                                        width: '40px', height: '40px', borderRadius: '50%', background: '#f59e0b', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'
-                                    }}><i className="fas fa-envelope"></i></a>
-                                </div>
+                                <p className="leader-desc">{leader.desc}</p>
                             </div>
-                            <p style={{ fontSize: '15px', lineHeight: '1.7', color: 'var(--text-main)', margin: 0 }}>
-                                {leader.desc}
-                            </p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </section>
         </>
