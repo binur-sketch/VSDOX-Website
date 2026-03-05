@@ -1,47 +1,67 @@
 import React from 'react';
-import client1 from '../assets/client_1.png';
-import client2 from '../assets/client_2.jpg';
-import client3 from '../assets/client_3.webp';
-import client4 from '../assets/client_4.jpg';
-import client5 from '../assets/client_5.webp';
-import client6 from '../assets/client_6.jpg';
-import client7 from '../assets/client_7.webp';
-import client8 from '../assets/client_8.png';
-import client9 from '../assets/client_9.jpg';
-import client10 from '../assets/client_10.jpg';
-import client11 from '../assets/client_11.webp';
-import client12 from '../assets/client_12.jpg';
-import client13 from '../assets/client_13.jpg';
-import client14 from '../assets/client_14.jpg';
-import client15 from '../assets/client_15.jpg';
-import client16 from '../assets/client_16.webp';
-import client17 from '../assets/client_17.png';
+import hdfcLife from '../assets/hdfclife.jpg';
+import abHousing from '../assets/ABHFL_OG.png';
+import heroMoto from '../assets/Hero_MotoCorp-Logo.wine.svg';
+import religare from '../assets/Religare-Broking-Ltd..jpg';
+import subros from '../assets/subroshlogo.jpg';
+import rajasthanHC from '../assets/Logo_of_the_High_Court_of_Rajasthan.png';
+import bda from '../assets/BDA.webp';
+import bmc from '../assets/bmclogo.png';
+import iitDelhi from '../assets/IIT Delhi.svg';
+import cskAgri from '../assets/CSK HImachal.jpg';
+import iicDelhi from '../assets/IIC.png';
+import hdfcPension from '../assets/images.jpg';
+import meghalayaHealth from '../assets/top-left.jpg';
+import dcTelangana from '../assets/District courts of telangana.png';
+import delnet from '../assets/Untitled.png';
+import pharmacopoeia from '../assets/IPC.jpg';
+import govPosts from '../assets/images (2).jpg';
+import andhraHC from '../assets/unnamed.png';
+import asiaticSociety from '../assets/logo6.jpg';
+import madrasHC from '../assets/High Court Madras.jpg';
+import odishaDC from '../assets/District Court Odisha.jpg';
+import deccanCollege from '../assets/Deccan college pune.png';
+import smsaExpress from '../assets/png-clipart-saudi-arabia-express-inc-smsa-express-air-waybill-retail-others-miscellaneous-purple.png';
+import ttdLogo from '../assets/TTD-Logo.png';
+import welhamGirls from '../assets/wgs-logo-final.png';
+import copycatKenya from '../assets/copycat logo.png';
+import registrationOdisha from '../assets/Odisha Dept.jpg';
+import allahabadHC from '../assets/District courts of Allahabad.png';
+
 
 const baseClients = [
-    { name: "Indian Pharmacopoeia Online ", logo: client1 },
-    { name: "National Archives", logo: client2 },
-    { name: "OCAC", logo: client3 },
-    { name: "Odisha High Court", logo: client4 },
-    { name: "Madras High Court", logo: client5 },
-    { name: "Allahabad High Court", logo: client6 },
-    { name: "HDFC Life", logo: client7 },
-    { name: "Rajasthan High Court", logo: client8 },
-    { name: "Hero MotoCorp", logo: client9 },
-    { name: "Aditya Birla Capital", logo: client10 },
-    { name: "IIT Delhi", logo: client11 },
-    { name: "CONCOR", logo: client12 },
-    { name: "AIIMS New Delhi", logo: client13 },
-    { name: "Utkarsh Bank", logo: client14 },
-    { name: "Govt of Maharashtra", logo: client15 },
-    { name: "Kerala High Court", logo: client16 },
-    { name: "IIC Delhi", logo: client17 }
+    { name: "HDFC Life Insurance Ltd.", logo: hdfcLife },
+    { name: "HDFC Pension Fund Ltd.", logo: hdfcPension },
+    { name: "Aditya Birla Housing Finance Limited", logo: abHousing },
+    { name: "Hero MotoCorp Ltd.", logo: heroMoto },
+    { name: "Religare Broking Ltd.", logo: religare },
+    { name: "Subros Ltd.", logo: subros },
+    { name: "Rajasthan High Court", logo: rajasthanHC },
+    { name: "District Courts, Odisha", logo: odishaDC },
+    { name: "Bhubaneswar Development Authority (BDA)", logo: bda },
+    { name: "Bhubaneswar Municipal Corporation", logo: bmc },
+    { name: "Inspector General of Registration Revenue, Odisha", logo: registrationOdisha },
+    { name: "Allahabad District Courts, Prayagraj", logo: allahabadHC },
+    { name: "Telangana District Courts", logo: dcTelangana },
+    { name: "Andhra Pradesh High Courts", logo: andhraHC },
+    { name: "Madras High Court, Chennai", logo: madrasHC },
+    { name: "Indian Institute Of Technology Delhi (IIT Delhi)", logo: iitDelhi },
+    { name: "CSK Agricultural University, Palampur", logo: cskAgri },
+    { name: "Deccan College of Engineering & Tech, Pune", logo: deccanCollege },
+    { name: "DELNET-Developing Library Network, Delhi", logo: delnet },
+    { name: "India International Centre, Delhi", logo: iicDelhi },
+    { name: "Indian Pharmacopoeia Commission", logo: pharmacopoeia },
+    { name: "The Asiatic Society of Mumbai", logo: asiaticSociety },
+    { name: "SMSA Express, Dubai, UAE", logo: smsaExpress },
+    { name: "Tirumala Tirupati Devasthanams (TTD)", logo: ttdLogo },
+    { name: "Dept of Health & Family Welfare, Meghalaya", logo: meghalayaHealth },
+    { name: "Welham Girls' School, Dehradun", logo: welhamGirls },
+    { name: "Department of Posts, Govt of India", logo: govPosts },
+    { name: "Copycat Ltd, Kenya", logo: copycatKenya }
 ];
 
-// Repeat logos to fill the 6x5 grid (30 items total)
-const clients = [
-    ...baseClients,
-    ...baseClients.slice(0, 13) // Add 13 more to make it 30
-];
+// Use exactly 30 items for the grid
+const clients = baseClients;
 
 const ClientLogos = () => {
     return (
@@ -55,8 +75,8 @@ const ClientLogos = () => {
 
                 <div className="clientele-grid-static">
                     {clients.map((client, index) => (
-                        <div key={index} className="client-circle-item">
-                            <div className="client-circle">
+                        <div key={index} className="client-card-item">
+                            <div className="client-card">
                                 {typeof client.logo === 'string' && client.logo.length < 5 ? (
                                     <span className="client-emoji">{client.logo}</span>
                                 ) : (

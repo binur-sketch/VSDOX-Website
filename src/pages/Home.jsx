@@ -6,6 +6,10 @@ import logo from '../logo.png';
 import heroVsdox from '../assets/hero-vsdox.png';
 import isoCert from '../assets/iso.jpg';
 import cmmiCert from '../assets/cmmi.jpg';
+import headlessDms from '../assets/headless DMS.png';
+import abLogo from '../assets/ABHFL_OG.png';
+import religareLogo from '../assets/Religare-Broking-Ltd..jpg';
+import hdfcLogo from '../assets/hdfclife.jpg';
 
 const Home = () => {
     useEffect(() => {
@@ -87,7 +91,7 @@ const Home = () => {
             </section>
 
             {/* AI Capabilities Section */}
-            <section className="ai-capabilities-section reveal" style={{ padding: '100px 0' }}>
+            <section className="ai-capabilities-section section-padding reveal">
                 <div className="max-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px', color: 'white' }}>AI-Powered Enterprise Content Management</h2>
@@ -133,7 +137,7 @@ const Home = () => {
             </section>
 
             {/* Flexible Hosting Infrastructure */}
-            <section className="hosting-section reveal" style={{ padding: '80px 0', background: 'var(--section-alt)' }}>
+            <section className="hosting-section section-padding reveal" style={{ background: 'var(--section-alt)' }}>
                 <div className="max-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px' }}>Flexible Hosting Infrastructure</h2>
@@ -163,7 +167,7 @@ const Home = () => {
             </section>
 
             {/* Enterprise-Grade Security */}
-            <section className="security-section-enhanced reveal" style={{ padding: '100px 0' }}>
+            <section className="security-section-enhanced section-padding reveal">
                 <div className="max-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px' }}>Enterprise-Grade Security</h2>
@@ -257,7 +261,7 @@ const Home = () => {
 
 
             {/* End-to-End Digital Content Transformation Section */}
-            <section className="content-lifecycle-section reveal" style={{ padding: '80px 0' }}>
+            <section className="content-lifecycle-section section-padding reveal">
                 <div className="max-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{ fontSize: '40px', fontWeight: '800', marginBottom: '20px' }}>End-to-End Digital Content Transformation</h2>
@@ -392,6 +396,59 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Headless DMS Section */}
+            <section className="headless-dms-section section-padding reveal" style={{ background: '#f8fafc' }}>
+                <div className="max-container">
+                    <div className="headless-container">
+                        <div className="headless-content">
+                            <div className="info-tag">REST API–Based Architecture</div>
+                            <h2 style={{ fontSize: '32px', fontWeight: '800', margin: '15px 0' }}>Headless DMS (REST API–Based Architecture)</h2>
+                            <p style={{ fontSize: '18px', color: 'var(--text-main)', marginBottom: '24px' }}>
+                                A Headless DMS is a REST API–driven document management solution where all document storage, metadata, security, and workflows are managed in the backend through an Admin Panel.
+                            </p>
+                            <p style={{ fontSize: '16px', color: 'var(--text-muted)', marginBottom: '24px' }}>
+                                Documents are stored and controlled centrally in the DMS, while customers use their own custom front-end (web portal, mobile app, ERP, etc.) to fetch and display document data via secure APIs. This approach provides full UI flexibility while keeping document governance, access control, and compliance centralized in the backend system.
+                            </p>
+
+                            <div className="headless-comparison">
+                                <div className="comp-item">
+                                    <strong>Traditional DMS</strong>
+                                    <span>Backend + Fixed UI</span>
+                                </div>
+                                <div className="comp-arrow"><i className="fas fa-arrow-right-long"></i></div>
+                                <div className="comp-item highlight">
+                                    <strong>Headless DMS</strong>
+                                    <span>Backend Only (Build Your Own UI)</span>
+                                </div>
+                            </div>
+
+                            <div className="headless-benefits-grid">
+                                <div className="benefit-pill"><i className="fas fa-palette"></i> Full Front-end Customization</div>
+                                <div className="benefit-pill"><i className="fas fa-plug-circle-bolt"></i> Easy Integration</div>
+                                <div className="benefit-pill"><i className="fas fa-mobile-screen-button"></i> Omnichannel Access</div>
+                                <div className="benefit-pill"><i className="fas fa-rocket"></i> Faster Innovation</div>
+                            </div>
+
+                            <div className="headless-proof">
+                                <p>Delivered Headless DMS solution to industry leaders:</p>
+                                <div className="proof-logos-inline">
+                                    <img src={abLogo} alt="Aditya Birla Group" className="headless-customer-logo" />
+                                    <img src={religareLogo} alt="Religare" className="headless-customer-logo" />
+                                    <img src={hdfcLogo} alt="HDFC" className="headless-customer-logo" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="headless-visual reveal" style={{ transitionDelay: '0.2s' }}>
+                            <div className="headless-image-wrapper">
+                                <img src={headlessDms} alt="VSDOX Headless DMS Architecture" />
+                                <div className="image-overlay-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
 
 
@@ -453,7 +510,7 @@ const Home = () => {
             </section>
 
             {/* ECM Solutions for Verticals Section */}
-            <section className="verticals-section reveal" style={{ padding: '80px 0' }}>
+            <section className="verticals-section section-padding reveal">
                 <div className="max-container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{ fontSize: '36px', fontWeight: '800' }}>ECM Solutions for Verticals</h2>
@@ -521,7 +578,7 @@ const Home = () => {
             </section>
 
             {/* Why Vir Softech Section */}
-            <section className="max-container reveal" style={{ padding: '100px 0' }}>
+            <section className="why-vir-softech-section section-padding reveal">
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                     <h2 style={{ fontSize: '36px', fontWeight: '800' }}>Why Vir Softech</h2>
                     <p style={{ color: 'var(--text-muted)' }}>Vir Softech is a Registered Service Provider of DSpace, ensuring certified expertise, reliable customization, and professional support for enterprise-grade DMS solutions.</p>

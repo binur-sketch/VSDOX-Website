@@ -84,9 +84,9 @@ const Navbar = () => {
 
                 {/* Solutions Dropdown — CSS :hover driven */}
                 <div className="nav-dropdown-wrapper">
-                    <button className="nav-link nav-link-btn">
+                    <Link to="/solutions" className="nav-link nav-link-btn" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
                         Solutions <i className="fas fa-chevron-down dropdown-arrow"></i>
-                    </button>
+                    </Link>
                     <DropdownMenu items={solutionsDropdown} />
                 </div>
 
