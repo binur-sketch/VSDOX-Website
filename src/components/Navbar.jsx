@@ -102,7 +102,7 @@ const Navbar = () => {
                 <Link to="/contact" className="nav-link">Contact Us</Link>
             </div>
 
-            <Link to="/request-demo" className="btn-signin desktop-only">Request Demo</Link>
+            <Link to="/request-demo" className="btn-signin desktop-only" style={{ textDecoration: 'none' }}>Request Demo</Link>
 
             {/* Hamburger Button */}
             <button
