@@ -328,7 +328,8 @@ const Home = () => {
                                 { title: "Advanced Faceted Search", desc: "Refined discovery using structured filters and dynamic facets." },
                                 { title: "Intelligent Search", desc: "Phonetic, fuzzy, thesaurus-based, and nested-faceted document discovery." },
                                 { title: "Multilingual UI", desc: "Seamless experience in the user's selected language scripts." },
-                                { title: "RAG-Based Q&A", desc: "Internal Retrieval-Augmented Generation for contextual document queries." }
+                                { title: "RAG-Based Q&A", desc: "Internal Retrieval-Augmented Generation for contextual document queries." },
+                                { title: "Adaptive Video Streaming", desc: "Acts as a smart middleman between the server and users—delivering video in real-time chunks with Adaptive Bitrate (ABR) technology. Eliminates buffering on slow connections, enables instant timeline seeking, and ensures flawless playback on every device." }
                             ].map((feat, idx) => (
                                 <div key={idx} className="ecm-feature-v2">
                                     <div className="feat-icon"><i className="fas fa-check-circle"></i></div>
