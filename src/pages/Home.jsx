@@ -426,8 +426,6 @@ const Home = () => {
                             <div className="headless-benefits-grid">
                                 <div className="benefit-pill"><i className="fas fa-palette"></i> Full Front-end Customization</div>
                                 <div className="benefit-pill"><i className="fas fa-plug-circle-bolt"></i> Easy Integration</div>
-                                <div className="benefit-pill"><i className="fas fa-mobile-screen-button"></i> Omnichannel Access</div>
-                                <div className="benefit-pill"><i className="fas fa-rocket"></i> Faster Innovation</div>
                             </div>
 
                             <div className="headless-proof">

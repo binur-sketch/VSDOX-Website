@@ -104,6 +104,23 @@ const caseStudies = [
         tech: 'AWS, Java, Elasticsearch, PostgreSQL'
     },
     {
+        tag: 'BFSI',
+        tagColor: '#d97706',
+        client: 'HDFC Pension Management Company Limited (HPMC)',
+        logo: 'fa-building-columns',
+        title: 'NPS Workflow Automation Platform',
+        challenge: 'Fragmented workflows and manual processing across the NPS ecosystem, leading to limited visibility, complex integration needs, and challenges in handling high transaction volumes.',
+        solution: 'Centralized automation platform for Corporate and Retail sectors, integrating with CRA and HPMC APIs. Features include a secure document repository, automated file preparation/reconciliation, and real-time operational dashboards.',
+        results: [
+            'Digitized onboarding reduced manual intervention',
+            'Automated validations significantly cut processing time',
+            'Real-time dashboards improved operational tracking',
+            'Maker-checker workflows ensured 100% regulatory compliance'
+        ],
+        industry: 'Banking & Financial Services',
+        tech: 'React, Java, Spring Boot, PostgreSQL, Tomcat'
+    },
+    {
         tag: 'CORPORATE',
         tagColor: '#0f766e',
         client: 'Hero MotoCorp Ltd.',

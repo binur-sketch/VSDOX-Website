@@ -175,7 +175,7 @@ export const BankingBFSI = () => {
                         <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: '800' }}>Use Cases Across BFSI</h2>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
-                        {['Retail Banking: Account opening forms, KYC, credit cards', 'Commercial Lending: Loan origination, collateral, risk docs', 'Insurance: Claims, policy servicing, underwriting files', 'Investment Banking: Trade confirmations, mandates, reports', 'NBFCs: Microfinance application & disbursement records', 'Compliance: CERSAI, CKYC, RBI audit documentation'].map((uc, i) => (
+                        {['Retail Banking: Account opening forms, KYC, credit cards', 'Commercial Lending: Loan origination, collateral, risk docs', 'Insurance: Claims, policy servicing, underwriting files', 'Investment Banking: Trade confirmations, mandates, reports', 'NBFCs: Microfinance application & disbursement records', 'Pension Fund Management: NPS onboarding, contribution & workflow automation', 'Compliance: CERSAI, CKYC, RBI audit documentation'].map((uc, i) => (
                             <div key={i} className="feature-v3-card">
                                 <i className="fas fa-check-circle" style={{ color: 'var(--primary)', marginBottom: '12px', display: 'block' }}></i>
                                 <p style={{ color: 'var(--text-main)', fontWeight: '500' }}>{uc}</p>
