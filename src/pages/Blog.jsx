@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { handleFormSubmission } from '../utils/formHandler';
+
 
 
 const BlogCard = ({ category, date, title, excerpt, image, author, authorRole }) => (
@@ -140,16 +142,61 @@ const Blog = () => {
                 <div className="max-container reveal" style={{ textAlign: 'center' }}>
                     <h2 style={{ fontSize: '32px', fontWeight: '800', marginBottom: '20px' }}>Subscribe to Our Newsletter</h2>
                     <p style={{ opacity: 0.9, maxWidth: '600px', margin: '0 auto 40px', fontSize: '18px' }}>Get the latest insights on document automation and enterprise intelligence delivered straight to your inbox.</p>
-                    <form style={{ display: 'flex', maxWidth: '500px', margin: '0 auto', gap: '10px', flexWrap: 'wrap' }}>
-                        <input type="email" placeholder="Your work email" style={{ flexGrow: 1, padding: '16px 24px', borderRadius: '12px', border: 'none', fontSize: '16px' }} />
-                        <button className="btn-primary" style={{ background: 'white', color: 'var(--primary)', fontWeight: '800' }}>Subscribe</button>
-                    </form>
+                    
+                    <NewsletterForm />
                 </div>
             </section>
+
 
 
         </main>
     );
 };
 
+const NewsletterForm = () => {
+    const [email, setEmail] = React.useState('');
+    const [submitted, setSubmitted] = React.useState(false);
+    const [sending, setSending] = React.useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSending(true);
+        const success = await handleFormSubmission({ email, subject: 'Newsletter Subscription' }, 'corp@virsoftech.com');
+        if (success) {
+            setSubmitted(true);
+        }
+        setSending(false);
+    };
+
+    if (submitted) {
+        return (
+            <div style={{ background: 'rgba(255,255,255,0.1)', padding: '20px', borderRadius: '12px', display: 'inline-block' }}>
+                <h4 style={{ margin: 0 }}>🎉 Thank you for subscribing!</h4>
+            </div>
+        );
+    }
+
+    return (
+        <form onSubmit={handleSubmit} style={{ display: 'flex', maxWidth: '500px', margin: '0 auto', gap: '10px', flexWrap: 'wrap' }}>
+            <input 
+                type="email" 
+                placeholder="Your work email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                style={{ flexGrow: 1, padding: '16px 24px', borderRadius: '12px', border: 'none', fontSize: '16px', color: '#0f172a' }} 
+            />
+            <button 
+                type="submit" 
+                className="btn-primary" 
+                disabled={sending}
+                style={{ background: 'white', color: 'var(--primary)', fontWeight: '800', opacity: sending ? 0.7 : 1 }}
+            >
+                {sending ? 'Subscribing...' : 'Subscribe'}
+            </button>
+        </form>
+    );
+};
+
 export default Blog;
+

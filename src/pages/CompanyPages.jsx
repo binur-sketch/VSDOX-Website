@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { handleFormSubmission } from '../utils/formHandler';
+
 
 
 /* ── Shared inner-page hero ─────────────────────────────── */
@@ -259,9 +261,25 @@ export const ContactUs = () => {
     useEffect(() => { window.scrollTo(0, 0); document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in')); }, []);
     const [formData, setFormData] = useState({ name: '', email: '', company: '', phone: '', subject: '', message: '' });
     const [submitted, setSubmitted] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [error, setError] = useState(false);
 
     const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
-    const handleSubmit = e => { e.preventDefault(); setSubmitted(true); };
+    const handleSubmit = async e => {
+        e.preventDefault();
+        setSending(true);
+        setError(false);
+
+        const success = await handleFormSubmission(formData, 'corp@virsoftech.com');
+
+        if (success) {
+            setSubmitted(true);
+        } else {
+            setError(true);
+        }
+        setSending(false);
+    };
+
 
     return (
         <>
@@ -289,6 +307,14 @@ export const ContactUs = () => {
                                 <>
                                     <h3 style={{ fontSize: '26px', fontWeight: '800', marginBottom: '8px' }}>Send us a Message</h3>
                                     <p style={{ color: 'var(--text-muted)', marginBottom: '32px' }}>Fill out the form and we'll get back to you within 24 hours.</p>
+
+                                    {error && (
+                                        <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#991b1b', padding: '12px 16px', borderRadius: '8px', marginBottom: '24px', fontSize: '14px' }}>
+                                            <i className="fas fa-exclamation-circle" style={{ marginRight: '8px' }}></i>
+                                            Oops! Something went wrong. Please try again or email us directly at corp@virsoftech.com.
+                                        </div>
+                                    )}
+
                                     <form className="contact-form" onSubmit={handleSubmit}>
                                         <div className="form-row">
                                             <div>
@@ -331,9 +357,15 @@ export const ContactUs = () => {
                                             <label style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>Your Message *</label>
                                             <textarea name="message" placeholder="Tell us about your document management challenge..." rows="5" value={formData.message} onChange={handleChange} required></textarea>
                                         </div>
-                                        <button type="submit" className="btn-primary" style={{ width: '100%', padding: '16px', fontSize: '16px', marginTop: '8px' }}>
-                                            <i className="fas fa-paper-plane" style={{ marginRight: '10px' }}></i>Send Message
+                                        <button type="submit" className="btn-primary" disabled={sending} style={{ width: '100%', padding: '16px', fontSize: '16px', marginTop: '8px', opacity: sending ? 0.7 : 1, cursor: sending ? 'wait' : 'pointer' }}>
+                                            {sending ? (
+                                                <i className="fas fa-spinner fa-spin" style={{ marginRight: '10px' }}></i>
+                                            ) : (
+                                                <i className="fas fa-paper-plane" style={{ marginRight: '10px' }}></i>
+                                            )}
+                                            {sending ? 'Sending...' : 'Send Message'}
                                         </button>
+
                                     </form>
                                 </>
                             )}

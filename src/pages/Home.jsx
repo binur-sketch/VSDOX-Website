@@ -44,7 +44,7 @@ const Home = () => {
                                 Transform your documentation workflow with VSDOX AI. Automate classification, extraction, and retrieval while ensuring enterprise-grade security and scalability.
                             </p>
                             <div className="hero-buttons-v4">
-                                <Link to="/products" className="btn-primary">Learn More About VSDOX</Link>
+                                <Link to="" className="btn-primary">Learn More About VSDOX</Link>
                                 <a href="/request-demo" className="btn-primary">Platform Demo</a>
                             </div>
                         </div>

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { handleFormSubmission } from '../utils/formHandler';
+
 
 import MilestoneTimeline from '../components/MilestoneTimeline';
 import teamBanner from '../assets/team-member.jpeg';
@@ -539,55 +541,101 @@ export const Pricing = () => (
     </>
 );
 
-export const Contact = () => (
-    <>
-        <PageHero
-            title="Contact Us"
-            subtitle="Get in touch with our document management experts."
-            bgImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2340&auto=format&fit=crop"
-        />
-        <section className="max-container reveal" style={{ padding: '80px 0' }}>
-            <div className="contact-page-grid">
-                <div className="contact-form-wrapper glass-card">
-                    <h3>Send us a Message</h3>
-                    <form className="contact-form">
-                        <div className="form-row">
-                            <input type="text" placeholder="Full Name" />
-                            <input type="email" placeholder="Email Address" />
+export const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('fade-in'));
+    }, []);
+    const [formData, setFormData] = React.useState({ name: '', email: '', subject: '', message: '' });
+    const [submitted, setSubmitted] = React.useState(false);
+    const [sending, setSending] = React.useState(false);
+    const [error, setError] = React.useState(false);
+
+    const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+    const handleSubmit = async e => {
+        e.preventDefault();
+        setSending(true);
+        setError(false);
+        const success = await handleFormSubmission(formData, 'corp@virsoftech.com');
+        if (success) {
+            setSubmitted(true);
+        } else {
+            setError(true);
+        }
+        setSending(false);
+    };
+
+    return (
+        <>
+            <PageHero
+                title="Contact Us"
+                subtitle="Get in touch with our document management experts."
+                bgImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2340&auto=format&fit=crop"
+            />
+            <section className="max-container reveal" style={{ padding: '80px 0' }}>
+                <div className="contact-page-grid">
+                    <div className="contact-form-wrapper glass-card">
+                        {submitted ? (
+                            <div style={{ textAlign: 'center', padding: '40px 0' }}>
+                                <div style={{ fontSize: '48px', marginBottom: '16px' }}>✅</div>
+                                <h3 style={{ fontSize: '24px', fontWeight: '800', marginBottom: '12px' }}>Message Sent!</h3>
+                                <p style={{ color: 'var(--text-muted)' }}>Thank you for reaching out. We'll get back to you shortly.</p>
+                                <button onClick={() => setSubmitted(false)} className="btn-primary" style={{ marginTop: '20px' }}>Send Another</button>
+                            </div>
+                        ) : (
+                            <>
+                                <h3>Send us a Message</h3>
+                                {error && (
+                                    <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#991b1b', padding: '12px 16px', borderRadius: '8px', marginBottom: '20px', fontSize: '14px' }}>
+                                        Oops! Something went wrong. Please try again.
+                                    </div>
+                                )}
+                                <form className="contact-form" onSubmit={handleSubmit}>
+                                    <div className="form-row">
+                                        <input name="name" type="text" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
+                                        <input name="email" type="email" placeholder="Email Address" value={formData.email} onChange={handleChange} required />
+                                    </div>
+                                    <input name="subject" type="text" placeholder="Subject" value={formData.subject} onChange={handleChange} required />
+                                    <textarea name="message" placeholder="Your Message" rows="6" value={formData.message} onChange={handleChange} required></textarea>
+                                    <button type="submit" className="btn-primary" disabled={sending} style={{ opacity: sending ? 0.7 : 1, cursor: sending ? 'wait' : 'pointer' }}>
+                                        {sending ? 'Sending...' : 'Send Message'}
+                                    </button>
+                                </form>
+                            </>
+                        )}
+                    </div>
+
+                    <div className="contact-info-boxes">
+                        <div className="contact-box glass-card">
+                            <h4>Corporate Office (HQ)</h4>
+                            <p>Vir Softech Pvt. Ltd.<br />A 306, The I Thum, Plot No. A 40, Sector 62, Noida, UP, India</p>
                         </div>
-                        <input type="text" placeholder="Subject" />
-                        <textarea placeholder="Your Message" rows="6"></textarea>
-                        <button className="btn-primary">Send Message</button>
-                    </form>
-                </div>
-                <div className="contact-info-boxes">
-                    <div className="contact-box glass-card">
-                        <h4>Corporate Office (HQ)</h4>
-                        <p>Vir Softech Pvt. Ltd.<br />A 306, The I Thum, Plot No. A 40, Sector 62, Noida, UP, India</p>
-                    </div>
-                    <div className="contact-box glass-card">
-                        <h4>International Offices</h4>
-                        <p><strong>Japan:</strong> West Bldg. 302, 3-26-8 Takaido Higashi, Suginami-ku, Tokyo</p>
-                        <p><strong>USA:</strong> Silicon Valley, California</p>
-                    </div>
-                    <div className="contact-box glass-card">
-                        <h4>Phone & Email</h4>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                            <p style={{ margin: 0 }}><strong>Toll-Free:</strong> <a href="tel:18005717711">18005717711</a></p>
-                            <p style={{ margin: 0 }}><strong>Landline:</strong> <a href="tel:01204325497">0120 - 4325 497</a></p>
-                            <p style={{ margin: 0 }}><strong>WhatsApp:</strong> <a href="https://wa.me/919319086751" target="_blank" rel="noopener noreferrer">9319086751</a></p>
-                            <p style={{ margin: 0 }}><strong>Email:</strong> <a href="mailto:corp@virsoftech.com">corp@virsoftech.com</a></p>
+                        <div className="contact-box glass-card">
+                            <h4>International Offices</h4>
+                            <p><strong>Japan:</strong> West Bldg. 302, 3-26-8 Takaido Higashi, Suginami-ku, Tokyo</p>
+                            <p><strong>USA:</strong> Silicon Valley, California</p>
+                        </div>
+                        <div className="contact-box glass-card">
+                            <h4>Phone & Email</h4>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                <p style={{ margin: 0 }}><strong>Toll-Free:</strong> <a href="tel:18005717711">18005717711</a></p>
+                                <p style={{ margin: 0 }}><strong>Landline:</strong> <a href="tel:01204325497">0120 - 4325 497</a></p>
+                                <p style={{ margin: 0 }}><strong>WhatsApp:</strong> <a href="https://wa.me/919319086751" target="_blank" rel="noopener noreferrer">9319086751</a></p>
+                                <p style={{ margin: 0 }}><strong>Email:</strong> <a href="mailto:corp@virsoftech.com">corp@virsoftech.com</a></p>
+                            </div>
+                        </div>
+                        <div className="contact-box glass-card">
+                            <h4>Registered Office</h4>
+                            <p>C-2/54, Ashok Vihar, Phase-II, North West, New Delhi, India – 110052</p>
                         </div>
                     </div>
-                    <div className="contact-box glass-card">
-                        <h4>Registered Office</h4>
-                        <p>C-2/54, Ashok Vihar, Phase-II, North West, New Delhi, India – 110052</p>
-                    </div>
                 </div>
-            </div>
-        </section>
-    </>
-);
+            </section>
+        </>
+    );
+};
+
+
 
 export const Legal = () => (
     <>
@@ -599,7 +647,7 @@ export const Legal = () => (
         <section className="max-container reveal" style={{ padding: '100px 0' }}>
             <div className="legal-content glass-card">
                 <h3>Privacy Policy</h3>
-                <p>Effective Date: January 1, 2024</p>
+                <p>Effective Date: January 1, 2025</p>
                 <p>
                     At VSDox, we are committed to protecting your privacy. This policy outlines how we handle your data and documents...
                 </p>

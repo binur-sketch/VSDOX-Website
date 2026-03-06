@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { handleFormSubmission } from '../utils/formHandler';
+
 
 const RequestDemo = () => {
     useEffect(() => {
@@ -19,13 +21,29 @@ const RequestDemo = () => {
         message: '',
     });
     const [submitted, setSubmitted] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [error, setError] = useState(false);
+
 
     const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
-        setSubmitted(true);
+        setSending(true);
+        setError(false);
+
+        const success = await handleFormSubmission(form, 'corp@virsoftech.com');
+
+        if (success) {
+            setSubmitted(true);
+        } else {
+            setError(true);
+            // Fallback: still show success to user if service is blocked but let them know it might have failed?
+            // Actually, better to show an error message.
+        }
+        setSending(false);
     };
+
 
     const features = [
         { icon: 'fa-robot', title: 'AI-Powered ECM', desc: 'See VSDOX AI features live — summarization, RAG Q&A, metadata extraction & more.' },
@@ -151,6 +169,14 @@ const RequestDemo = () => {
                                     <h3 style={{ fontSize: '28px', fontWeight: '900', color: '#0f172a', marginBottom: '8px' }}>Book Your Free Demo</h3>
                                     <p style={{ fontSize: '15px', color: '#94a3b8', marginBottom: '32px' }}>Fill in your details and our team will reach out within 24 hours.</p>
 
+                                    {error && (
+                                        <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#991b1b', padding: '12px 16px', borderRadius: '8px', marginBottom: '24px', fontSize: '14px' }}>
+                                            <i className="fas fa-exclamation-circle" style={{ marginRight: '8px' }}></i>
+                                            Oops! Something went wrong. Please try again or email us directly at corp@virsoftech.com.
+                                        </div>
+                                    )}
+
+
                                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                                         {/* Name row */}
                                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
@@ -221,7 +247,7 @@ const RequestDemo = () => {
                                             <textarea name="message" value={form.message} onChange={handleChange} rows={4} style={{ ...inputStyle, resize: 'vertical', minHeight: '100px' }} placeholder="Tell us about your current document management challenges or specific requirements..." />
                                         </div>
 
-                                        <button type="submit" style={{
+                                        <button type="submit" disabled={sending} style={{
                                             background: 'linear-gradient(135deg, #1d63ed 0%, #7c3aed 100%)',
                                             color: 'white',
                                             padding: '18px 32px',
@@ -229,16 +255,22 @@ const RequestDemo = () => {
                                             borderRadius: '12px',
                                             fontSize: '16px',
                                             fontWeight: '800',
-                                            cursor: 'pointer',
+                                            cursor: sending ? 'wait' : 'pointer',
                                             transition: 'all 0.3s ease',
                                             letterSpacing: '0.3px',
+                                            opacity: sending ? 0.7 : 1,
                                         }}
-                                            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 30px rgba(29,99,237,0.4)'; }}
-                                            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+                                            onMouseEnter={e => { if (!sending) { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 30px rgba(29,99,237,0.4)'; } }}
+                                            onMouseLeave={e => { if (!sending) { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; } }}
                                         >
-                                            <i className="fas fa-calendar-check" style={{ marginRight: '10px' }}></i>
-                                            Request My Free Demo
+                                            {sending ? (
+                                                <i className="fas fa-spinner fa-spin" style={{ marginRight: '10px' }}></i>
+                                            ) : (
+                                                <i className="fas fa-calendar-check" style={{ marginRight: '10px' }}></i>
+                                            )}
+                                            {sending ? 'Sending...' : 'Request My Free Demo'}
                                         </button>
+
 
                                         <p style={{ fontSize: '13px', color: '#94a3b8', textAlign: 'center', margin: 0 }}>
                                             <i className="fas fa-lock" style={{ marginRight: '6px' }}></i>
